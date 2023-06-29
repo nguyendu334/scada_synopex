@@ -1,0 +1,193 @@
+#acu1-valve1 {
+  position: absolute;
+  z-index: 10;
+  right: 690px;
+  top: 385px;
+}
+#acu1-valve2 {
+  position: absolute;
+  z-index: 10;
+  right: 690px;
+  top: 466px;
+}
+#acu1-humidification1 {
+  position: absolute;
+  z-index: 10;
+  right: 265px;
+  top: 423px;
+}
+#acu1-humidification2 {
+  position: absolute;
+  z-index: 10;
+  right: 265px;
+  top: 465px;
+}
+#acu1-Watersupply {
+  position: absolute;
+  z-index: 10;
+  right: 41px;
+  top: 349px;
+}
+#acu1-Heater1 {
+  position: absolute;
+  z-index: 10;
+  right: 530px;
+  top: 386px;
+}
+#acu1-Heater2 {
+  position: absolute;
+  z-index: 10;
+  right: 530px;
+  top: 423px;
+}
+#acu1-Heater3 {
+  position: absolute;
+  z-index: 10;
+  right: 530px;
+  top: 465px;
+}
+#acu1-Drainage {
+  position: absolute;
+  z-index: 10;
+  right: 41px;
+  top: 423px;
+}
+#acu1-Heater4 {
+  position: absolute;
+  z-index: 10;
+  right: 265px;
+  top: 349px;
+}
+#acu1-Heater5 {
+  position: absolute;
+  z-index: 10;
+  right: 265px;
+  top: 386px;
+}
+#acu1-GeneralAlarm {
+  position: absolute;
+  z-index: 10;
+  right: 41px;
+  top: 386px;
+}
+#acu1-HVAC1_isconnect {
+  position: absolute;
+  z-index: 10;
+  right: 41px;
+  top: 466px;
+}
+#acu1-Comp1 {
+  position: absolute;
+  z-index: 10;
+  right: 690px;
+  top: 423px;
+}
+#acu1-Comp2 {
+  position: absolute;
+  z-index: 10;
+  right: 530px;
+  top: 347px;
+}
+#acu1-FanBlower {
+  position: absolute;
+  z-index: 10;
+  right: 690px;
+  top: 347px;
+}
+
+#acu2-valve1 {
+  position: absolute;
+  z-index: 10;
+  right: 693px;
+  top: 844px;
+}
+#acu2-valve2 {
+  position: absolute;
+  z-index: 10;
+  right: 693px;
+  top: 922px;
+}
+#acu2-humidification1 {
+  position: absolute;
+  z-index: 10;
+  right: 262px;
+  top: 881px;
+}
+#acu2-humidification2 {
+  position: absolute;
+  z-index: 10;
+  right: 262px;
+  top: 922px;
+}
+#acu2-Watersupply {
+  position: absolute;
+  z-index: 10;
+  right: 43px;
+  top: 805px;
+}
+#acu2-Heater1 {
+  position: absolute;
+  z-index: 10;
+  right: 529px;
+  top: 844px;
+}
+#acu2-Heater2 {
+  position: absolute;
+  z-index: 10;
+  right: 529px;
+  top: 881px;
+}
+#acu2-Heater3 {
+  position: absolute;
+  z-index: 10;
+  right: 529px;
+  top: 922px;
+}
+#acu2-Drainage {
+  position: absolute;
+  z-index: 10;
+  right: 43px;
+  top: 881px;
+}
+#acu2-Heater4 {
+  position: absolute;
+  z-index: 10;
+  right: 262px;
+  top: 805px;
+}
+#acu2-Heater5 {
+  position: absolute;
+  z-index: 10;
+  right: 262px;
+  top: 843px;
+}
+#acu2-GeneralAlarm {
+  position: absolute;
+  z-index: 10;
+  right: 43px;
+  top: 843px;
+}
+#acu2-HVAC1_isconnect {
+  position: absolute;
+  z-index: 10;
+  right: 43px;
+  top: 922px;
+}
+#acu2-Comp1 {
+  position: absolute;
+  z-index: 10;
+  right: 693px;
+  top: 881px;
+}
+#acu2-Comp2 {
+  position: absolute;
+  z-index: 10;
+  right: 529px;
+  top: 805px;
+}
+#acu2-FanBlower {
+  position: absolute;
+  z-index: 10;
+  right: 693px;
+  top: 805px;
+}

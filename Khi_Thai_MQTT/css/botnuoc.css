@@ -1,0 +1,94 @@
+/* Bubbles */
+
+.bubbles {
+  position: absolute;
+  top: 590px;
+  z-index: 101;
+  margin-right: 50px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.5;
+  width: 10px;
+  height: 10px;
+  left: 250px;
+  animation: up 4s infinite;
+}
+
+.bubble-2 {
+  left: 925px;
+  animation: up 2s infinite;
+}
+
+.bubble-3 {
+  left: 690px;
+  opacity: 0.3;
+  animation: up 5s infinite;
+}
+
+.bubble-4 {
+  left: 1125px;
+  animation: up 6s infinite;
+}
+
+.bubble-5 {
+  left: 160px;
+  animation: up 5s infinite;
+}
+
+.bubble-6 {
+  left: 420px;
+  opacity: 0.3;
+  animation: up 3s infinite;
+}
+
+.bubble-7 {
+  left: 650px;
+  animation: up 4s infinite;
+}
+
+.bubble-8 {
+  left: 1196px;
+  opacity: 0.3;
+  animation: up 3s infinite;
+}
+.bubble-9 {
+  left: 1396px;
+  opacity: 0.3;
+  animation: up 5s infinite;
+}
+.bubble-10 {
+  left: 1596px;
+  opacity: 0.3;
+  animation: up 4s infinite;
+}
+.bubble-11 {
+  left: 1666px;
+  opacity: 0.3;
+  animation: up 6s infinite;
+}
+.bubble-12 {
+  left: 1866px;
+  opacity: 0.3;
+  animation: up 5s infinite;
+}
+/* Bubbles Animation */
+
+@keyframes up {
+  0% {
+    transform: translateY(0);
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-70px);
+    opacity: 0;
+  }
+}
+
+.slide-slow {
+  width: 100%;
+  top: 400px;
+  overflow: hidden;
+  position: absolute;
+}

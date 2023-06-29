@@ -1,0 +1,411 @@
+[class~="fish"],
+[class~="fish-body"] {
+  width: 150px;
+}
+[class~="fish-body"],
+[class~="fish"] {
+  height: 6.25pc;
+}
+[class~="fish"] {
+  animation: swim 4s infinite;
+}
+[class~="fish-body"] {
+  position: relative;
+}
+[class~="fish-body"] {
+  margin-top: 1.875pc;
+}
+[class~="fish-body"] {
+  margin-left: 40px;
+}
+[class~="fish-body"] {
+  background-color: orange;
+}
+[class~="bubbles"],
+[class~="fin"],
+[class~="eye"],
+[class~="fish-body"],
+[class~="pupil"] {
+  border-radius: 50%;
+}
+[class~="bubbles"],
+[class~="eye"],
+[class~="pupil"] {
+  position: absolute;
+}
+[class~="eye"] {
+  margin-left: 75pt;
+}
+[class~="eye"] {
+  margin-top: 0.208333333in;
+}
+[class~="eye"] {
+  z-index: 1;
+}
+[class~="eye"] {
+  background-color: white;
+}
+[class~="eye"] {
+  width: 15pt;
+}
+[class~="eye"] {
+  height: 1.25pc;
+}
+[class~="pupil"] {
+  z-index: 2;
+}
+[class~="pupil"] {
+  margin-left: 5px;
+}
+[class~="pupil"] {
+  margin-top: 0.052083333in;
+}
+[class~="pupil"] {
+  background-color: black;
+}
+[class~="pupil"] {
+  height: 7.5pt;
+}
+[class~="pupil"] {
+  width: 0.625pc;
+}
+[class~="fin"] {
+  margin-top: -75pt;
+}
+[class~="fin"] {
+  background-color: orange;
+}
+[class~="fin"] {
+  transform: rotate(40deg);
+}
+[class~="fin"] {
+  width: 80px;
+}
+[class~="fin"] {
+  height: 0.520833333in;
+}
+[class~="fin-bottom"] {
+  margin-top: -0.104166667in;
+}
+[class~="fin-bottom"] {
+  transform: rotate(-40deg);
+}
+[class~="bubbles"] {
+  bottom: 0;
+}
+[class~="bubbles"] {
+  z-index: 5;
+}
+[class~="bubbles"] {
+  margin-right: 3.125pc;
+}
+[class~="bubbles"] {
+  background-color: white;
+}
+[class~="bubbles"] {
+  opacity: 0.5;
+}
+[class~="bubbles"] {
+  width: 30pt;
+}
+[class~="bubbles"] {
+  height: 40px;
+}
+[class~="bubbles"] {
+  animation: up 4s infinite;
+}
+[class~="bubble-2"] {
+  left: 350px;
+}
+[class~="bubble-2"] {
+  animation: up 2s infinite;
+}
+[class~="bubble-3"] {
+  left: 46.875pc;
+}
+[class~="bubble-8"],
+[class~="bubble-6"],
+[class~="bubble-3"] {
+  opacity: 0.3;
+}
+[class~="bubble-3"] {
+  animation: up 5s infinite;
+}
+.bubble-4 {
+  left: 862.5pt;
+}
+.bubble-4 {
+  animation: up 6s infinite;
+}
+[class~="bubble-5"] {
+  left: 37.5pt;
+}
+[class~="bubble-5"] {
+  animation: up 5s infinite;
+}
+[class~="bubble-6"] {
+  left: 18.75pc;
+}
+[class~="bubble-6"] {
+  animation: up 3s infinite;
+}
+.bubble-7 {
+  left: 6.979166667in;
+}
+.bubble-7 {
+  animation: up 4s infinite;
+}
+[class~="bubble-8"] {
+  left: 787.5pt;
+}
+[class~="bubble-8"] {
+  animation: up 3s infinite;
+}
+@keyframes swim {
+  0% {
+    transform: translateY(-50px) translateX(0) rotate(30deg);
+    left: -30px;
+  }
+  25% {
+    transform: translateY(50px) translateX(150px) rotate(20deg);
+    left: -30px;
+  }
+  50% {
+    transform: translateY(100px) translateX(500px);
+    left: -30px;
+  }
+  75% {
+    transform: translateY(50px) translateX(850px) rotate(-20deg);
+    left: -30px;
+  }
+  100% {
+    transform: translateY(-170px) translateX(1200px) rotate(-40deg);
+    left: -30px;
+  }
+}
+@keyframes up {
+  100% {
+    transform: translateY(-800px);
+  }
+}
+[class~="slide-slow"] img {
+  position: relative;
+}
+[class~="slide-slow"] img {
+  animation: slide-slow 6s, slide-slow-img 6s;
+}
+[class~="slide-slow"] img {
+  animation-iteration-count: infinite;
+}
+.slide-slow {
+  width: 100%;
+}
+.slide-slow {
+  top: 400px;
+}
+.slide-slow {
+  overflow: hidden;
+}
+.slide-slow {
+  position: absolute;
+}
+@keyframes slide-slow {
+  0% {
+    left: calc(100% - 88px);
+  }
+  49.99% {
+    left: 0%;
+  }
+  50% {
+    left: 0%;
+  }
+  99.99% {
+    left: calc(100% - 88px);
+  }
+  100% {
+    left: calc(100% - 88px);
+  }
+}
+@keyframes slide-slow-img {
+  0% {
+    transform: scaleX(1);
+  }
+  48% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(-1);
+  }
+  98% {
+    transform: scaleX(-1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+#fishtim,
+#muc {
+  position: absolute;
+}
+#fishtim {
+  z-index: 3;
+}
+#fishtim {
+  bottom: 22.5pt;
+}
+#fishtim {
+  width: 3.635416667in;
+}
+#fishtim,
+#muc {
+  height: 0.541666667in;
+}
+#fishtim {
+  left: 1.625pc;
+}
+#muc {
+  z-index: 2;
+}
+#muc {
+  bottom: 2.020833333in;
+}
+#muc {
+  width: 1.104166667in;
+}
+#muc {
+  right: 0.625pc;
+}
+#muc {
+  animation: mymove 20s infinite;
+}
+@keyframes mymove {
+  from {
+    bottom: 0px;
+  }
+  to {
+    bottom: 300px;
+  }
+}
+[class~="wave"],
+#so {
+  position: absolute;
+}
+#so {
+  z-index: 4;
+}
+[class~="wave"],
+#so {
+  bottom: 0pt;
+}
+#so {
+  width: 79.5pt;
+}
+[class~="wave"] {
+  background: url("../wave2.svg") repeat-x;
+}
+#so {
+  height: 52px;
+}
+#so {
+  left: 225.75pt;
+}
+[class~="wave"] {
+  width: 300%;
+}
+[class~="wave"] {
+  height: 58%;
+}
+[class~="wave"] {
+  animation: wave 6s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+}
+[class~="wave"] {
+  transform: translate3d(0, 0, 0);
+}
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+}
+[class~="wave1"] {
+  background: url("../wave1.svg") repeat-x;
+}
+[class~="wave1"] {
+  position: absolute;
+}
+[class~="wave1"] {
+  bottom: 0pc;
+}
+[class~="wave1"] {
+  width: 450%;
+}
+[class~="wave1"] {
+  height: 58%;
+}
+[class~="wave1"] {
+  animation: wave1 6s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+}
+[class~="wave1"] {
+  transform: translate3d(0, 0, 0);
+}
+@keyframes wave1 {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+}
+[class~="black"] {
+  background: black;
+}
+[class~="black"] {
+  box-shadow: 0px 2px 0.1875pc black;
+}
+.green {
+  background: green;
+}
+.green {
+  box-shadow: 0in 0.020833333in 3px green;
+}
+.green {
+  border-left-width: 0.0625pc;
+}
+.green {
+  border-bottom-width: 0.0625pc;
+}
+.green {
+  border-right-width: 0.0625pc;
+}
+.green {
+  border-top-width: 0.0625pc;
+}
+.green {
+  border-left-style: solid;
+}
+.green {
+  border-bottom-style: solid;
+}
+.green {
+  border-right-style: solid;
+}
+.green {
+  border-top-style: solid;
+}
+.green {
+  border-left-color: #fff;
+}
+.green {
+  border-bottom-color: #fff;
+}
+.green {
+  border-right-color: #fff;
+}
+.green {
+  border-top-color: #fff;
+}
+.green {
+  border-image: none;
+}

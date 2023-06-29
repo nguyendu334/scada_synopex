@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        html {
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <title>Hệ thống nước</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/botnuoc.css">
+    <link rel="stylesheet" href="css/barprocess.css">
+</head>
+
+<body>
+
+    <section id="container">
+        <header>
+            <h1 style="line-height:60px;font-size:40px">WATER LEVEL & PUMP MONINGTORING WEB-SYSTEM</h1>
+        </header>
+        <section class="wapper">
+            <div class="row">
+                <div class="col-md-12">
+                    <form style=" position: absolute; left: 638px ;top:-19px;">
+                        수캡량(m3) Luong cap: <input style="background-color:red;width: 50px;height: 15px" type="text"
+                            disabled="disabled">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        수량(m3) Luong ton : <input style="background-color:blue;width: 50px;height: 15px" type="text"
+                            disabled="disabled">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        사용량(m3) luong su dung : <input style="background-color:green;width: 50px;height: 15px"
+                            type="text" disabled="disabled">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+
+                    </form>
+                    <canvas id="myChart" style="width:100%;height: 150px"></canvas>
+
+                    <div id="tabletop">
+                        <table cellspacing="0" border="0">
+                            <colgroup width="211"></colgroup>
+                            <colgroup span="31" width="64"></colgroup>
+                            <tr id="ngaytrongthangtable1">
+                            </tr>
+                            <tr id="dataTheothangluongton">
+                            </tr>
+                            <tr id="dataTheothangluongcap">
+                            </tr>
+                            <tr id="dataTheothangluongsudung">
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+        </section>
+        <section class="wapper1">
+
+
+            <div class="right">
+                <img src="images/sodo.png" alt=""
+                    style="background-size: contain;width: 1545px; height: 697px;position: absolute;z-index: 555;">
+
+                <div id="beLeft">
+                    <img id="waterfall" src="images/xam.gif" alt="">
+                    <div id="table-wrapper">
+                        <div id="table-scroll">
+                            <table id="tableLichsucapnuoc" cellspacing="0" border="0"></table>
+                        </div>
+                    </div>
+                    <!-- Hiệu ứng bọt và cá-->
+                    <img id="fishtim" src="images/fishtim.gif" title=" " />
+                    <img id="muc" name="e902" src="images/muc.gif" width="100" />
+                    <img id="so" src="images/so.gif" title="" />
+                    <div class="bubbles bubble-1"></div>
+                    <div class="bubbles bubble-5"></div>
+                    <div class="bubbles bubble-2"></div>
+                    <div class="bubbles bubble-6"></div>
+                    <div class="bubbles bubble-3"></div>
+                    <div class="bubbles bubble-7"></div>
+                    <div class="bubbles bubble-4"></div>
+                    <div class="bubbles bubble-8"></div>
+
+                    <img id="image1" style="position: absolute;bottom: 0;left: -299px;z-index: 4;" src="images/1.png" />
+                    <img id="image2" style="position: absolute; bottom: 0px;width: 411px;left: 146px;z-index: 3;"
+                        src="images/2.png" />
+                    <img id="image3" style="position: absolute;width: 411px;left: 146px;bottom: 0px; z-index: 2;"
+                        src="images/5.png" />
+                    <img id="image4" style="position: absolute; bottom: 0px;width: 411px;left: 269px;z-index: 2;"
+                        src="images/4.png" />
+                    <img class="botnuoc" style=" position: absolute;top: 250px ;z-index: 1;left: 200px;"
+                        src="images/bongbong.gif" title=" " />
+                    <img class="botnuoc" style=" position: absolute;top: 250px ;z-index: 1;left: 300px;"
+                        src="images/bongbong.gif" title=" " />
+                    <img class="botnuoc" style=" position: absolute;top: 250px ;z-index: 1;left: 400px;"
+                        src="images/bongbong.gif" title=" " />
+                    <img class="botnuoc" style=" position: absolute;top: 250px ; z-index: 1;left: 500px;"
+                        src="images/bongbong.gif" title=" " />
+                    <!-- background nước -->
+                    <div id="waterBeLeft">
+                    </div>
+                    <p id="titleLeft">Supply Tank <span id="totalLeft">1720</span>m3</p>
+                    <p id="tilenuocLefttop">70.7 %</p><span id="totalLefttop">(1209.2 m3)</span>
+
+                    <!-- Hiệu ứng sóng -->
+                    <div id="waweBeLeft" class="wave"></div>
+
+                </div>
+                <div id="beRight">
+
+                    <div id="waterBeRight"></div>
+                    <div id="waweBeRight" class="wave1"></div>
+                    <p id="titleRight">RawWater Tank <span id="totalRight">430</span>m3</p>
+                    <p id="tilenuocRighttop">70.7 %</p><span id="totalRighttop">(1209.2 m3)</span>
+
+
+                    <!-- Hiệu ứng bọt và cá-->
+                    <div class="slide-slow">
+                        <img id="fish" src="images/fish.gif" alt="Swimming fish">
+                    </div>
+
+                    <div class="bubbles bubble-1"></div>
+                    <div class="bubbles bubble-5"></div>
+                    <div class="bubbles bubble-2"></div>
+                    <div class="bubbles bubble-6"></div>
+                    <div class="bubbles bubble-3"></div>
+                    <div class="bubbles bubble-7"></div>
+                    <div class="bubbles bubble-4"></div>
+                    <div class="bubbles bubble-8"></div>
+                </div>
+
+                <div id="ngoaicung">
+
+                    <form
+                        style="width: 134px; background: aliceblue; top: 138px;position: absolute;height: 62px;left: 17px;z-index: 888;">
+                        <fieldset>
+                            <legend style="font-size: 13px;">LINEB</legend>
+                            <label style=" font-size: 13px;position: relative;top: -23px;" for="total">Total:</label>
+                            <input id="numberTotalLineB" type="text" value="12399.64"
+                                style="width: 68px; height: 18px;border: none;background: no-repeat;position: relative;top: -23px;" />
+                            <span style="position: relative;top: -23px;">m3</span> <br />
+                            <label style=" font-size: 13px;position: relative;top: -27px;" for="flowRate">FlowRate:
+                            </label>:
+                            <input id="numberFlowRateLineB" value="51.13" type="text"
+                                style="width: 68px; height: 18px;border: none;background: no-repeat;position: relative;top: -52px;left: 64px;" />
+                            <span style="position: relative;top: -52px;left: 38px;">m3</span><br />
+                        </fieldset>
+                    </form>
+
+                    <form
+                        style="width:134px; background: aliceblue; top: 454px;position: absolute;height: 56px;left: 18px;z-index: 888;">
+                        <fieldset>
+                            <legend style="font-size: 13px;">LINEA</legend>
+                            <label style=" font-size: 13px;position: relative;top: -23px;" for="total">Total:</label>
+                            <input id="numberTotalLineA" type="text" value="12399.64"
+                                style="width: 68px; height: 18px;border: none;background: no-repeat;position: relative;top: -23px;" />
+                            <span style="position: relative;top: -23px;">m3</span> <br />
+                            <label style=" font-size: 13px;position: relative;top: -27px;" for="flowRate">FlowRate:
+                            </label>:
+                            <input id="numberFlowRateLineA" value="51.13" type="text"
+                                style="width: 68px; height: 18px;border: none;background: no-repeat;position: relative;top: -52px;left: 64px;" />
+                            <span style="position: relative;top: -52px;left: 38px;">m3</span><br />
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="listOng">
+                    <img id="ongdoc" src="images/ongdoc.png" alt="">
+                    <img id="ongngang" src="images/ongngang.png" alt="">
+                    <img id="ongngang1" src="images/ongngang.png" alt="">
+                    <img id="ongngang2" src="images/ongngang.png" alt="">
+                    <img id="ongdoc1" src="images/ongdoc.png" alt="">
+                    <img id="ongdoc2" src="images/ongdoc.png" alt="">
+
+                    <img id="ongdocDI3" src="images/ongnuoc.png" alt="">
+                    <img id="ongdocDI2" src="images/ongnuoc.png" alt="">
+                    <img id="ongdocDI1" src="images/ongnuoc.png" alt="">
+                </div>
+                <div class="arrowed" style="position: relative;">
+                    <!-- Arrow hướng vào -->
+                    <div id="arowDI" class="arrow"></div>
+                    <div id="arowWT" class="arrow"></div>
+                    <div id="arowPr1" class="arrow"></div>
+                    <div id="arowSv1" class="arrow"></div>
+                    <!-- <div id="arowSv2" class="arrow"></div>
+                    <div id="arowSv3" class="arrow"></div> -->
+                    <div id="arowBW1" class="arrow"></div>
+                    <!-- <div id="arowBW2" class="arrow"></div> -->
+                    <div id="arowBW1x" class="arrow"></div>
+                    <div id="arowBW2x" class="arrow"></div>
+                    <div id="arowLv" class="arrow"></div>
+
+                    <!-- Arrow hướng ra -->
+                    <div id="arowPr2" class="arrowRa"></div>
+                    <div id="arowPr2x" class="arrow"></div>
+                    <div id="arowPump1" class="arrowRa"></div>
+                    <div id="arowPump2" class="arrowRa"></div>
+
+                    <!-- Arrow hướng Lên -->
+                    <div id="arowUp" class="arrowUp"></div>
+                    <!-- Arrow hướng Xuống -->
+                    <div id="arowDown" class="arrowDown"></div>
+                    <div id="arowDownPr2" class="arrowDown"></div>
+                </div>
+                <div id="listbom" style="position: relative;top:-1400px;">
+                    <embed id="pumpDi3" src="FanOn.svg"></embed>
+                    <embed id="pumpDi2" src="FanOn.svg" type="">
+                    <embed id="pumpDi1" src="FanOn.svg" type="">
+                    <embed id="wt1" src="FanOn.svg" type="">
+                    <embed id="wt2" src="FanOn.svg" type="">
+                    <embed id="pr1" src="FanOn.svg" type="">
+                    <embed id="pr2" src="FanOn.svg" type="">
+                </div>
+            </div>
+            <!--        
+
+            <HMI-PICTURE id="pr2" width="60" height="28" value=false OnPic=" images/pumpton.png "
+                OffPic="images/pumptoff.png "></HMI-PICTURE>
+            <HMI-PICTURE id="pr1" width="60" height="28" value=false OnPic=" images/pumpton.png "
+                OffPic="images/pumptoff.png "></HMI-PICTURE>
+
+            <HMI-PICTURE id="sv3" width="56" height="26" value=false OnPic=" images/pumpton.png "
+                OffPic="images/pumptoff.png "></HMI-PICTURE>
+            <HMI-PICTURE id="sv2" width="56" height="26" value=false OnPic=" images/pumpton.png "
+                OffPic="images/pumptoff.png "></HMI-PICTURE>
+            <HMI-PICTURE id="sv1" width="56" height="26" value=false OnPic=" images/pumpton.png "
+                OffPic="images/pumptoff.png "></HMI-PICTURE>
+
+            <HMI-PICTURE id="bw1" width="56" height="26" value=false OnPic=" images/pumpton.png "
+                OffPic="images/pumptoff.png "></HMI-PICTURE>
+            <HMI-PICTURE id="bw2" width="56" height="26" value=false OnPic=" images/pumpton.png "
+                OffPic="images/pumptoff.png "></HMI-PICTURE>
+
+            <HMI-PICTURE id="lv1" width="60" height="28" value=false OnPic=" images/pumpton.png "
+                OffPic="images/pumptoff.png "></HMI-PICTURE>
+            <HMI-PICTURE id="lv2" width="60" height="28" value=false OnPic=" images/pumpton.png "
+                OffPic="images/pumptoff.png "></HMI-PICTURE>
+
+            <HMI-PICTURE id="ePump" width="56" height="22" value=false OnPic=" images/pumpton.png "
+                OffPic="images/pumptoff.png "></HMI-PICTURE>
+
+            <HMI-PICTURE id="bPump" width="50" height="24" value=false OnPic=" images/pumpton.png "
+                OffPic="images/pumptoff.png "></HMI-PICTURE>
+            <HMI-PICTURE id="dPump" width="94" height="46" value=false OnPic=" images/pumpton.png "
+                OffPic="images/pumptoff.png "></HMI-PICTURE> -->
+
+            <div class="left">
+                <canvas id="myChart1" style="width:100%;height: 150px;position: relative;    top: -130px;"></canvas>
+                <div class="table">
+                    <table cellspacing="0" border="0" id="taleRightCheckSheet">
+                    </table>
+                </div>
+            </div>
+
+        </section>
+        <section class="wapper2">
+            <span
+                style="    position: absolute;left: 196px;font-size: 12px; text-transform: uppercase;line-height: 20px; ">Proceedings
+                :</span>
+            <div class="progress-bar">
+                <span class="bar">
+                    <span class="progress"></span>
+                </span>
+            </div>
+            <form style=" position: absolute; left: 638px ;top:0px;">
+                CONNECT: <input id="connect" class="black green " type="text"
+                    disabled="disabled">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                RAWWATER : <input id="rawWater" class="black " type="text"
+                    disabled="disabled">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                DI RO NEW : <input id="diRoNew" class="black " type="text"
+                    disabled="disabled">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                PUMP_PLC: <input id="pumpPlc" class="black " type="text"
+                    disabled="disabled">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                FLOWMETER: <input id="flowMeter" class="black " type="text"
+                    disabled="disabled">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                TIME UPDATE DATA: <input id="timedata" style="height: 18px; border: none;" type="text" value=""
+                    disabled="disabled">
+            </form>
+        </section>
+    </section>
+</body>
+<script src="js/mqttws31.min.js"></script>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/animation.js"></script>
+<script src="js/Chart.js"></script>
+<script src="js/HMI-Picture.js"></script>
+<!-- <script src="js/aquarium.js"></script> -->
+
+</html>

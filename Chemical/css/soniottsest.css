@@ -1,0 +1,60 @@
+#Smalltank1 {
+    position: absolute;
+    top: 285px;
+    left: 406px;
+    background-color: rgba(240, 248, 255, 0);
+    height: 223px;
+    width: 152px;
+}
+#mucnuoc1 {
+    position: absolute;
+    background-color: rgba(8, 66, 117, 0.651);
+    height: 50%;
+    width: 100%;
+    bottom: 0px;
+}
+#Smalltank2 {
+    position: absolute;
+    top: 345px;
+    left: 574px;
+    background-color: rgba(240, 248, 255, 0);
+    height: 158px;
+    width: 98px;
+}
+#mucnuoc2 {
+    position: absolute;
+    background-color: rgba(8, 66, 117, 0.651);
+    height: 50%;
+    width: 100%;
+    bottom: 0px;
+}
+#Smalltank3 {
+    position: absolute;
+    top: 289px;
+    left: 733px;
+    background-color: rgba(240, 248, 255, 0);
+    height: 217px;
+    width: 150px;
+}
+#mucnuoc3 {
+    position: absolute;
+    background-color: rgba(8, 66, 117, 0.651);
+    height: 50%;
+    width: 100%;
+    bottom: 0px;
+}
+#Smalltank4 {
+    position: absolute;
+    top: 346px;
+    left: 898px;
+    background-color: rgba(241, 248, 25, 0);
+    height: 161px;
+    width: 100px;
+}
+#mucnuoc4 {
+    position: absolute;
+    background-color: rgba(8, 66, 117, 0.651);
+    height: 50%;
+    width: 100%;
+    bottom: 0px;
+}

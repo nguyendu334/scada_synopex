@@ -1,0 +1,518 @@
+/* Fan */
+#fan1 {
+  position: absolute;
+  top: 538px;
+  left: -12px;
+  z-index: 99;
+  width: 100px;
+  height: 75px;
+}
+#fan2 {
+  position: absolute;
+  top: 538px;
+  left: 471px;
+  z-index: 99;
+  width: 100px;
+  height: 75px;
+}
+#fan3 {
+  position: absolute;
+  top: 538px;
+  left: 952px;
+  z-index: 99;
+  width: 100px;
+  height: 75px;
+}
+
+#fan4 {
+  position: absolute;
+  top: 538px;
+  left: 1434px;
+  z-index: 9;
+  width: 100px;
+  height: 75px;
+}
+/* pump */
+
+#pump_chemicalbottom_1 {
+  position: absolute;
+  top: 567px;
+  left: 346px;
+  z-index: 100;
+  width: 42px;
+  height: 33px;
+  transform: rotateY(180deg);
+}
+#pump_chemicalbottom_2 {
+  position: absolute;
+  top: 567px;
+  left: 828px;
+  z-index: 100;
+  width: 42px;
+  height: 33px;
+  transform: rotateY(180deg);
+}
+#pump_chemicalbottom_3 {
+  position: absolute;
+  top: 567px;
+  left: 1310px;
+  z-index: 100;
+  width: 42px;
+  height: 33px;
+  transform: rotateY(180deg);
+}
+#pump_chemicalbottom_4 {
+  position: absolute;
+  top: 567px;
+  left: 1790px;
+  z-index: 100;
+  width: 42px;
+  height: 33px;
+  transform: rotateY(180deg);
+}
+#text_pump_chemicalbottom_1 {
+  position: absolute;
+  top: 544px;
+  left: 350px;
+  z-index: 100;
+  width: 41px;
+  height: 28px;
+  color: yellow;
+  font-size: 15px;
+}
+#text_pump_chemicalbottom_2 {
+  position: absolute;
+  top: 544px;
+  left: 832px;
+  z-index: 100;
+  width: 41px;
+  height: 28px;
+  color: yellow;
+  font-size: 15px;
+}
+#text_pump_chemicalbottom_3 {
+  position: absolute;
+  top: 544px;
+  left: 1314px;
+  z-index: 100;
+  width: 41px;
+  height: 28px;
+  color: yellow;
+  font-size: 15px;
+}
+#text_pump_chemicalbottom_4 {
+  position: absolute;
+  top: 544px;
+  left: 1794px;
+  z-index: 100;
+  width: 41px;
+  height: 28px;
+  color: yellow;
+  font-size: 15px;
+}
+/* Text */
+h2 {
+  color: yellow;
+  /* font-style: italic;
+  text-decoration: underline; */
+  font-family: "Times New Roman", Times, serif;
+}
+#cu1200 {
+  position: absolute;
+  top: 608px;
+  left: 90px;
+  z-index: 100;
+}
+#cu1000 {
+  position: absolute;
+  top: 608px;
+  left: 572px;
+  z-index: 100;
+}
+#wetline700 {
+  position: absolute;
+  top: 608px;
+  left: 1086px;
+  z-index: 100;
+}
+#au400 {
+  position: absolute;
+  top: 608px;
+  left: 1550px;
+  z-index: 100;
+}
+/* vavle */
+/* #vavle_ {
+  position: absolute;
+  left: 214px;
+  z-index: 1000;
+    top: 338px;
+  width: 40px;
+  height: 35px;
+} */
+#vavle_1_1 {
+  position: absolute;
+  left: 214px;
+  z-index: 1000;
+  top: 338px;
+  width: 40px;
+  height: 35px;
+}
+#vavle_1_2 {
+  position: absolute;
+  left: 214px;
+  z-index: 1000;
+  top: 400px;
+  width: 40px;
+  height: 35px;
+}
+#vavle_1_3 {
+  position: absolute;
+  left: 247px;
+  z-index: 1000;
+  top: 430px;
+  width: 40px;
+  height: 35px;
+  transform: rotate(90deg);
+}
+
+#vavle_2_1 {
+  position: absolute;
+  left: 695px;
+  z-index: 1000;
+  top: 338px;
+  width: 40px;
+  height: 35px;
+}
+#vavle_2_2 {
+  position: absolute;
+  left: 695px;
+  z-index: 1000;
+  top: 400px;
+  width: 40px;
+  height: 35px;
+}
+#vavle_2_3 {
+  position: absolute;
+  left: 728px;
+  z-index: 1000;
+  top: 430px;
+  width: 40px;
+  height: 35px;
+  transform: rotate(90deg);
+}
+#vavle_3_1 {
+  position: absolute;
+  left: 1177px;
+  z-index: 1000;
+  top: 338px;
+  width: 40px;
+  height: 35px;
+}
+#vavle_3_2 {
+  position: absolute;
+  left: 1177px;
+  z-index: 1000;
+  top: 400px;
+  width: 40px;
+  height: 35px;
+}
+#vavle_3_3 {
+  position: absolute;
+  left: 1211px;
+  z-index: 1000;
+  top: 430px;
+  width: 40px;
+  height: 35px;
+  transform: rotate(90deg);
+}
+#vavle_4_1 {
+  position: absolute;
+  left: 1656px;
+  z-index: 1000;
+  top: 338px;
+  width: 40px;
+  height: 35px;
+}
+#vavle_4_2 {
+  position: absolute;
+  left: 1656px;
+  z-index: 1000;
+  top: 400px;
+  width: 40px;
+  height: 35px;
+}
+#vavle_4_3 {
+  position: absolute;
+  left: 1691px;
+  z-index: 1000;
+  top: 430px;
+  width: 40px;
+  height: 35px;
+  transform: rotate(90deg);
+}
+
+/* pump TH */
+#pumpTH_ {
+  position: absolute;
+  top: 377px;
+  left: 297px;
+  z-index: 100;
+  width: 42px;
+  height: 33px;
+  transform: rotate(-90deg);
+}
+#pumpTH_1 {
+  position: absolute;
+  top: 473px;
+  left: 292px;
+  z-index: 100;
+  width: 42px;
+  height: 33px;
+  transform: rotate(-90deg);
+}
+#pumpTH_2 {
+  position: absolute;
+  top: 473px;
+  left: 775px;
+  z-index: 100;
+  width: 42px;
+  height: 33px;
+  transform: rotate(-90deg);
+}
+#pumpTH_3 {
+  position: absolute;
+  top: 473px;
+  left: 1257px;
+  z-index: 100;
+  width: 42px;
+  height: 33px;
+  transform: rotate(-90deg);
+}
+#pumpTH_4 {
+  position: absolute;
+  top: 473px;
+  left: 1736px;
+  z-index: 100;
+  width: 42px;
+  height: 33px;
+  transform: rotate(-90deg);
+}
+#text_pumpTH_1 {
+  position: absolute;
+  top: 473px;
+  left: 339px;
+  z-index: 100;
+  width: 50px;
+  color: yellow;
+  font-size: 15px;
+  height: 50px;
+}
+#text_pumpTH_2 {
+  position: absolute;
+  top: 473px;
+  left: 821px;
+  z-index: 100;
+  width: 32px;
+  height: 42px;
+  color: yellow;
+  font-size: 15px;
+}
+#text_pumpTH_3 {
+  position: absolute;
+  top: 473px;
+  left: 1302px;
+  z-index: 100;
+  width: 32px;
+  height: 42px;
+  color: yellow;
+  font-size: 15px;
+}
+#text_pumpTH_4 {
+  position: absolute;
+  top: 473px;
+  left: 1781px;
+  z-index: 100;
+  width: 32px;
+  height: 42px;
+  color: yellow;
+  font-size: 15px;
+}
+/* Pump Chemical */
+
+#pump_chemical_top_1 {
+  position: absolute;
+  top: 445px;
+  left: 414px;
+  z-index: 100;
+  width: 42px;
+  height: 33px;
+  transform: rotate(-90deg);
+}
+#pump_chemical_top_2 {
+  position: absolute;
+  top: 445px;
+  left: 897px;
+  z-index: 100;
+  width: 42px;
+  height: 33px;
+  transform: rotate(-90deg);
+}
+#pump_chemical_top_3 {
+  position: absolute;
+  top: 445px;
+  left: 1381px;
+  z-index: 100;
+  width: 42px;
+  height: 33px;
+  transform: rotate(-90deg);
+}
+#pump_chemical_top_4 {
+  position: absolute;
+  top: 445px;
+  left: 1857px;
+  z-index: 100;
+  width: 42px;
+  height: 33px;
+  transform: rotate(-90deg);
+}
+
+#tankkhuayon1 {
+  position: absolute;
+  top: 477px;
+  left: 394px;
+  z-index: 100;
+  width: 84px;
+  height: 122px;
+}
+#tankkhuayon2 {
+  position: absolute;
+  top: 477px;
+  left: 877px;
+  z-index: 100;
+  width: 84px;
+  height: 122px;
+}
+#tankkhuayon3 {
+  position: absolute;
+  top: 477px;
+  left: 1360px;
+  z-index: 100;
+  width: 84px;
+  height: 122px;
+}
+#tankkhuayon4 {
+  position: absolute;
+  top: 477px;
+  left: 1836px;
+  z-index: 100;
+  width: 84px;
+  height: 122px;
+}
+
+/* #data1 {
+  position: absolute;
+  left: 176px;
+  top: 452px;
+  z-index: 1000;
+  width: 70px;
+  background: black;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  height: 25px;
+  font-size: 16px;
+} */
+
+#data1 {
+  position: absolute;
+  left: 176px;
+  top: 453px;
+  z-index: 1000;
+
+  text-align: center;
+  color: white;
+  width: 81px;
+  height: 35px;
+  font-size: 16px;
+}
+#data2 {
+  position: absolute;
+  left: 658px;
+  top: 452px;
+  z-index: 1000;
+  /* background: black; */
+  text-align: center;
+  color: white;
+  /* border: 1px solid white; */
+  width: 81px;
+  height: 35px;
+  font-size: 16px;
+}
+#data3 {
+  position: absolute;
+  left: 1140px;
+  top: 452px;
+  z-index: 1000;
+
+  text-align: center;
+  color: white;
+
+  width: 81px;
+  height: 35px;
+  font-size: 16px;
+}
+#data4 {
+  position: absolute;
+  left: 1621px;
+  top: 452px;
+  z-index: 1000;
+ 
+
+  text-align: center;
+  color: white;
+
+  width: 81px;
+  height: 35px;
+  font-size: 16px;
+}
+#baodong1 {
+  position: absolute;
+  text-align: center;
+  left: 159px;
+  top: 210px;
+  background: red;
+  color: yellow;
+  width: 200px;
+  font-size: 40px;
+}
+#baodong2 {
+  position: absolute;
+  text-align: center;
+  left: 640px;
+  top: 210px;
+  background: red;
+  color: yellow;
+  width: 200px;
+  font-size: 40px;
+}
+#baodong3 {
+  position: absolute;
+  text-align: center;
+  left: 1124px;
+  top: 210px;
+  background: red;
+  color: yellow;
+  width: 200px;
+  font-size: 40px;
+}
+#baodong4 {
+  position: absolute;
+  text-align: center;
+  left: 1604px;
+  top: 210px;
+  background: red;
+  color: yellow;
+  width: 200px;
+  font-size: 40px;
+}

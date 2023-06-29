@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="./img/monitoring.png" type="image/x-icon" />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/luxon@1.27.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.0.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@2.0.0"></script>
+        <script src="./scripts/mqttws31.min.js"></script>
+
+        <title>PCW MONITORING WEB-SYSTEM</title>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <a href="" class="logo">
+                    <img src="./svg/list.svg" alt="" />
+                    <b class="syno">SYNO<span>PEX</span></b>
+                </a>
+
+                <img id="loa1" src="img/volume.png" />
+                <img id="loa" src="img/onvolumn.png" />
+
+                <audio id="myAudio" type="audio/mpeg" loop>
+                    <source src="audio/canhbao.mp3" type="audio/mpeg" />
+                </audio>
+
+                <span class="NameProject">PCW MONITORING WEB-SYSTEM</span>
+
+                <span id="myTime"></span>
+            </header>
+
+            <section class="wapper">
+                <iframe src="./svg/pcw.svg" frameborder="0" id="left-wapper"></iframe>
+
+                <img src="./svg/smoke2.gif" alt="" class="water" id="water_hotpress" style="top: 504px; left: 312px" />
+                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 507px; left: 379px" />
+                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 515px; left: 523px" />
+                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 509px; left: 661px" />
+
+                <img src="./svg/smoke2.gif" alt="" class="water" id="water_wetline" style="top: 1174px; left: 320px" />
+                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 1176px; left: 378px" />
+                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 1186px; left: 521px" />
+                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 1179px; left: 600px" />
+                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 1179px; left: 662px" />
+
+                <button class="btn-a" id="btn1" style="top: 792px; left: 302px"></button>
+                <span class="data-water" id="hotpress_level" style="top: 642px; left: 304px"></span>
+                <span class="data-water" id="hotpress_temp" style="top: 642px; left: 530px"></span>
+                <span class="text-water" style="top: 607px; left: 304px"><b>MỨC NƯỚC</b></span>
+                <span class="text-water" style="top: 607px; left: 530px"><b>NHIỆT ĐỘ</b></span>
+                <span class="text" style="top: 730px; left: 345px"><b>PCW TANK HOTPRESS</b></span>
+
+                <button class="btn-a" id="btn2" style="top: 1461px; left: 302px"></button>
+                <span class="data-water" id="wetline_level" style="top: 1307px; left: 304px"></span>
+                <span class="data-water" id="wetline_temp" style="top: 1307px; left: 530px"></span>
+                <span class="text-water" style="top: 1270px; left: 304px"><b>MỨC NƯỚC</b></span>
+                <span class="text-water" style="top: 1270px; left: 530px"><b>NHIỆT ĐỘ</b></span>
+                <span class="text" style="top: 1390px; left: 360px"><b>PCW TANK WETLINE</b></span>
+
+                <span class="data-chiller" id="chiller4" style="top: 675px; left: 1485px"></span>
+                <span class="data-chiller" id="chiller5" style="top: 1310px; left: 1485px"></span>
+                <span class="data-chiller" id="chiller6" style="top: 1600px; left: 1485px"></span>
+                <span class="data-chiller" id="chiller7" style="top: 1890px; left: 1485px"></span>
+
+                <span class="data-back" id="hotpress_machine1" style="top: 210px; left: 428px"></span>
+                <span class="data-back" id="hotpress_machine2" style="top: 270px; left: 568px"></span>
+                <span class="data-back" id="copper_line1" style="top: 916px; left: 346px"></span>
+                <span class="data-back" id="copper_line2" style="top: 916px; left: 495px"></span>
+            </section>
+
+            <section class="footer">
+                <span class="process">PROCESSING:</span>
+                <input class="input-process1" type="text" disabled />
+                <input class="input-process" type="text" disabled />
+
+                <span class="connect">CONNECT:</span>
+                <input id="connect" class="black" type="text" disabled />
+                <!-- 
+                <span class="mqtt">MQTT:</span>
+                <input id="mqtt" class="black" type="text" disabled />
+
+                <span class="SPINKLER">SPINKLER:</span>
+                <input id="SPINKLER" class="black" type="text" disabled />
+
+                <span class="pumpPlc">PLC:</span>
+                <input id="pumpPlc" class="black" type="text" disabled /> -->
+
+                <span class="time-data">TIME UPDATE DATA:</span>
+                <input id="timedata" type="text" disabled />
+            </section>
+        </div>
+
+        <script>
+            setInterval(() => {
+                timer();
+            }, 1);
+
+            const timer = () => {
+                var date = new Date();
+                var month = date.getMonth() + 1;
+                var year = date.getFullYear();
+                var day = date.getDate();
+                var h = date.getHours();
+                var m = date.getMinutes();
+                var s = date.getSeconds();
+                if (h < 10) h = '0' + h;
+                if (m < 10) m = '0' + m;
+                if (s < 10) s = '0' + s;
+                if (day < 10) day = '0' + day;
+                if (month < 10) month = '0' + month;
+                document.getElementById('myTime').innerHTML =
+                    h + ':' + m + ':' + s + '      ' + day + '/' + month + '/' + year;
+                timedata.value = new Date();
+            };
+        </script>
+        <script src="./scripts/chart.js"></script>
+    </body>
+</html>

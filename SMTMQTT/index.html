@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SMT MONITORING - SCADA/ IoT</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name='viewport' content='width=device-width,user-scalable=0' />
+    <meta property="og:image" content="images/logo_vuong.ico" />
+    <link rel="shortcut icon" type="images/x-icon" href="images/logo_vuong.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/toggeled.css">
+    <link rel="stylesheet" href="css/barprocess.css">
+    <link rel="stylesheet" href="css/led.css">
+    <link rel="stylesheet" href="css/fan.css">
+    <link rel="stylesheet" href="css/data.css">
+    <link rel="stylesheet" href="css/checkbox.css">
+    <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+    <style>
+        .legend {
+            display: none;
+        }
+    </style>
+</head>
+
+<body style="background-color:#F0F0F0;margin: 0;">
+    <aside>
+        <div id="sidebar" class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu" id="nav-accordion">
+                <li class="mt">
+                    <a href="index.html">
+                        <a href="historians.html " target="_blank"> <i class="fa fa-history" aria-hidden="true"> Live
+                                Data</i>
+                        </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <div id="container">
+
+
+        <header id="tieude">
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+            </div>
+            <a href="index.html" class="logo"><b>Syno<span style="font-size: 34px;">pex</span></b></a>
+
+            <p id="myTime"></p>
+            <img id="loa" src="images/onvolumn.png" width=50 height=50>
+            <audio id="myAudio" loop>
+                <source src="audio/canhbao.mp3" type="audio/mpeg">
+            </audio>
+            <span>SMT MONITORING WEB-SYSTEM</span>
+
+        </header>
+        <section id="wapper">
+
+            <!-- <img id="img-wapper" src="images/pic9.png"> -->
+            <iframe id="img-wapper" src="back_final.svg"></iframe>
+            <iframe id="fan1" src="svg/FanOn_final.svg"></iframe>
+            <iframe id="fan2" src="svg/FanOn_final.svg"></iframe>
+            <iframe id="fan3" src="svg/FanOn_final.svg"></iframe>
+
+            <!-- Check box Line -->
+
+            <input type="checkbox" id="linesv1" name="linesv1" value="linesv1">
+            <input type="checkbox" id="linesv2" name="linesv2" value="linesv2">
+            <input type="checkbox" id="linesv3" name="linesv3" value="linesv3">
+            <input type="checkbox" id="linesv4" name="linesv4" value="linesv4">
+            <input type="checkbox" id="linesv5" name="linesv5" value="linesv5">
+            <input type="checkbox" id="linesv6" name="linesv6" value="linesv6">
+            <input type="checkbox" id="linesv7" name="linesv7" value="linesv7">
+            <input type="checkbox" id="linesv8" name="linesv8" value="linesv8">
+            <input type="checkbox" id="linesv9" name="linesv9" value="linesv9">
+            <input type="checkbox" id="linesv10" name="linesv10" value="linesv10">
+            <input type="checkbox" id="linesv11" name="linesv11" value="linesv11">
+            <input type="checkbox" id="linesv12" name="linesv12" value="linesv12">
+            <input type="checkbox" id="linesv13" name="linesv13" value="linesv13">
+            <input type="checkbox" id="linesv14" name="linesv14" value="linesv14">
+            <input type="checkbox" id="linesv15" name="linesv15" value="linesv15">
+            <input type="checkbox" id="linesv16" name="linesv16" value="linesv16">
+
+            <!-- Checkbox Reflow -->
+            <input type="checkbox" id="lineReflow1" name="lineReflow1" value="lineReflow1">
+            <input type="checkbox" id="lineReflow2" name="lineReflow2" value="lineReflow2">
+            <input type="checkbox" id="lineReflow3" name="lineReflow3" value="lineReflow3">
+            <input type="checkbox" id="lineReflow4" name="lineReflow4" value="lineReflow4">
+            <input type="checkbox" id="lineReflow5" name="lineReflow5" value="lineReflow5">
+            <input type="checkbox" id="lineReflow6" name="lineReflow6" value="lineReflow6">
+            <input type="checkbox" id="lineReflow7" name="lineReflow7" value="lineReflow7">
+            <input type="checkbox" id="lineReflow8" name="lineReflow8" value="lineReflow8">
+            <input type="checkbox" id="lineReflow9" name="lineReflow9" value="lineReflow9">
+            <input type="checkbox" id="lineReflow10" name="lineReflow10" value="lineReflow10">
+            <input type="checkbox" id="lineReflow11" name="lineReflow11" value="lineReflow11">
+            <input type="checkbox" id="lineReflow12" name="lineReflow12" value="lineReflow12">
+            <input type="checkbox" id="lineReflow13" name="lineReflow13" value="lineReflow13">
+            <input type="checkbox" id="lineReflow14" name="lineReflow14" value="lineReflow14">
+            <input type="checkbox" id="lineReflow15" name="lineReflow15" value="lineReflow15">
+            <input type="checkbox" id="lineReflow16" name="lineReflow16" value="lineReflow16">
+
+            <!-- Checkbox Printer -->
+            <input type="checkbox" id="linePrinter1" name="linePrinter1" value="linePrinter1">
+            <input type="checkbox" id="linePrinter2" name="linePrinter2" value="linePrinter2">
+            <input type="checkbox" id="linePrinter3" name="linePrinter3" value="linePrinter3">
+            <input type="checkbox" id="linePrinter4" name="linePrinter4" value="linePrinter4">
+            <input type="checkbox" id="linePrinter5" name="linePrinter5" value="linePrinter5">
+            <input type="checkbox" id="linePrinter6" name="linePrinter6" value="linePrinter6">
+            <input type="checkbox" id="linePrinter7" name="linePrinter7" value="linePrinter7">
+            <input type="checkbox" id="linePrinter8" name="linePrinter8" value="linePrinter8">
+            <input type="checkbox" id="linePrinter9" name="linePrinter9" value="linePrinter9">
+            <input type="checkbox" id="linePrinter10" name="linePrinter10" value="linePrinter10">
+            <input type="checkbox" id="linePrinter11" name="linePrinter11" value="linePrinter11">
+            <input type="checkbox" id="linePrinter12" name="linePrinter12" value="linePrinter12">
+            <input type="checkbox" id="linePrinter13" name="linePrinter13" value="linePrinter13">
+            <input type="checkbox" id="linePrinter14" name="linePrinter14" value="linePrinter14">
+            <input type="checkbox" id="linePrinter15" name="linePrinter15" value="linePrinter15">
+            <input type="checkbox" id="linePrinter16" name="linePrinter16" value="linePrinter16">
+            <!-- LED C -->
+            <iframe id="LedRefLowline1" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedRefLowline2" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedRefLowline3" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedRefLowline4" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedRefLowline5" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedRefLowline6" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedRefLowline7" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedRefLowline8" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedRefLowline9" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedRefLowline10" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedRefLowline11" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedRefLowline12" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedRefLowline13" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedRefLowline14" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedRefLowline15" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedRefLowline16" src="library/svg/LED_C.svg"></iframe>
+
+            <iframe id="LedPrinterline1" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedPrinterline2" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedPrinterline3" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedPrinterline4" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedPrinterline5" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedPrinterline6" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedPrinterline7" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedPrinterline8" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedPrinterline9" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedPrinterline10" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedPrinterline11" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedPrinterline12" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedPrinterline13" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedPrinterline14" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedPrinterline15" src="library/svg/LED_C.svg"></iframe>
+            <iframe id="LedPrinterline16" src="library/svg/LED_C.svg"></iframe>
+            <!-- DataLable -->
+            <iframe id="dataRefLowline1" src="library/svg/display.svg"></iframe>
+            <iframe id="dataRefLowline2" src="library/svg/display.svg"></iframe>
+            <iframe id="dataRefLowline3" src="library/svg/display.svg"></iframe>
+            <iframe id="dataRefLowline4" src="library/svg/display.svg"></iframe>
+            <iframe id="dataRefLowline5" src="library/svg/display.svg"></iframe>
+            <iframe id="dataRefLowline6" src="library/svg/display.svg"></iframe>
+            <iframe id="dataRefLowline7" src="library/svg/display.svg"></iframe>
+            <iframe id="dataRefLowline8" src="library/svg/display.svg"></iframe>
+            <iframe id="dataRefLowline9" src="library/svg/display.svg"></iframe>
+            <iframe id="dataRefLowline10" src="library/svg/display.svg"></iframe>
+            <iframe id="dataRefLowline11" src="library/svg/display.svg"></iframe>
+            <iframe id="dataRefLowline12" src="library/svg/display.svg"></iframe>
+            <iframe id="dataRefLowline13" src="library/svg/display.svg"></iframe>
+            <iframe id="dataRefLowline14" src="library/svg/display.svg"></iframe>
+            <iframe id="dataRefLowline15" src="library/svg/display.svg"></iframe>
+            <iframe id="dataRefLowline16" src="library/svg/display.svg"></iframe>
+
+            <!--data Printer  -->
+            <iframe id="dataPrinterline1" src="library/svg/display.svg"></iframe>
+            <iframe id="dataPrinterline2" src="library/svg/display.svg"></iframe>
+            <iframe id="dataPrinterline3" src="library/svg/display.svg"></iframe>
+            <iframe id="dataPrinterline4" src="library/svg/display.svg"></iframe>
+            <iframe id="dataPrinterline5" src="library/svg/display.svg"></iframe>
+            <iframe id="dataPrinterline6" src="library/svg/display.svg"></iframe>
+            <iframe id="dataPrinterline7" src="library/svg/display.svg"></iframe>
+            <iframe id="dataPrinterline8" src="library/svg/display.svg"></iframe>
+            <iframe id="dataPrinterline9" src="library/svg/display.svg"></iframe>
+            <iframe id="dataPrinterline10" src="library/svg/display.svg"></iframe>
+            <iframe id="dataPrinterline11" src="library/svg/display.svg"></iframe>
+            <iframe id="dataPrinterline12" src="library/svg/display.svg"></iframe>
+            <iframe id="dataPrinterline13" src="library/svg/display.svg"></iframe>
+            <iframe id="dataPrinterline14" src="library/svg/display.svg"></iframe>
+            <iframe id="dataPrinterline15" src="library/svg/display.svg"></iframe>
+            <iframe id="dataPrinterline16" src="library/svg/display.svg"></iframe>
+            <!-- data outside -->
+            <iframe id="dataOutSide1" src="library/svg/display.svg"></iframe>
+            <iframe id="dataOutSide2" src="library/svg/display.svg"></iframe>
+            <iframe id="dataOutSide3" src="library/svg/display.svg"></iframe>
+        </section>
+
+        <section class="wapper2">
+            <span
+                style=" position: absolute;left: 5px;font-size: 12px; text-transform: uppercase;line-height: 20px;top:0px ">PROCESSING
+                :</span>
+            <div class="progress-bar">
+                <span class="bar">
+                    <span class="progress"></span>
+                </span>
+            </div>
+            <form style=" position: absolute; left: 320px ;top:0px;">
+                CONNECT: <iframe id="connect" src="library/svg/LED.svg"></iframe>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                PLC CONNECT-7: <iframe id="PLC_isconnected1_7"
+                    src="library/svg/LED.svg"></iframe>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                PLC CONNECT-16: <iframe id="PLC_isconnected8_16"
+                    src="library/svg/LED.svg"></iframe>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                EXHAUFAN CONNECT: <iframe id="Exhaufan_isconnected"
+                    src="library/svg/LED.svg"></iframe>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                TIME UPDATE DATA: <input id="timedata" type="text" value="" />
+            </form>
+        </section>
+        </section>
+    </div>
+
+
+    <script type="text/javascript " src="js/mqttws31.min.js "></script>
+    <script type="text/javascript " src="js/toggeled.js "></script>
+    <script type="text/javascript " src="library/mainsvg.js"></script>
+    <!-- <script type="text/javascript " src="js/display.js "></script> -->
+    <script type="text/javascript " src="js/app.js "></script>
+    <script type="text/javascript " src="js/encode.js"></script>
+
+
+
+</body>
+
+</html>

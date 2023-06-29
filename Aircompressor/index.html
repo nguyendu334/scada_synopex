@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+        Hieunv
+        SDT: 098.298.68.34
+        Email: tamdaitu.hsdb@gmail.com
+    -->
+
+<head style="background-color: lightskyblue;">
+    <meta property="og:image" content="images/monitoring.ico" />
+    <link rel="shortcut icon" type="images/x-icon" href="images/monitoring.ico" />
+    <title>AIRCOMPRESSOR - SCADA/ IoT</title>
+    <Header id="tieude"
+        style="font-size: 400%; color: white; text-align: center; width: 1920px; height: 60px;left:0px; top:0px; background-color:rgb(85, 85, 85)">
+        <b>AIRCOMPRESSOR PRESSURE WEB-IoT</b>
+    </Header>
+    <meta name="viewport" content="max-width=device-max-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet" />
+    <link href="changcolor.css" rel="stylesheet" />
+</head>
+
+<body style="background-color: lemonchiffon;">
+
+    <!--div class="slidecontainer">
+        <input id="dk" style="position:absolute; left:850px; top:70px;" type="range" min="0" max="10000" value="500" class="slider" id="myRange" onchange="onhieunv()">
+    </div-->
+    <h1
+        style="position:absolute;font-size: 200%; color: black;background-color: rgb(242, 248, 204);  width: 1930px; height: 65px;left:0px; top:975px;">
+    </h1>
+    <MARQUEE
+        style="position:absolute;font-size: 250%; color: black;background-color:ghostwhite;  width: 720px; height: 50;left:510px; top:1002px; border: double;border-color: black; font-family: Arial, Helvetica, sans-serif">
+        SYSTEM PROCESSING</MARQUEE>
+    <MARQUEE
+        style="position:absolute;font-size: 250%; color: black;background-color:ghostwhite;  width: 680px; height: 47px;left:1240px; top:1002px; border: double;border-color: black;">
+        <b> </b>
+    </MARQUEE>
+    <button
+        style="position:absolute; left:10px; top:1004px;  width: 120px; height: 50px; background-color: gold; color: black; ">RUNNING</button>
+
+    <button
+        style="position:absolute; left:260px; top:1004px;  width: 120px; height: 50px; background-color: gold; color: black; ">ALARM
+        OFF</button>
+    <button
+        style="position:absolute; left:385px; top:1004px;  width: 120px; height: 50px; background-color: gold; color: black; ">RESET</button>
+
+
+
+    <p></p>
+    <HMI-PICTURE style="position:absolute; left:5px; top:67px; " width="1920" height="935" value=false
+        OnPic=" Air3.png " OffPic="Air3.png"></HMI-PICTURE>
+
+
+
+
+
+
+
+
+
+    <!--Flow, Conduc-->
+        <HMI-DISPLAY id="N2" style="position:absolute;left:1135px; top:185px;" width="100px" height="50px" value="20.1"
+        Textcolor="gold" BackColor="black" Font=" Digital-7 " FontSize="310% "></HMI-DISPLAY>
+    <p style="position:absolute; left:1240px; top:195px ; ">Bar</p>
+  
+
+    <HMI-DISPLAY id="Product" style="position:absolute;left:1685px; top:276px;" width="100px" height="50px" value="20.1"
+        Textcolor="gold" BackColor="black" Font=" Digital-7 " FontSize="310% "></HMI-DISPLAY>
+    <p style="position:absolute; left:1790px; top:281px ; ">Bar</p>
+
+    <HMI-DISPLAY id="Room1" style="position:absolute;left:985px; top:370px;" width="100px" height="50px" value="20.1"
+        Textcolor="gold" BackColor="black" Font=" Digital-7 " FontSize="310% "></HMI-DISPLAY>
+    <p style="position:absolute; left:1090px; top:375px ; ">Bar</p>
+
+    <HMI-DISPLAY id="Room2" style="position:absolute;left:985px; top:708px;" width="100px" height="50px" value="20.1"
+        Textcolor="gold" BackColor="black" Font=" Digital-7 " FontSize="310% "></HMI-DISPLAY>
+    <p style="position:absolute; left:1790px; top:713px ;">Bar</p>
+
+
+
+    <HMI-BUTTON id="SIGNAL" style="position:absolute;left:135px; top:1004px;" width="120px" height="50px" value=false
+        Ontext="SIGNAL" Oncolor="Gold" Offtext="SIGNAL" Offcolor="RED"></HMI-BUTTON>
+
+    <!-- chu -->
+
+    <div id="boxN2"></div>
+    <div id="boxRoom1"></div>
+    <div id="boxRoom2"></div>
+    <div id="boxProduct"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type=" text/javascript " src="HMI-ERRShow.js "></script>
+
+    <script type=" text/javascript " src="HMI-Display.js "></script>
+    <script type=" text/javascript " src="HMI-TANK.js "></script>
+    <script type="text/javascript " src="HMI-Button.js "></script>
+    <script type="text/javascript " src="HMI-LED.js "></script>
+
+
+    <script type="text/javascript " src="HMI-Picture.js "></script>
+    <!--script type="text/javascript " src="main.js "></script>
+
+
+    <!-- import jquery library -->
+    <script src="jquery-3.1.0.min.js "></script>
+
+    <!-- import paho MQTT library -->
+    <script src="mqttws31.min.js " type="text/javascript "></script>
+
+    <!-- our javascript -->
+    <script src="app.js "></script>
+    <script src="./changebgcolor.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+@font-face {
+  font-family: myDigitalFont;
+  src: url(../font/digital-7.ttf);
+}
+.font {
+  font-family: myDigitalFont;
+  color: yellow;
+  font-size: 25px;
+}
+#container {
+  width: 1920px;
+  height: 1080px;
+}
+iframe {
+  border: none;
+}
+#tieude {
+  position: relative;
+  font-size: 30px;
+  color: rgb(33 26 224);
+  text-align: center;
+  width: 1920px;
+  height: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 60px;
+  background: #e5f1f2;
+}
+#tieude span {
+  line-height: 61px;
+  font-weight: bold;
+  font-size: 39px;
+}
+
+#myTime {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  color: #dacd51;
+  font-size: 22px;
+  background: black;
+  width: 290px;
+}
+#loa {
+  position: absolute;
+  left: 274px;
+  top: 7px;
+}
+
+h3 {
+  font-size: 19px;
+}
+#wapper {
+  position: relative;
+  width: 100%;
+  height: 998px;
+  background: black;
+}
+#img-wapper {
+  width: 100%;
+  height: 990px;
+}
+/* Css Footer */
+.wapper2 {
+  background-color: aqua;
+  height: 20px;
+  position: relative;
+}
+#connect,
+#plcConnect {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  border: none;
+  position: absolute;
+  top: 2px;
+}
+
+.black {
+  background: black;
+  box-shadow: 0px 2px 3px black;
+}
+.green {
+  background: green;
+  box-shadow: 0px 2px 3px green;
+  border: 1px solid #ffffff;
+}
+
+/* Pump */
+#acu1-comp1 {
+  position: absolute;
+  right: 38px;
+  top: 72px;
+  width: 90px;
+  height: 90px;
+}
+
+#acu1-comp2 {
+  position: absolute;
+  right: 39px;
+  top: 192px;
+  width: 90px;
+  height: 90px;
+}
+
+#acu2-comp1 {
+  position: absolute;
+  right: 39px;
+  top: 528px;
+  width: 90px;
+  height: 90px;
+}
+#acu2-comp2 {
+  position: absolute;
+  right: 39px;
+  top: 647px;
+  width: 90px;
+  height: 90px;
+}
+
+/* data */
+#acu1-temp {
+  position: absolute;
+  z-index: 10;
+  right: 725px;
+  top: 297px;
+}
+#acu1-temp1 {
+  position: absolute;
+  z-index: 10;
+  right: 957px;
+  top: 244px;
+}
+#acu1-settemp {
+  position: absolute;
+  z-index: 10;
+  right: 568px;
+  top: 297px;
+}
+#acu1-humi {
+  position: absolute;
+  z-index: 10;
+  right: 307px;
+  top: 297px;
+}
+#acu1-humi1 {
+  position: absolute;
+  z-index: 10;
+  right: 957px;
+  top: 280px;
+}
+#acu1-sethumi {
+  position: absolute;
+  z-index: 10;
+  right: 85px;
+  top: 297px;
+}
+#acu2-temp {
+  position: absolute;
+  z-index: 10;
+  right: 723px;
+  top: 752px;
+}
+#acu2-temp1 {
+  position: absolute;
+  z-index: 10;
+  right: 994px;
+  top: 704px;
+}
+#acu2-settemp {
+  position: absolute;
+  z-index: 10;
+  right: 565px;
+  top: 754px;
+}
+#acu2-humi {
+  position: absolute;
+  z-index: 10;
+  right: 305px;
+  top: 754px;
+}
+#acu2-humi1 {
+  position: absolute;
+  z-index: 10;
+  right: 994px;
+  top: 740px;
+}
+#acu2-sethumi {
+  position: absolute;
+  z-index: 10;
+  right: 80px;
+  top: 754px;
+}
+
+#serverIT-temp {
+  position: absolute;
+  z-index: 10;
+  right: 979px;
+  top: 444px;
+}
+#serverIT-humi {
+  position: absolute;
+  z-index: 10;
+  right: 979px;
+  top: 479px;
+}
+/* Errro */
+#error-acu1 {
+  position: absolute;
+  z-index: 10;
+  right: 551px;
+  top: 163px;
+  background: red;
+  color: yellow;
+  font-size: 40px;
+}
+#error-acu2 {
+  position: absolute;
+  z-index: 10;
+  right: 551px;
+  top: 612px;
+  background: red;
+  color: yellow;
+  font-size: 40px;
+}
+/* LED acu */
+#led-acutemp1{
+  position: absolute;
+    z-index: 100000;
+    left: 978px;
+    top: 253px;
+}
+#led-acuhumi1{
+  position: absolute;
+  z-index: 100000;
+  left: 978px;
+  top: 288px;
+}
+#led-acutemp2{
+  position: absolute;
+    z-index: 100000;
+    left: 940px;
+    top: 711px;
+}
+#led-acuhumi2{
+  position: absolute;
+  z-index: 100000;
+  left: 940px;
+  top: 750px;
+}
+#led-serverIT-temp{
+  position: absolute;
+  z-index: 100000;
+  left: 953px;
+  top: 449px;
+}
+#led-serverIT-humi{
+  position: absolute;
+  z-index: 100000;
+  left: 953px;
+  top: 488px;
+}

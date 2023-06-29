@@ -1,0 +1,146 @@
+#bocngoaiHCL{
+    position: absolute;
+    width: 30px;
+    height: 265px;
+    top: 213px;
+    left: 209px;
+    background: white;
+    z-index: 10;
+}
+#bentrongHCL{
+    position: absolute;
+    background:rgb(44, 116, 179);
+    width: 100%;
+    height:30%;
+    bottom: 0px;
+
+}
+
+#bocngoaiCuCL{
+    position: absolute;
+    width: 30px;
+    height: 265px;
+    top: 707px;
+    left: 581px;
+    background: white;
+    z-index: 10;
+}
+#bentrongCuCL{
+    position: absolute;
+    background:rgb(44, 116, 179);
+    width: 100%;
+    height:30%;
+    bottom: 0px;
+
+}
+#bocngoaiHNO3{
+    position: absolute;
+    width: 30px;
+    height: 265px;
+    top: 711px;
+    left: 952px;
+    background: white;
+    z-index: 10;
+}
+#bentrongHNO3{
+    position: absolute;
+    background:rgb(44, 116, 179);
+    width: 100%;
+    height:30%;
+    bottom: 0px;
+
+}
+#bocngoaiHNO3_RIGHT{
+    position: absolute;
+    width: 25px;
+    height: 230px;
+    top: 701px;
+    left: 1509px;
+    background: white;
+    z-index: 10;
+}
+#bentrongHNO3_RIGHT{
+    position: absolute;
+    background:rgb(44, 116, 179);
+    width: 100%;
+    height:30%;
+    bottom: 0px;
+
+}
+#bocngoaiHNO3AU{
+    position: absolute;
+    width: 25px;
+    height: 150px;
+    top: 836px;
+    left: 1104px;
+    background: white;
+    z-index: 10;
+}
+#bentrongHNO3AU{
+    position: absolute;
+    background:rgb(44, 116, 179);
+    width: 100%;
+    height:10.10%;
+    bottom: 0px;
+
+}
+#textHCl-phantram{
+    position: absolute;
+    top: 246px;
+    left: 127px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 25.64444px;
+    font-family: 'Times New Roman', Times, serif;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    fill: #f5ff7b;
+    fill-opacity: 1;
+    stroke-width: 0.264583;
+    color: #f5ff7b;
+    z-index: 11;
+}
+#textCuCl2-phantram{
+    position: absolute;
+    top: 741px;
+    left: 496px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 25.64444px;
+    font-family: 'Times New Roman', Times, serif;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    fill: #f5ff7b;
+    fill-opacity: 1;
+    stroke-width: 0.264583;
+    color: #f5ff7b;
+    z-index: 111;
+}
+#textHNO3-phantram{
+    position: absolute;
+    top: 742px;
+    left: 862px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 25.64444px;
+    font-family: 'Times New Roman', Times, serif;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    fill: #f5ff7b;
+    fill-opacity: 1;
+    stroke-width: 0.264583;
+    color: #f5ff7b;
+    z-index: 111;
+}

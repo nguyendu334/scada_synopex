@@ -1,0 +1,237 @@
+{
+    "HVAC1": {
+        "Humi": 57.6,
+        "Temp": 22.9
+    },
+    "HVAC2": {
+        "Humi": 57.9,
+        "Temp": 22.9
+    },
+    "nhiệt_độ": {
+        "smt1": 27.9,
+        "smt2": 28.8,
+        "smt3": 26.7,
+        "smt4": 28.8,
+        "lazer1": 26.9,
+        "lazer2": 24.8,
+        "coverlay1": 23.9,
+        "coverlay2": 22.1,
+        "exposure1": 19.4,
+        "exposure2": 20.4
+    },
+    "độ_ẩm": {
+        "smt1": 45.4,
+        "smt2": 44,
+        "smt3": 54.1,
+        "smt4": 48.2,
+        "lazer1": 54.7,
+        "lazer2": 59,
+        "coverlay1": 65,
+        "coverlay2": 54.1,
+        "exposure1": 48,
+        "exposure2": 44.4
+    },
+    "final": {
+        "temp": 20,
+        "humi": 40
+    },
+    "pba": {
+        "temp": 20,
+        "humi": 40
+    },
+    "chiller1": {
+        "temp": 20,
+        "fan": {
+            "1":true,
+            "2":true,
+            "3":true,
+            "4":true
+        }
+    },
+    "chiller2": {
+        "temp": 21,
+        "fan": {
+            "1": true,
+            "2": true,
+            "3": true,
+            "4": true
+        }
+    },
+    "chiller3": {
+        "temp": 20,
+        "fan": {
+            "1": true,
+            "2": true,
+            "3": true,
+            "4": true
+        }
+    },
+    "pump": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true
+    },
+    "ahu": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": true,
+        "7": true,
+        "8": true,
+        "9": true,
+        "10": true
+    },
+    "ahu1": {
+        "temp": 20,
+        "humi": 40,
+        "cdu1": false,
+        "cdu2": true,
+        "cdu3": true,
+        "cdu4": true,
+        "cdu5": true
+    },
+    "ahu2": {
+        "temp": 20,
+        "humi": 40,
+        "cdu1": true,
+        "cdu2": true,
+        "cdu3": true,
+        "cdu4": true,
+        "cdu5": true
+    },
+    "ahu3": {
+        "temp": 20,
+        "humi": 40
+    },
+    "ahu4": {
+        "temp": 20,
+        "humi": 40
+    },
+    "ahu5": {
+        "temp": 20,
+        "humi": 40,
+        "cdu1": true,
+        "cdu2": true,
+        "cdu3": true,
+        "cdu4": true,
+        "cdu5": true,
+        "cdu6": true
+    },
+    "ahu6": {
+        "temp": 20,
+        "humi": 40,
+        "cdu1": true,
+        "cdu2": true,
+        "cdu3": true,
+        "cdu4": true
+    },
+    "ahu7": {
+        "temp": 20,
+        "humi": 40,
+        "cdu1": true,
+        "cdu2": true,
+        "cdu3": true,
+        "cdu4": true,
+        "cdu5": true,
+        "cdu6": true,
+        "cdu7": true
+    },
+    "ahu8": {
+        "temp": 20,
+        "humi": 40,
+        "cdu1": true,
+        "cdu2": true,
+        "cdu3": true,
+        "cdu4": true,
+        "cdu5": true,
+        "cdu6": true,
+        "cdu7": true
+    },
+    "ahu9": {
+        "temp": 20,
+        "humi": 40,
+        "cdu1": true,
+        "cdu2": true,
+        "cdu3": true,
+        "cdu4": true
+    },
+    "ahu10": {
+        "temp": 20,
+        "humi": 40,
+        "cdu1": true,
+        "cdu2": true,
+        "cdu3": true,
+        "cdu4": true
+    },
+    "error": {
+        "ahu1": {
+            "fan": false,
+            "cdu1": false,
+            "cdu2": false,
+            "cdu3": false,
+            "cdu4": false,
+            "cdu5": false
+        },
+        "ahu2": {
+            "fan": false,
+            "cdu1": false,
+            "cdu2": false,
+            "cdu3": false,
+            "cdu4": false,
+            "cdu5": false
+        },
+        "ahu5": {
+            "fan": false,
+            "cdu1": false,
+            "cdu2": false,
+            "cdu3": false,
+            "cdu4": false,
+            "cdu5": false,
+            "cdu6": false
+        },
+        "ahu6": {
+            "fan": false,
+            "cdu1": false,
+            "cdu2": false,
+            "cdu3": false,
+            "cdu4": false
+        },
+        "ahu7": {
+            "fan": false,
+            "cdu1": false,
+            "cdu2": false,
+            "cdu3": false,
+            "cdu4": false,
+            "cdu5": false,
+            "cdu6": false,
+            "cdu7": false
+        },
+        "ahu8": {
+            "fan": false,
+            "cdu1": false,
+            "cdu2": false,
+            "cdu3": false,
+            "cdu4": false,
+            "cdu5": false,
+            "cdu6": false,
+            "cdu7": false
+        },
+        "ahu9": {
+            "fan": false,
+            "cdu1": false,
+            "cdu2": false,
+            "cdu3": false,
+            "cdu4": false
+        },
+        "ahu10": {
+            "fan": false,
+            "cdu1": false,
+            "cdu2": false,
+            "cdu3": false,
+            "cdu4": false
+        }
+    }
+}

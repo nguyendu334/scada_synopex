@@ -1,0 +1,142 @@
+{
+    "van_chính": {
+        "hotpress": 1,
+        "wetline": 0
+    },
+    "mực_nước": {
+        "hotpress": 60,
+        "wetline": 50
+    },
+    "nhiệt_độ": {
+        "hotpress": 21,
+        "wetline": 20,
+        "chiller4": 19,
+        "chiller5": 22,
+        "chiller6": 26,
+        "chiller7": 21,
+        "nước_về": {
+            "hotpress_machine_1": 21,
+            "hotpress_machine_2": 19,
+            "copper_line_1": 22,
+            "copper_line_2": 24
+        }
+    },
+    "pump": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": true,
+        "7": true,
+        "8": true,
+        "9": true,
+        "10": true,
+        "11": true,
+        "12": true,
+        "13": true,
+        "14": true
+    },
+    "chill": {
+        "chill4": {
+            "comp": {
+                "1": true,
+                "2": true
+            },
+            "cooling1": {
+                "1": true,
+                "2": true,
+                "3": true,
+                "4": true,
+                "5": true,
+                "6": true,
+                "7": true,
+                "8": true
+            },
+            "cooling2": {
+                "1": true,
+                "2": true,
+                "3": true,
+                "4": true,
+                "5": true,
+                "6": true,
+                "7": true,
+                "8": true
+            }
+        },
+        "chill5": {
+            "comp": {
+                "1": true,
+                "2": true,
+                "3": true
+            },
+            "cooling1": {
+                "1": false,
+                "2": true,
+                "3": true,
+                "4": true,
+                "5": true,
+                "6": false,
+                "7": true,
+                "8": true
+            },
+            "cooling2": {
+                "1": false,
+                "2": true,
+                "3": true,
+                "4": true,
+                "5": true,
+                "6": false,
+                "7": true,
+                "8": true
+            }
+            ,
+            "cooling3": {
+                "1": false,
+                "2": true,
+                "3": true,
+                "4": true,
+                "5": true,
+                "6": false,
+                "7": true,
+                "8": true
+            }
+        },
+        "chill6": {
+            "comp": {
+                "1": true,
+                "2": true
+            },
+            "cooling1": {
+                "1": false,
+                "2": true,
+                "3": true,
+                "4": true
+            },
+            "cooling2": {
+                "1": false,
+                "2": true,
+                "3": true,
+                "4": true
+            }
+        },
+        "chill7": {
+            "comp": {
+                "1": true,
+                "2": true
+            },
+            "cooling1": {
+                "1": false,
+                "2": true,
+                "3": true,
+                "4": true
+            },
+            "cooling2": {
+                "1": false,
+                "2": true,
+                "3": true,
+                "4": true
+            }
+        }
+    }
+}

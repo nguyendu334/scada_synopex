@@ -1,0 +1,217 @@
+@font-face {
+    font-family: myDigitalFont;
+    src: url(./font/digital-7\ \(mono\ italic\).ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* header */
+.header {
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px 3000px 400px;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background: rgb(15, 1, 63);
+}
+
+.menu{
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 460px;
+    padding-top: 130px;
+    background: rgb(15, 1, 63); 
+    transition: 0.5s;
+    transform: translateX(-460px);
+}
+
+ul li{
+    font-size: 35px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: 0.5s;
+    text-align: center;
+    border-radius: 15px;
+}
+ul li:hover{
+    padding-left: 35px;
+    background-color: #445665;
+}
+ul li a{
+    display: block;
+    color: #fff;
+    padding: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+ul li a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+#open{
+    display: none;
+}
+.open{
+    display: flex;
+    margin-left: 60px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.open img{
+    height: 60px;
+    width: 60px;
+    margin: auto;
+    z-index: 99;
+}
+
+.open b {
+    z-index: 99;
+}
+#open:checked ~ .menu{
+    transition: 0.5s;
+    transform: translateX(0);
+}
+#open:checked ~ .open {
+    transition: 0.5s;
+    margin-left: 0;
+}
+
+.open span {
+    background: url(https://24.media.tumblr.com/tumblr_m87dri70zh1qzla33o1_500.gif);
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.syno {
+    margin-left: 4px;
+    background: linear-gradient(90deg, rgb(99, 138, 245) 0%, rgba(0, 212, 255, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 70px;
+}
+
+.NameProject {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 70px;
+    justify-content: center;
+    display: flex;
+}
+
+#myTime {
+    right: 100px;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+}
+
+/* wrapper */
+
+#left-wapper {
+    display: flex;
+    width:3840px;
+    height: 1995px;
+    background: rgb(248, 244, 244);
+}
+
+.footer {
+    position: relative;
+    height: 43px;
+    background: rgb(153, 247, 247);
+}
+
+@keyframes loader {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 400px;
+    }
+}
+
+.process {
+    position: absolute;
+    height: 32px;
+    border-radius: 10px;
+    top: 6px;
+    left: 430px;
+    animation: loader 7s linear infinite;
+    background: #e2f102;
+    border: none;
+    z-index: 99;
+}
+
+.input-process1 {
+    position: absolute;
+    height: 32px;
+    width: 400px;
+    border-radius: 10px;
+    top: 6px;
+    left: 430px;
+    background: #2e90eb;
+    border: none;
+}
+
+.black {
+    background: black;
+}
+
+.green {
+    background: rgb(31, 155, 31);
+    box-shadow: 0px 1px 2px rgb(31, 155, 31);
+}
+
+#hmi{
+    position: absolute;
+    height: 34px;
+    width: 34px;
+    border-radius: 100%;
+    top: 6px;
+    left: 1500px;
+    border: none;
+}
+
+#connect{
+    position: absolute;
+    height: 34px;
+    width: 34px;
+    border-radius: 100%;
+    top: 6px;
+    left: 1200px;
+    border: none;
+}
+
+#timedata{
+    background: rgb(153, 247, 247);
+    position: absolute;
+    height: 34px;
+    width: 900px;
+    top: 8px;
+    right: 255px;
+    border: none;
+    font-size: 34px;
+    font-family: "times new roman";
+}
+
+.wind {
+    display: flex;
+    position: absolute;
+    width: 150px;
+    height: 60px;
+    transform: rotate(180deg);
+}
+
+
+

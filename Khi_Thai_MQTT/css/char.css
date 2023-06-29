@@ -1,0 +1,36 @@
+#chart {
+  width: 474px;
+  height: 236px;
+  overflow: auto;
+  top: 769px;
+  position: absolute;
+  left: 4px;
+  background: white;
+}
+#chart1 {
+  width: 474px;
+  height: 236px;
+  overflow: auto;
+  position: absolute;
+  top: 769px;
+  left: 485px;
+  background: white;
+}
+#chart2 {
+  width: 474px;
+  height: 236px;
+  overflow: auto;
+  position: absolute;
+  top: 769px;
+  left: 967px;
+  background: white;
+}
+#chart3 {
+  width: 474px;
+  height: 236px;
+  overflow: auto;
+  position: absolute;
+  top: 769px;
+  left: 1446px;
+  background: white;
+}

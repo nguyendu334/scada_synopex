@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HVAC SERVER IT-SCADA/ IoT</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="max-width=device-max-width, initial-scale=1">
+    <meta property="og:image" content="images/monitoring.ico" />
+    <link rel="shortcut icon" type="images/x-icon" href="images/monitoring.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/toggeled.css">
+    <link rel="stylesheet" href="css/barprocess.css">
+
+    <link rel="stylesheet" href="css/led.css">
+    <link rel="stylesheet" href="css/dataLED.css">
+    <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+</head>
+
+<body style="background-color:#F0F0F0;margin: 0;">
+    <aside>
+        <div id="sidebar" class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu" id="nav-accordion">
+                <li class="mt">
+                    <a href="index.html">
+                        <a href="historians.html " target="_blank"> <i class="fa fa-history" aria-hidden="true"> Live
+                                Data</i>
+                        </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <div id="container">
+
+        <header id="tieude">
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+            </div>
+            <a href="index.html" class="logo"><b>Syno<span style="font-size: 34px;">pex</span></b></a>
+
+            <p id="myTime"></p>
+            <img id="loa" src="images/onvolumn.png" width=50 height=50>
+            <audio id="myAudio" loop>
+                <source src="audio/canhbao.mp3" type="audio/mpeg">
+            </audio>
+            <span>HVAC SERVER IT ROOM MONITORING</span>
+
+        </header>
+        <section id="wapper">
+            <!-- <img id="img-wapper" src="images/pic9.png"> -->
+            <iframe id="img-wapper" src="back.svg"></iframe>
+            <!-- Pump -->
+            <img id="acu1-comp1" src="images/comprun.png"></img>
+            <img id="acu1-comp2" src="images/comprun.png"></img>
+            <img id="acu2-comp1" src="images/comprun.png"></img>
+            <img id="acu2-comp2" src="images/comprun.png"></img>
+
+            <!-- data -->
+            <span id="acu1-temp" class="font">50.0</span>
+            <span id="acu1-settemp" class="font">50.0</span>
+            <span id="acu1-humi" class="font">50.0</span>
+            <span id="acu1-sethumi" class="font">50.0</span>
+
+            <span id="acu1-temp1" class="font">50.0</span>
+            <span id="acu1-humi1" class="font">50.0</span>
+            <div id="led-acutemp1" class="on ledgarenal"></div>
+            <div id="led-acuhumi1" class="on ledgarenal"></div>
+
+            <span id="acu2-temp" class="font">50.0</span>
+            <span id="acu2-settemp" class="font">50.0</span>
+            <span id="acu2-humi" class="font">50.0</span>
+            <span id="acu2-sethumi" class="font">50.0</span>
+
+            <span id="acu2-temp1" class="font">50.0</span>
+            <span id="acu2-humi1" class="font">50.0</span>
+            <div id="led-acutemp2" class="on ledgarenal"></div>
+            <div id="led-acuhumi2" class="on ledgarenal"></div>
+
+            <span id="serverIT-temp" class="font">50.0</span>
+            <span id="serverIT-humi" class="font">50.0</span>
+            <div id="led-serverIT-temp" class="on ledgarenal"></div>
+            <div id="led-serverIT-humi" class="on ledgarenal"></div>
+            <!-- Đèn led -->
+            <div id="acu1-FanBlower" class="on ledgarenal"></div>
+            <div id="acu1-valve1" class="on ledgarenal"></div>
+            <div id="acu1-Comp1" class="on ledgarenal"></div>
+            <div id="acu1-valve2" class="on ledgarenal"></div>
+            <div id="acu1-Comp2" class="on ledgarenal"></div>
+            <div id="acu1-Heater1" class="on ledgarenal"></div>
+            <div id="acu1-Heater2" class="on ledgarenal"></div>
+            <div id="acu1-Heater3" class="on ledgarenal"></div>
+            <div id="acu1-Heater4" class="on ledgarenal"></div>
+            <div id="acu1-Heater5" class="on ledgarenal"></div>
+            <div id="acu1-humidification1" class="on ledgarenal"></div>
+            <div id="acu1-humidification2" class="on ledgarenal"></div>
+            <div id="acu1-Watersupply" class="on ledgarenal"></div>
+            <div id="acu1-GeneralAlarm" class="on ledgarenal"></div>
+            <div id="acu1-Drainage" class="on ledgarenal"></div>
+            <div id="acu1-HVAC1_isconnect" class="on ledgarenal"></div>
+
+            <div id="acu2-valve1" class="on ledgarenal"></div>
+            <div id="acu2-valve2" class="on ledgarenal"></div>
+            <div id="acu2-humidification1" class="on ledgarenal"></div>
+            <div id="acu2-humidification2" class="on ledgarenal"></div>
+            <div id="acu2-Watersupply" class="on ledgarenal"></div>
+            <div id="acu2-Heater1" class="on ledgarenal"></div>
+            <div id="acu2-Heater2" class="on ledgarenal"></div>
+            <div id="acu2-Heater3" class="on ledgarenal"></div>
+            <div id="acu2-Drainage" class="on ledgarenal"></div>
+            <div id="acu2-Heater4" class="on ledgarenal"></div>
+            <div id="acu2-Heater5" class="on ledgarenal"></div>
+            <div id="acu2-GeneralAlarm" class="on ledgarenal"></div>
+            <div id="acu2-HVAC1_isconnect" class="on ledgarenal"></div>
+            <div id="acu2-Comp1" class="on ledgarenal"></div>
+            <div id="acu2-Comp2" class="on ledgarenal"></div>
+            <div id="acu2-FanBlower" class="on ledgarenal"></div>
+
+            <span id="error-acu1" class="error">ERROR</span>
+            <span id="error-acu2" class="error">ERROR</span>
+        </section>
+
+        <section class="wapper2">
+            <span
+                style=" position: absolute;left: 5px;font-size: 12px; text-transform: uppercase;line-height: 20px; font-size: 12px;">PROCESSING
+                :</span>
+            <div class="progress-bar">
+                <span class="bar">
+                    <span class="progress"></span>
+                </span>
+            </div>
+            <form style=" position: absolute; left: 320px ;top:2px;font-size: 11px;">
+                CONNECT SERVER : <input id="connect" class="on ledgarenal" type="text" disabled />&nbsp&nbsp&nbsp&nbsp
+                ACU-01 CONNECT: <input id="acu1-connect" class=" on ledgarenal" type="text" disabled />&nbsp
+                ACU-02 CONNECT: <input id="acu2-connect" class="on ledgarenal" type="text" disabled />&nbsp
+
+                <!-- DATA ACU-01: <input id="dataConnectUpdate_acu1" class="on ledgarenal">&nbsp
+                DATA ACU-02: <input id="dataConnectUpdate_acu2" class="on ledgarenal">&nbsp
+                DATA IT ROOM: <input id="dataConnectUpdate_IT" class="on ledgarenal">&nbsp -->
+                TIME UPDATE DATA ACU1: <input id="timedata1" style="width: 140px;color:black; border: none;" type="text"
+                    value="" disabled />
+                TIME UPDATE DATA ACU2: <input id="timedata2" style="width: 140px;color:black; border: none;" type="text"
+                    value="" disabled />
+                <!-- TIME UPDATE DATA IT: <input id="timedata" style="width: 100px;;color:black; border: none;" type="text"
+                    value="" disabled /> -->
+            </form>
+        </section>
+        </section>
+
+    </div>
+    <script type="text/javascript " src="js/mqttws31.min.js "></script>
+    <script type="text/javascript " src="js/toggeled.js "></script>
+    <script type="text/javascript " src="js/app.js "></script>
+    <!-- <script type="text/javascript " src="js/conenctServerIT.js "></script> -->
+    <script type="text/javascript " src="js/encode.js "></script>
+
+</body>
+
+
+</html>

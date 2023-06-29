@@ -1,0 +1,23 @@
+#g17071 {
+  animation: haicanh 0.5s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#g17075 {
+  animation: haicanh 0.5s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes haicanh {
+  0% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}

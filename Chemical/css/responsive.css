@@ -1,0 +1,31 @@
+@media (min-width: 929px) and (max-width: 936px) {
+  header {
+    text-align: center;
+    margin-top: 0;
+    background-color: black;
+    height: 60px;
+    position: relative;
+  }
+  #loa {
+    position: absolute;
+    left: 230px;
+    top: 5px;
+  }
+  h1 {
+    line-height: 60px;
+    font-size: 20px;
+    color: #4ecdc4;
+    margin-left: 80px;
+  }
+  #myTime {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    color: white;
+    font-size: 18px;
+  }
+  #container {
+    width: 930px;
+    height: auto;
+  }
+}

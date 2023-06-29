@@ -1,0 +1,358 @@
+@font-face {
+    font-family: myDigitalFont;
+    src: url(../font/digital-7\ \(mono\ italic\).ttf);
+}
+
+body {
+    font-family: 'Times New Roman';
+    margin: 0;
+}
+
+/* header */
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background: rgb(15, 1, 63);
+}
+
+.logo {
+    display: flex;
+    position: absolute;
+    left: 140px;
+    text-decoration: none;
+}
+
+.logo span {
+    background: url(https://24.media.tumblr.com/tumblr_m87dri70zh1qzla33o1_500.gif);
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.syno {
+    margin-left: 4px;
+    background: linear-gradient(90deg, rgb(99, 138, 245) 0%, rgba(0, 212, 255, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 70px;
+}
+
+#loa {
+    position: absolute;
+    left: 800px;
+    top: 17px;
+    width: 80px;
+    height: 80px;
+    scale: 100%;
+    margin-top: 0px
+}
+
+#loa1 {
+    position: absolute;
+    left: 800px;
+    top: 17px;
+    width: 80px;
+    height: 80px;
+    scale: 100%;
+    margin-top: 0px
+}
+
+.NameProject {
+    display: flex;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 70px;
+}
+
+#myTime {
+    position: absolute;
+    right: 100px;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+}
+
+/* chart */
+/* .temp {
+    position: relative;
+    display: inline;
+    left: 20px;
+    background: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+}
+
+.chartBox {
+    position: relative;
+    display: inline-block;
+    width: 1918px;
+    height: 348px;
+    background: rgb(255, 255, 255);
+    border-right: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.chartBox1 {
+    position: absolute;
+    display: inline-block;
+    left: 1920px;
+    width: 1920px;
+    height: 348px;
+    background: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(0, 0, 0);
+} */
+
+/* wrapper */
+#left-wapper {
+    display: flex;
+    width:3840px;
+    height: 1985px;
+    background: rgb(248, 244, 244);
+}
+
+/* footer */
+.footer {
+    position: relative;
+    height: 43px;
+    background: aqua;
+}
+
+@keyframes loader {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 400px;
+    }
+}
+
+.process {
+    position: absolute;
+    left: 196px;
+    font-size: 34px;
+    text-transform: uppercase;
+    top: 2px;
+}
+
+.input-process {
+    position: absolute;
+    height: 30px;
+    border-radius: 10px;
+    top: 6px;
+    left: 430px;
+    animation: loader 7s linear infinite;
+    background: #e2f102;
+    border: none;
+}
+
+.input-process1 {
+    position: absolute;
+    height: 30px;
+    width: 400px;
+    border-radius: 10px;
+    top: 6px;
+    left: 430px;
+    background: #2e90eb;
+    border: none;
+}
+
+.black {
+    background: black;
+    box-shadow: 0px 2px 3px black;
+}
+
+.green {
+    background: rgb(13, 221, 13);
+    box-shadow: 0px 2px 3px green;
+}
+
+.connect {
+    position: absolute;
+    left: 1150px;
+    font-size: 34px;
+    top: 2px;
+}
+
+#connect {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    top: 4px;
+    left: 1330px;
+    border: none;
+}
+
+/* .mqtt {
+    position: absolute;
+    left: 720px;
+    font-size: 17px;
+    text-transform: uppercase;
+    top: 2px;
+}
+
+#mqtt {
+    position: absolute;
+    height: 17px;
+    width: 17px;
+    border-radius: 100%;
+    top: 2px;
+    left: 780px;
+    border: none;
+}
+
+.SPINKLER {
+    position: absolute;
+    left: 840px;
+    font-size: 17px;
+    text-transform: uppercase;
+    top: 2px;
+}
+
+#SPINKLER {
+    position: absolute;
+    height: 17px;
+    width: 17px;
+    border-radius: 100%;
+    top: 2px;
+    left: 932px;
+    border: none;
+}
+
+.pumpPlc {
+    position: absolute;
+    left: 990px;
+    font-size: 17px;
+    text-transform: uppercase;
+    top: 2px;
+}
+
+#pumpPlc {
+    position: absolute;
+    height: 17px;
+    width: 17px;
+    border-radius: 100%;
+    top: 2px;
+    left: 1032px;
+    border: none;
+} */
+
+.time-data {
+    position: absolute;
+    left: 2500px;
+    font-size: 34px;
+    top: 2px;
+}
+
+#timedata {
+    position: absolute;
+    width: 900px;
+    top: 2px;
+    left: 2850px;
+    border: none;
+    font-size: 32px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.water {
+    display: flex;
+    position: absolute;
+    width: 80px;
+    height: 300px;
+    transform: rotate(180deg);
+    opacity: 0.7;
+}
+
+.btn-a {
+    display: flex;
+    position: absolute;
+    border: none;
+    z-index: 1;
+    background-color: #65bffa;
+    width: 445px;
+    padding: 0;
+    transform: translateY(-100%);
+    opacity: 0.95;
+}
+
+.text-water {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    font-size: 26px;
+    width: 207px;
+    height: 36px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 32px;
+    z-index: 1;
+    border-bottom: 1px solid black;
+    color: black;
+    
+}
+
+.data-water {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 55px;
+    z-index: 1;
+    width: 207px;
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+    font-family: 'myDigitalFont';
+    font-weight: 900;
+    color: #ffd42a;
+    text-shadow: -1px 0px 0px black, 1px 0px 0px black, 0px -1px 0px black, 0px 1px 0px black;
+    border: 1px solid black;
+}
+
+.data-chiller {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 68px;
+    z-index: 1;
+    width: 260px;
+    height: 70px;
+    background-color: black;
+    font-family: 'myDigitalFont';
+    font-weight: 900;
+    color: #ffd42a;
+    text-shadow: -1px 0px 0px rgb(0, 0, 0), 1px 0px 0px black, 0px -1px 0px black, 0px 1px 0px black;
+    border: 1px solid black;
+}
+
+.data-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 40px;
+    z-index: 1;
+    width: 140px;
+    height: 50px;
+    background-color: black;
+    font-family: 'myDigitalFont';
+    font-weight: 900;
+    color: #ffd42a;
+    text-shadow: -1px 0px 0px rgb(0, 0, 0), 1px 0px 0px black, 0px -1px 0px black, 0px 1px 0px black;
+    border: 2px solid rgb(129, 118, 118);
+}

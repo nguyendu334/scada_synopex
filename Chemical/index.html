@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <title>CHEMICAL LEVEL</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/barprocess.css">
+    <link rel="stylesheet" href="css/cssbutom.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/phantramChemical.css">
+    <link rel="stylesheet" href="css/soniottsest.css">
+</head>
+
+<body>
+
+    <section id="container">
+        <header>
+            <img id="logo" src="images/logo.png" alt="">
+            <img id="loa" src="images/onvolumn.png" width=50 height=50>
+            <audio id="myAudio" onclick="setloa()">
+                <source src="audio/canhbao.mp3" type="audio/mpeg">
+            </audio>
+            <p id="myTime"></p>
+            <!-- <div id="mybuttom">
+                <button id="playaudio" class="snip15821" onclick="playAudio()" type="button">Bật cảnh báo </button>
+                <button id="stopaudio" class="snip1582" onclick="pauseAudio()" type="button">Tắt cảnh báo</button>
+            </div> -->
+
+            <h1>CHEMICAL LEVEL MONITORING WEB-SYSTEM</h1>
+        </header>
+
+        <section class="wapper">
+            <div id="textHCl-phantram">0.0</div>
+            <div id="textCuCl2-phantram">0.0</div>
+            <div id="textHNO3-phantram">0.0</div>
+            <div class="left">
+                <iframe src="backChemical.svg" id="back"></iframe>
+                <div id="bocngoaiHCL">
+                    <div id="bentrongHCL"></div>
+                </div>
+                <div id="bocngoaiCuCL">
+                    <div id="bentrongCuCL"></div>
+                </div>
+
+                <div id="bocngoaiHNO3">
+                    <div id="bentrongHNO3"></div>
+                </div>
+                <!-- <div id="bocngoaiHNO3_RIGHT">
+                    <div id="bentrongHNO3_RIGHT"></div>
+                </div> -->
+                <div id="bocngoaiHNO3AU">
+                    <div id="bentrongHNO3AU"></div>
+                </div>
+            </div>
+            <div id="tankwetline">
+                <div id="Smalltank1">
+                    <div id="mucnuoc1"></div>
+                </div>
+                <div id="Smalltank2">
+                    <div id="mucnuoc2"></div>
+                </div>
+                <div id="Smalltank3">
+                    <div id="mucnuoc3"></div>
+                </div>
+                <div id="Smalltank4">
+                    <div id="mucnuoc4"></div>
+                </div>
+            </div>
+
+
+            <div class=" right">
+                <!-- Chart Right -->
+                <canvas id="myChart" style="width:100%;height: 200px;position: relative;top: 0px;"></canvas>
+                <canvas id="myChart1" style="width:100%;height: 200px;position: relative;top: 20px;"></canvas>
+                <!-- Table checksheet  -->
+                <div class="table">
+                    <table cellspacing="0" id="taleRightCheckSheet">
+                    </table>
+                </div>
+
+            </div>
+
+        </section>
+        <section class="wapper1">
+            <span
+                style="    position: absolute;left: 196px;font-size: 12px; text-transform: uppercase;line-height: 20px; ">Proceedings
+                :</span>
+            <div class="progress-bar">
+                <span class="bar">
+                    <span class="progress"></span>
+                </span>
+            </div>
+            <!-- Form kết nối đến các tank và coneect server -->
+            <form style=" position: absolute; left: 638px ;top:0px;">
+                CONNECT: <input id="connect" class="black green " type="text"
+                    disabled="disabled">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                HNO3_Inlet : <input id="hno3_inlet" class="black " type="text"
+                    disabled="disabled">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                HNO3_Outlet : <input id="hno3_outlet" class="black " type="text"
+                    disabled="disabled">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                OXA-100: <input id="oxa-100" class="black " type="text"
+                    disabled="disabled">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                CuCl2: <input id="cucl2" class="black " type="text"
+                    disabled="disabled">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                HCl: <input id="hcl" class="black " type="text"
+                    disabled="disabled">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                TIME UPDATE DATA: <input id="timedata" style="height: 18px; border: none;" type="text" value=""
+                    disabled="disabled">
+            </form>
+        </section>
+    </section>
+
+</body>
+<script src="js/mqttws31.min.js"></script>
+<script src="js/jquery-3.1.0.min.js"></script>
+<!-- <script src="js/index2.js"></script> -->
+<script src="js/indexMqtt.js"></script>
+<script src="./images/changeStyleSvg.js"></script>
+<!-- <script src="js/Chart.js"></script> -->
+<script src="js/converToCanvas.js"></script>
+<!-- <script src="js/HMI-Picture.js"></script> -->
+<!-- <script src="js/aquarium.js"></script> -->
+<!-- <script src="js/Sontestdata.js"></script> -->
+
+</html>

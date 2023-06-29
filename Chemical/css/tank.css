@@ -1,0 +1,362 @@
+#ongcamfinaldaiHno3-i {
+  position: absolute;
+  width: 1267px;
+  height: 80px;
+  left: 260px;
+  top: 17px;
+  z-index: 1;
+}
+
+#tankHNO3-i {
+  position: absolute;
+  left: 170px;
+  top: 80px;
+  z-index: 10;
+}
+#ongloiHno3-i {
+  position: absolute;
+  width: 83px;
+  height: 30px;
+  left: 303px;
+  top: 366px;
+  z-index: 1;
+}
+#ongnoixeHno3-i {
+  position: absolute;
+  width: 130px;
+  height: 348px;
+  left: 78px;
+  top: 88px;
+  z-index: 1;
+}
+#otoHno3-i {
+  position: absolute;
+  width: 115px;
+  height: 60px;
+  left: 12px;
+  top: 428px;
+  z-index: 1;
+}
+#sodo2Hno3-i {
+  width: 280px;
+  position: absolute;
+  left: 386px;
+  top: 155px;
+  z-index: 2;
+}
+#FanOn1Hno3-i {
+  position: absolute;
+  left: 427px;
+  top: 298px;
+  width: 100px;
+  z-index: 100;
+}
+#FanOn2Hno3-i {
+  position: absolute;
+  left: 427px;
+  top: 419px;
+  width: 100px;
+  z-index: 100;
+}
+#cuathoatnuocHno3-i {
+  position: absolute;
+  width: 45px;
+  height: 27px;
+  right: 269px;
+  top: 84px;
+  z-index: 10;
+}
+#ongcamfinalnganHno3-o {
+  position: absolute;
+  width: 223px;
+  height: 53px;
+  right: 17px;
+  top: 67px;
+  z-index: 1;
+}
+#ongxanhHno3-o {
+  position: absolute;
+  right: 77px;
+  width: 135px;
+  top: 335px;
+  z-index: 1;
+}
+#otonguochno3-o {
+  position: absolute;
+  width: 115px;
+  height: 60px;
+  right: 4px;
+  top: 435px;
+  z-index: 1;
+}
+#ongloiox100 {
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  left: 340px;
+  bottom: 121px;
+  z-index: 1;
+}
+#sodo31Oxa100 {
+  position: absolute;
+  width: 215px;
+  left: 396px;
+  top: 85px;
+}
+#FanOn1Oxa100 {
+  position: absolute;
+  left: 445px;
+  top: 217px;
+  width: 100px;
+  z-index: 100;
+}
+#FanOn2Oxa100 {
+  position: absolute;
+  left: 445px;
+  top: 321px;
+  width: 100px;
+  z-index: 100;
+}
+#FanOn3Oxa100 {
+  position: absolute;
+  left: 445px;
+  top: 429px;
+  width: 100px;
+  z-index: 100;
+}
+#ongcamfinalOxa100 {
+  position: absolute;
+  width: 309px;
+  height: 80px;
+  left: 302px;
+  top: 20px;
+  z-index: 1;
+}
+#ongnoixeOxa100 {
+  position: absolute;
+  width: 130px;
+  height: 348px;
+  left: 122px;
+  top: 92px;
+  z-index: 1;
+}
+#cuathoatnuocOxa100 {
+  position: absolute;
+  width: 45px;
+  height: 27px;
+  left: 221px;
+  top: 88px;
+  z-index: 1;
+}
+#otoOxa100 {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  left: 86px;
+  top: 420px;
+  z-index: 1;
+}
+#sodo31CuCl2 {
+  position: absolute;
+  width: 215px;
+  right: 490px;
+  top: 85px;
+}
+#FanOn1CuCl2 {
+  position: absolute;
+  right: 555px;
+  top: 217px;
+  width: 100px;
+  z-index: 100;
+}
+#FanOn2CuCl2 {
+  position: absolute;
+  right: 555px;
+  top: 321px;
+  width: 100px;
+  z-index: 100;
+}
+#FanOn3CuCl2 {
+  position: absolute;
+  right: 555px;
+  top: 429px;
+  width: 100px;
+  z-index: 100;
+}
+#tankCuCl2 {
+  position: absolute;
+  right: 700px;
+  top: 80px;
+  z-index: 10;
+}
+#ongcamfinalCuCl2 {
+  position: absolute;
+  width: 309px;
+  height: 80px;
+  left: 753px;
+  top: 20px;
+  z-index: 1;
+}
+#otoCuCl2 {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  left: 560px;
+  top: 420px;
+  z-index: 1;
+}
+#ongnoixeCuCl2 {
+  position: absolute;
+  width: 130px;
+  height: 348px;
+  left: 595px;
+  top: 89px;
+  z-index: 1;
+}
+#ongnoixeHCl {
+  position: absolute;
+  width: 127px;
+  height: 365px;
+  right: 325px;
+  top: 79px;
+  z-index: 1;
+}
+#otoHCl {
+  position: absolute;
+  width: 105px;
+  height: 50px;
+  right: 398px;
+  top: 430px;
+  z-index: 1;
+}
+#sodo4HCl {
+  position: absolute;
+  right: 5px;
+  top: 50px;
+  width: 215px;
+}
+#FanOn1HCl {
+  position: absolute;
+  right: 69px;
+  top: 159px;
+  width: 100px;
+}
+#FanOn2HCl {
+  position: absolute;
+  right: 69px;
+  top: 248px;
+  width: 100px;
+}
+#FanOn3HCl {
+  position: absolute;
+  right: 68px;
+  top: 342px;
+  width: 100px;
+}
+#FanOn4HCl {
+  position: absolute;
+  right: 69px;
+  top: 430px;
+  width: 100px;
+}
+#ongcamfinalHCl {
+  position: absolute;
+  width: 309px;
+  height: 80px;
+  left: 197px;
+  top: 20px;
+  z-index: 1;
+}
+
+/* Texxt  css*/
+#SENSOR-HNO3-o {
+  position: absolute;
+  right: 255px;
+  top: 40px;
+  color: white;
+  font-size: 12px;
+}
+#SCRUBBER-HNO3-o {
+  position: absolute;
+  right: 30px;
+  top: 50px;
+  color: white;
+  font-size: 12px;
+}
+#SENSOR-HNO3-i {
+  position: absolute;
+  left: 55px;
+  top: 60px;
+  color: white;
+  font-size: 12px;
+}
+#SCRUBBER-HNO3-i {
+  position: absolute;
+  right: 30px;
+  top: 5px;
+  color: white;
+  font-size: 12px;
+}
+#SENSOR-Oxa100 {
+  position: absolute;
+  left: 140px;
+  top: 60px;
+  color: white;
+  font-size: 12px;
+}
+#SCRUBBER-Oxa100 {
+  position: absolute;
+  left: 475px;
+  top: 0px;
+  color: white;
+  font-size: 12px;
+}
+#WETLINE-Oxa100 {
+  position: absolute;
+  left: 560px;
+  top: 70px;
+  color: white;
+  font-size: 12px;
+}
+#SENSOR-CuCl2 {
+  position: absolute;
+  left: 592px;
+  top: 60px;
+  color: white;
+  font-size: 12px;
+}
+#WETLINE-CuCl2 {
+  position: absolute;
+  left: 1005px;
+  top: 70px;
+  color: white;
+  font-size: 12px;
+}
+#SCRUBBER-CuCl2 {
+  position: absolute;
+  left: 922px;
+  top: 0px;
+  color: white;
+  font-size: 12px;
+}
+#SENSOR-HCl {
+  position: absolute;
+  left: 1080px;
+  top: 60px;
+  color: white;
+  font-size: 12px;
+}
+#SCRUBBER-HCl {
+  position: absolute;
+  left: 385px;
+  top: 0px;
+  color: white;
+  font-size: 12px;
+}
+#WETLINE-HCl {
+  position: absolute;
+  right: 8px;
+  top: 38px;
+  color: white;
+  font-size: 12px;
+}

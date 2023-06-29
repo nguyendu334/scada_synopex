@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SCADA RAW TREATMENT</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="max-width=device-max-width, initial-scale=1">
+    <meta property="og:image" content="images/monitoring.ico" />
+    <link rel="shortcut icon" type="images/x-icon" href="images/monitoring.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/toggeled.css">
+    <link rel="stylesheet" href="css/barprocess.css">
+    <!-- <link rel="stylesheet" href="css/arrow.css"> -->
+    <link rel="stylesheet" href="css/pumpvalve.css">
+    <link rel="stylesheet" href="css/led.css">
+    <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+</head>
+
+<body style="background-color:#F0F0F0;margin: 0;">
+    <aside>
+        <div id="sidebar" class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu" id="nav-accordion">
+                <li class="mt">
+                    <a href="index.html">
+                        <a href="historians.html " target="_blank"> <i class="fa fa-history" aria-hidden="true"> Live
+                                Data</i>
+                        </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <div id="container">
+
+        <header id="tieude">
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+            </div>
+            <a href="index.html" class="logo"><b>Syno<span style="font-size: 34px;">pex</span></b></a>
+
+            <p id="myTime"></p>
+            <img id="loa" src="images/onvolumn.png" width=50 height=50>
+            <audio id="myAudio" loop>
+                <source src="audio/canhbao.mp3" type="audio/mpeg">
+            </audio>
+            <span>RAW TREATMENT MONITORING WEB-SYSTEM</span>
+
+        </header>
+        <section id="wapper">
+            <!-- <img id="img-wapper" src="images/pic9.png"> -->
+            <iframe id="img-wapper" src="back2.svg"></iframe>
+            <!--  % các tank -->
+            <div id="bocngoaimmfa">
+                <div id="bentrongmmfa"></div>
+            </div>
+            <div id="bocngoaimmfb">
+                <div id="bentrongmmfb"></div>
+            </div>
+            <div id="bocngoaibirma">
+                <div id="bentrongbirma"></div>
+            </div>
+            <div id="bocngoaibirmb">
+                <div id="bentrongbirmb"></div>
+            </div>
+            <div id="bocngoaifilreta">
+                <div id="bentrongfilreta"></div>
+            </div>
+            <div id="bocngoaifilretb">
+                <div id="bentrongfilretb"></div>
+            </div>
+            <div id="bocngoaisofta">
+                <div id="bentrongsofta"></div>
+            </div>
+            <div id="bocngoaisoftb">
+                <div id="bentrongsoftb"></div>
+            </div>
+            <!-- All Pump -->
+            <iframe id="sp01a" src="FanOn.svg"></iframe>
+
+            <input id="errorsp01a" value="ERROR">
+            <!-- <iframe id="sp01a" src="FanOn.svg"></iframe> -->
+            <iframe id="sp01c" src="FanOn.svg"></iframe>
+            <input id="errorsp01c" value="ERROR">
+            <iframe id="sp01b" src="FanOn.svg"></iframe>
+            <input id="errorsp01b" value="ERROR">
+
+
+            <iframe id="bp01a" src="FanOn.svg"></iframe>
+            <input id="errorbp01a" value="ERROR">
+            <iframe id="bp01b" src="FanOn.svg"></iframe>
+            <input id="errorbp01b" value="ERROR">
+
+
+            <iframe id="npa01a" src="FanOnTo.svg"></iframe>
+            <input id="errornpa01a" value="ERROR">
+            <iframe id="npa01b" src="FanOnTo.svg"></iframe>
+            <input id="errornpa01b" value="ERROR">
+
+            <iframe id="tankNacl" src="tank.svg"></iframe>
+
+            <!-- <HMI-PICTURE id="van-f07a" width="45" height="30" value=false OnPic="images/ValveTopLeft_Green.png "
+                OffPic="images/vanbom.png">
+                
+            </HMI-PICTURE> -->
+
+
+            <input type="text" id="textF07a" value="F07A">
+            <input type="text" id="textF07b" value="F07B">
+            <input type="text" id="text07b" value="07B">
+            <input type="text" id="textRaw" value="Raw">
+            <input type="text" id="textBSVA" value="BSVA">
+            <input type="text" id="textBSVB" value="BSVB">
+
+            <input type="text" id="textSP01A" value="SP 01A">
+            <input type="text" id="textSP01B" value="SP 01B">
+            <input type="text" id="textSP01C" value="SP 01C">
+            <input type="text" id="SERVICE" value="SERVICE">
+            <input type="text" id="waterTank" value="RAW WATER TANK">
+            <input type="text" id="PLANTAIR" value="PLANTAIR">
+
+
+            <input type="text" id="textBP01A" value="BP 01A">
+            <input type="text" id="textBP01B" value="BP 01B">
+            <input type="text" id="BACKWASH" value="BACKWASH">
+            <input type="text" id="waterTankB" value="RAW WATER TANK">
+
+            <input type="text" id="textNP01A" value="NaCl Tank">
+            <input type="text" id="textNP01B" value="NP 01A/B">
+            <input type="text" id="textNaClPump" value="NaCl Pump">
+            <input type="text" id="UTSYSTEM" value="UT SYSTEM">
+
+
+            <input type="text" id="MMFA" value="MMFA">
+            <input type="text" id="BIRMA" value="BIRMA">
+            <input type="text" id="FILRETA" value="A/C FILRETA">
+            <input type="text" id="SOFTENERA" value="SOFTENERA">
+
+
+            <input type="text" id="text07A" value="07A" />
+            <input type="text" id="MMFB" value="MMFB">
+            <input type="text" id="BIRMB" value="BIRMB">
+            <input type="text" id="FILRETB" value="A/C FILRETB">
+            <input type="text" id="SOFTENERB" value="SOFTENERB">
+
+            <iframe id="van-mmfa07a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-mmfa07b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-arrow07A" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-arrow07B" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-raw" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-bsva" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-bsvb" src="library/svg/valveon.svg"></iframe>
+
+            <!-- <img id="van-mmfa08a" src="images/ValveTopLeft_Green.png"> -->
+            <iframe id="van-mmfa08a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-mmfa06a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-mmfa05a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-mmfa04a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-mmfa03a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-mmfa02a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-mmfa01a" src="library/svg/valveon.svg"></iframe>
+
+            <input type="text" id="textmmfa08a" value="08A">
+            <input type="text" id="textmmfa06a" value="06A">
+            <input type="text" id="textmmfa05a" value="05A">
+            <input type="text" id="textmmfa04a" value="04A">
+            <input type="text" id="textmmfa03a" value="03A">
+            <input type="text" id="textmmfa02a" value="02A">
+            <input type="text" id="textmmfa01a" value="01A">
+
+            <iframe id="van-mmfa08b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-mmfa06b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-mmfa05b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-mmfa04b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-mmfa03b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-mmfa02b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-mmfa01b" src="library/svg/valveon.svg"></iframe>
+
+            <input type="text" id="textmmfa08b" value="08B">
+            <input type="text" id="textmmfa06b" value="06B">
+            <input type="text" id="textmmfa05b" value="05B">
+            <input type="text" id="textmmfa04b" value="04B">
+            <input type="text" id="textmmfa03b" value="03B">
+            <input type="text" id="textmmfa02b" value="02B">
+            <input type="text" id="textmmfa01b" value="01B">
+
+
+            <iframe id="van-birma08a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-birma06a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-birma05a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-birma04a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-birma03a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-birma02a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-birma01a" src="library/svg/valveon.svg"></iframe>
+
+
+            <input type="text" id="textbirma08a" value="08A">
+            <input type="text" id="textbirma06a" value="06A">
+            <input type="text" id="textbirma05a" value="05A">
+            <input type="text" id="textbirma04a" value="04A">
+            <input type="text" id="textbirma03a" value="03A">
+            <input type="text" id="textbirma02a" value="02A">
+            <input type="text" id="textbirma01a" value="01A">
+
+            <iframe id="van-birma08b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-birma06b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-birma05b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-birma04b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-birma03b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-birma02b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-birma01b" src="library/svg/valveon.svg"></iframe>
+
+            <input type="text" id="textbirma08b" value="08B">
+            <input type="text" id="textbirma06b" value="06B">
+            <input type="text" id="textbirma05b" value="05B">
+            <input type="text" id="textbirma04b" value="04B">
+            <input type="text" id="textbirma03b" value="03B">
+            <input type="text" id="textbirma02b" value="02B">
+            <input type="text" id="textbirma01b" value="01B">
+
+            <iframe id="van-FILRETA08a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-FILRETA06a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-FILRETA05a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-FILRETA04a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-FILRETA03a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-FILRETA02a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-FILRETA01a" src="library/svg/valveon.svg"></iframe>
+
+
+
+            <input type="text" id="textFILRETA08a" value="08A">
+            <input type="text" id="textFILRETA06a" value="06A">
+            <input type="text" id="textFILRETA05a" value="05A">
+            <input type="text" id="textFILRETA04a" value="04A">
+            <input type="text" id="textFILRETA03a" value="03A">
+            <input type="text" id="textFILRETA02a" value="02A">
+            <input type="text" id="textFILRETA01a" value="01A">
+
+            <iframe id="van-FILRETA08b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-FILRETA06b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-FILRETA05b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-FILRETA04b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-FILRETA03b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-FILRETA02b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-FILRETA01b" src="library/svg/valveon.svg"></iframe>
+
+
+            <input type="text" id="textFILRETA08b" value="08B">
+            <input type="text" id="textFILRETA06b" value="06B">
+            <input type="text" id="textFILRETA05b" value="05B">
+            <input type="text" id="textFILRETA04b" value="04B">
+            <input type="text" id="textFILRETA03b" value="03B">
+            <input type="text" id="textFILRETA02b" value="02B">
+            <input type="text" id="textFILRETA01b" value="01B">
+
+            <iframe id="van-SOFTA08a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-SOFTA06a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-SOFTA05a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-SOFTA04a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-SOFTA03a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-SOFTA02a" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-SOFTA01a" src="library/svg/valveon.svg"></iframe>
+
+
+
+            <input type="text" id="textSOFTA08a" value="08A">
+            <input type="text" id="textSOFTA06a" value="06A">
+            <input type="text" id="textSOFTA05a" value="05A">
+            <input type="text" id="textSOFTA04a" value="04A">
+            <input type="text" id="textSOFTA03a" value="03A">
+            <input type="text" id="textSOFTA02a" value="02A">
+            <input type="text" id="textSOFTA01a" value="01A">
+
+            <iframe id="van-SOFTA08b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-SOFTA06b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-SOFTA05b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-SOFTA04b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-SOFTA03b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-SOFTA02b" src="library/svg/valveon.svg"></iframe>
+            <iframe id="van-SOFTA01b" src="library/svg/valveon.svg"></iframe>
+
+            <input type="text" id="textSOFTA08b" value="08B">
+            <input type="text" id="textSOFTA06b" value="06B">
+            <input type="text" id="textSOFTA05b" value="05B">
+            <input type="text" id="textSOFTA04b" value="04B">
+            <input type="text" id="textSOFTA03b" value="03B">
+            <input type="text" id="textSOFTA02b" value="02B">
+            <input type="text" id="textSOFTA01b" value="01B">
+
+        </section>
+
+        <section class="wapper2">
+            <span
+                style=" position: absolute;left: 196px;font-size: 12px; text-transform: uppercase;line-height: 20px; ">Proceedings
+                :</span>
+            <div class="progress-bar">
+                <span class="bar">
+                    <span class="progress"></span>
+                </span>
+            </div>
+            <form style=" position: absolute; left: 638px ;top:2px;">
+                CONNECT SERVER : <input id="connect" class="%STATE% on" type="text"
+                    disabled />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                PLC CONNECT: <input id="plcConnect" class="%STATE% on" type="text"
+                    disabled />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                TIME UPDATE DATA: <input id="timedata" style="width: 200px;;color:black; border: none;" type="text"
+                    value="" disabled />
+            </form>
+        </section>
+        </section>
+
+    </div>
+    <script type="text/javascript " src="js/mqttws31.min.js "></script>
+    <script type="text/javascript " src="js/toggeled.js "></script>
+    <script type="text/javascript " src="library/mainsvg.js"></script>
+    <script type="text/javascript " src="js/app.js "></script>
+    <script type="text/javascript " src="js/encode.js "></script>
+
+</body>
+
+
+</html>

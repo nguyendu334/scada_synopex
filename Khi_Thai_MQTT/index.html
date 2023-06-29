@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SCRUBBER - SCADA/ IoT</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name='viewport' content='width=device-width,user-scalable=0' />
+    <meta property="og:image" content="images/monitoring.ico" />
+    <link rel="shortcut icon" type="images/x-icon" href="images/monitoring.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/toggeled.css">
+    <link rel="stylesheet" href="css/barprocess.css">
+    <link rel="stylesheet" href="css/dataTable.css">
+    <link rel="stylesheet" href="css/led.css">
+    <link rel="stylesheet" href="css/dataLED.css">
+    <link rel="stylesheet" href="css/arrow.css">
+    <link rel="stylesheet" href="css/phunnuoc.css">
+    <link rel="stylesheet" href="css/char.css">
+    <link rel="stylesheet" href="css/pump_valve.css">
+    <link rel="stylesheet" href="css/smokercss.css">
+    <link rel="stylesheet" href="css/botnuoc.css">
+    <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+    <style>
+        .legend {
+            display: none;
+        }
+    </style>
+</head>
+
+<body style="background-color:#F0F0F0;margin: 0;">
+    <aside>
+        <div id="sidebar" class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu" id="nav-accordion">
+                <li class="mt">
+                    <a href="index.html">
+                        <a href="historians.html " target="_blank"> <i class="fa fa-history" aria-hidden="true"> Live
+                                Data</i>
+                        </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <div id="container">
+
+
+        <header id="tieude">
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+            </div>
+            <a href="index.html" class="logo"><b>Syno<span style="font-size: 34px;">pex</span></b></a>
+
+            <p id="myTime"></p>
+            <!-- <img id="loa" src="images/onvolumn.png" width=50 height=50>
+            <audio id="myAudio" loop>
+                <source src="audio/canhbao.mp3" type="audio/mpeg">
+            </audio> -->
+            <span>SCRUBBER MONITORING WEB-SYSTEM</span>
+
+        </header>
+        <section id="wapper">
+            <div class="bubbles bubble-1"></div>
+            <div class="bubbles bubble-5"></div>
+            <div class="bubbles bubble-2"></div>
+            <div class="bubbles bubble-6"></div>
+            <div class="bubbles bubble-3"></div>
+            <div class="bubbles bubble-7"></div>
+            <div class="bubbles bubble-4"></div>
+            <div class="bubbles bubble-8"></div>
+            <div class="bubbles bubble-9"></div>
+            <div class="bubbles bubble-10"></div>
+            <div class="bubbles bubble-11"></div>
+            <div class="bubbles bubble-12"></div>
+
+            <!-- <img id="img-wapper" src="images/pic9.png"> -->
+            <iframe id="img-wapper" src="back4.svg"></iframe>
+            <!-- <img src="Resources 1/dopump.png" id="khungvuong1"> -->
+            <span id="baodong1">ALARM</span>
+            <span id="baodong2">ALARM</span>
+            <span id="baodong3">ALARM</span>
+            <span id="baodong4">ALARM</span>
+
+            <iframe id="data1" src="svg/display.svg"></iframe>
+            <iframe id="data2" src="svg/display.svg"></iframe>
+            <iframe id="data3" src="svg/display.svg"></iframe>
+            <iframe id="data4" src="svg/display.svg"></iframe>
+            <h2 id="cu1200">Cu Plating 1200 CMM</h2>
+            <h2 id="cu1000">Cu Plating 1000 CMM</h2>
+            <h2 id="wetline700">Wetline 700 CMM</h2>
+            <h2 id="au400">Au Plating 400 CMM</h2>
+            <iframe id="fan1" class="fan" src="FanOn_final.svg"></iframe>
+            <iframe id="fan2" class="fan" src="FanOn111222of.svg"></iframe>
+            <iframe id="fan3" class="fan" src="FanOn_final.svg"></iframe>
+            <iframe id="fan4" class="fan" src="FanOn_final.svg"></iframe>
+
+            <!-- Pump Chemical -->
+
+            <iframe src="svg/pumpoff.svg" id="pump_chemicalbottom_1"></iframe>
+            <iframe src="svg/pumpoff.svg" id="pump_chemicalbottom_2"></iframe>
+            <iframe src="svg/pumpoff.svg" id="pump_chemicalbottom_3"></iframe>
+            <iframe src="svg/pumpoff.svg" id="pump_chemicalbottom_4"></iframe>
+
+            <span id="text_pump_chemicalbottom_1">2-A</span>
+            <span id="text_pump_chemicalbottom_2">2-A</span>
+            <span id="text_pump_chemicalbottom_3">2-A</span>
+            <span id="text_pump_chemicalbottom_4">2-A</span>
+
+            <!-- <iframe id="pump_" class="fan" src="svg/pumpoff.svg"></iframe> -->
+            <iframe id="pump_chemical_top_1" class="fan" src="svg/pumpoff.svg"> </iframe>
+            <iframe id="pump_chemical_top_2" class="fan" src="svg/pumpoff.svg"></iframe>
+            <iframe id="pump_chemical_top_3" class="fan" src="svg/pumpoff.svg"></iframe>
+            <iframe id="pump_chemical_top_4" class="fan" src="svg/pumpoff.svg"></iframe>
+
+            <iframe src="tankkhuayoff_final.svg" id="tankkhuayon1"></iframe>
+            <iframe src="tankkhuayon_final.svg" id="tankkhuayon2"></iframe>
+            <iframe src="tankkhuayon_final.svg" id="tankkhuayon3"></iframe>
+            <iframe src="tankkhuayon_final.svg" id="tankkhuayon4"></iframe>
+
+            <!--Pump_TH  -->
+            <!-- <iframe id="pumpTH_" class="fan" src="svg/pumpoff.svg"> -->
+            <iframe id="pumpTH_1" class="fan" src="svg/pumpon.svg"></iframe>
+            <span id="text_pumpTH_1">1-A</span>
+            <iframe id="pumpTH_2" class="fan" src="svg/pumpon.svg"></iframe>
+            <span id="text_pumpTH_2">1-A</span>
+            <iframe id="pumpTH_3" class="fan" src="svg/pumpon.svg"></iframe>
+            <span id="text_pumpTH_3">1-A</span>
+            <iframe id="pumpTH_4" class="fan" src="svg/pumpon.svg"></iframe>
+            <span id="text_pumpTH_4">1-A</span>
+
+
+            <!-- valve -->
+            <!-- <iframe src="svg/valveon_final.svg" id="vavle_"></iframe> -->
+            <iframe src="svg/valveon_final.svg" id="vavle_1_1"> </iframe>
+            <iframe src="svg/valveon_final.svg" id="vavle_1_2"></iframe>
+            <iframe src="svg/valveon_final.svg" id="vavle_1_3"></iframe>
+
+            <iframe src="svg/valveon_final.svg" id="vavle_2_1"></iframe>
+            <iframe src="svg/valveon_final.svg" id="vavle_2_2"></iframe>
+            <iframe src="svg/valveon_final.svg" id="vavle_2_3"></iframe>
+
+            <iframe src="svg/valveon_final.svg" id="vavle_3_1"></iframe>
+            <iframe src="svg/valveon_final.svg" id="vavle_3_2"></iframe>
+            <iframe src="svg/valveon_final.svg" id="vavle_3_3"></iframe>
+
+            <iframe src="svg/valveon_final.svg" id="vavle_4_1"></iframe>
+            <iframe src="svg/valveon_final.svg" id="vavle_4_2"></iframe>
+            <iframe src="svg/valveOff_final.svg" id="vavle_4_3"></iframe>
+            <!-- arrow C1200 -->
+            <!-- <div id="Cu1200_arrow1" class="arrowUpTo"></div> -->
+            <div id="viewport1"> </div>
+            <div class="viewport1 sokerFirealram1"> </div>
+            <div id="arrowxanhla1_1" class="arrowUp"></div>
+            <div id="arrowxanhla1_2" class="arrowUp"></div>
+
+            <div id="arrowxanhduong1_1" class="arrowUp"></div>
+            <div id="arrowxanhduong1_2" class="arrowRa"></div>
+            <!-- arrow C1000 -->
+            <!-- <div id="Cu1000_arrow2" class="arrowUpTo"></div> -->
+            <div id="viewport2"></div>
+            <div class="viewport2 sokerFirealram2"> </div>
+            <div id="arrowxanhla2_1" class="arrowUp"></div>
+            <div id="arrowxanhla2_2" class="arrowUp"></div>
+
+            <div id="arrowxanhduong2_1" class="arrowUp"></div>
+            <div id="arrowxanhduong2_2" class="arrowRa"></div>
+            <!-- wetline 700 -->
+            <!-- <div id="Wetline700_arrow3" class="arrowUpTo"></div> -->
+            <div id="viewport3"></div>
+            <div class="viewport3 sokerFirealram3"> </div>
+            <div id="arrowxanhla3_1" class="arrowUp"></div>
+            <div id="arrowxanhla3_2" class="arrowUp"></div>
+
+            <div id="arrowxanhduong3_1" class="arrowUp"></div>
+            <div id="arrowxanhduong3_2" class="arrowRa"></div>
+
+            <!-- Au 400 -->
+            <!-- <div id="Au400_arrow4" class="arrowUpTo"></div> -->
+            <div id="viewport4"></div>
+            <div class="viewport4 sokerFirealram4"> </div>
+            <div id="arrowxanhla4_1" class="arrowUp"></div>
+            <div id="arrowxanhla4_2" class="arrowUp"></div>
+
+            <div id="arrowxanhduong4_1" class="arrowUp"></div>
+            <div id="arrowxanhduong4_2" class="arrowRa"></div>
+
+            <div id="phunnuoc1">
+                <img src="images/phunnuoc.png" id="phunnuocCu1200top_1_1" class="phunnuocCu1200top_1">
+                <img src="images/phunnuoc.png" id="phunnuocCu1200top_1_2" class="phunnuocCu1200top_1">
+                <img src="images/phunnuoc.png" id="phunnuocCu1200top_1_3" class="phunnuocCu1200top_1">
+                <img src="images/phunnuoc.png" id="phunnuocCu1200top_1_4" class="phunnuocCu1200top_1">
+
+                <img src="images/phunnuoc.png" id="phunnuocCu1200top_2_1" class="phunnuocCu1200top_2">
+                <img src="images/phunnuoc.png" id="phunnuocCu1200top_2_2" class="phunnuocCu1200top_2">
+                <img src="images/phunnuoc.png" id="phunnuocCu1200top_2_3" class="phunnuocCu1200top_2">
+                <img src="images/phunnuoc.png" id="phunnuocCu1200top_2_4" class="phunnuocCu1200top_2">
+            </div>
+            <div id="phunnuoc2">
+                <img src="images/phunnuoc.png" id="phunnuocCu1000top_1_1" class="phunnuocCu1000top_1">
+                <img src="images/phunnuoc.png" id="phunnuocCu1000top_1_2" class="phunnuocCu1000top_1">
+                <img src="images/phunnuoc.png" id="phunnuocCu1000top_1_3" class="phunnuocCu1000top_1">
+                <img src="images/phunnuoc.png" id="phunnuocCu1000top_1_4" class="phunnuocCu1000top_1">
+
+                <img src="images/phunnuoc.png" id="phunnuocCu1000top_2_1" class="phunnuocCu1000top_2">
+                <img src="images/phunnuoc.png" id="phunnuocCu1000top_2_2" class="phunnuocCu1000top_2">
+                <img src="images/phunnuoc.png" id="phunnuocCu1000top_2_3" class="phunnuocCu1000top_2">
+                <img src="images/phunnuoc.png" id="phunnuocCu1000top_2_4" class="phunnuocCu1000top_2">
+            </div>
+            <div id="phunnuoc3">
+                <img src="images/phunnuoc.png" id="phunnuocWetline700top_1_1" class="phunnuocWetline700top_1">
+                <img src="images/phunnuoc.png" id="phunnuocWetline700top_1_2" class="phunnuocWetline700top_1">
+                <img src="images/phunnuoc.png" id="phunnuocWetline700top_1_3" class="phunnuocWetline700top_1">
+                <img src="images/phunnuoc.png" id="phunnuocWetline700top_1_4" class="phunnuocWetline700top_1">
+
+                <img src="images/phunnuoc.png" id="phunnuocWetline700top_2_1" class="phunnuocWetline700top_2">
+                <img src="images/phunnuoc.png" id="phunnuocWetline700top_2_2" class="phunnuocWetline700top_2">
+                <img src="images/phunnuoc.png" id="phunnuocWetline700top_2_3" class="phunnuocWetline700top_2">
+                <img src="images/phunnuoc.png" id="phunnuocWetline700top_2_4" class="phunnuocWetline700top_2">
+            </div>
+            <div id="phunnuoc4">
+                <img src="images/phunnuoc.png" id="phunnuocAu400top_1_1" class="phunnuocAu400top_1">
+                <img src="images/phunnuoc.png" id="phunnuocAu400top_1_2" class="phunnuocAu400top_1">
+                <img src="images/phunnuoc.png" id="phunnuocAu400top_1_3" class="phunnuocAu400top_1">
+                <img src="images/phunnuoc.png" id="phunnuocAu400top_1_4" class="phunnuocAu400top_1">
+
+                <img src="images/phunnuoc.png" id="phunnuocAu400top_2_1" class="phunnuocAu400top_2">
+                <img src="images/phunnuoc.png" id="phunnuocAu400top_2_2" class="phunnuocAu400top_2">
+                <img src="images/phunnuoc.png" id="phunnuocAu400top_2_3" class="phunnuocAu400top_2">
+                <img src="images/phunnuoc.png" id="phunnuocAu400top_2_4" class="phunnuocAu400top_2">
+            </div>
+            <div id="chart"></div>
+            <div id="chart1"></div>
+            <div id="chart2"></div>
+            <div id="chart3"></div>
+            <table id="table1">
+                <thead>
+                    <tr>
+                        <th>N</th>
+                        <th>Time Date</th>
+                        <th>Limit-H</th>
+                        <th>Limit-L</th>
+                        <th>pH present</th>
+                        <th>Status</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <table id="table2">
+                <thead>
+                    <tr>
+                        <th>N</th>
+                        <th>Time Date</th>
+                        <th>Limit-H</th>
+                        <th>Limit-L</th>
+                        <th>pH present</th>
+                        <th>Status</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+            <table id="table3">
+                <thead>
+                    <tr>
+                        <th>N</th>
+                        <th>Time Date</th>
+                        <th>Limit-H</th>
+                        <th>Limit-L</th>
+                        <th>pH present</th>
+                        <th>Status</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+            <table id="table4">
+                <thead>
+                    <tr>
+                        <th>N</th>
+                        <th>Time Date</th>
+                        <th>Limit-H</th>
+                        <th>Limit-L</th>
+                        <th>pH present</th>
+                        <th>Status</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+
+        </section>
+
+        <section class="wapper2">
+            <span
+                style=" position: absolute;left: 5px;font-size: 12px; text-transform: uppercase;line-height: 20px;top:0px ">PROCESSING
+                :</span>
+            <div class="progress-bar">
+                <span class="bar">
+                    <span class="progress"></span>
+                </span>
+            </div>
+            <form style=" position: absolute; left: 320px ;top:0px;">
+                CONNECT: <iframe id="connect"
+                    src="library/svg/LED.svg"></iframe>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                PLC CONNECT: <iframe id="plcConnect"
+                    src="library/svg/LED.svg"></iframe>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                PLCPH CONNECT: <iframe id="plcphConnect"
+                    src="library/svg/LED.svg"></iframe>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                TIME UPDATE DATA: <input id="timedata" type="text" value="" />
+            </form>
+        </section>
+        </section>
+    </div>
+    <script src="smoker/index.js"></script>
+    <script src="smoker/index1.js"></script>
+    <script src="smoker/index2.js"></script>
+    <script src="smoker/index3.js"></script>
+    <script src="smoker/index4.js"></script>
+    <script src="smoker/index5.js"></script>
+    <script src="smoker/index6.js"></script>
+    <script src="smoker/index7.js"></script>
+    <script type="text/javascript " src="js/chart.js"></script>
+    <script type="text/javascript " src="js/mqttws31.min.js "></script>
+    <script type="text/javascript " src="js/toggeled.js "></script>
+    <!-- <script type="text/javascript " src="js/display.js "></script> -->
+    <script type="text/javascript " src="library/mainsvg.js"></script>
+    <script type="text/javascript " src="js/app.js "></script>
+    <script type="text/javascript">
+        $('#table1').on('scroll', function () {
+            $("#table1 > *").width($("#table1").width() + $("#table1").scrollLeft());
+        });
+        $('#table2').on('scroll', function () {
+            $("#table2 > *").width($("#table2").width() + $("#table2").scrollLeft());
+        });
+        $('#table3').on('scroll', function () {
+            $("#table3 > *").width($("#table3").width() + $("#table3").scrollLeft());
+        })
+        $('#table4').on('scroll', function () {
+            $("#table4 > *").width($("#table4").width() + $("#table4").scrollLeft());
+        })
+        $('#table5').on('scroll', function () {
+            $("#table5 > *").width($("#table5").width() + $("#table5").scrollLeft());
+        })
+    </script>
+    <script src="chart.js"></script>
+    <script type="text/javascript " src="js/encode.js"></script>
+
+</body>
+
+</html>

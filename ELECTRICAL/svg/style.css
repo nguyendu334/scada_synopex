@@ -1,0 +1,9 @@
+@font-face {
+    font-family: myDigitalFont;
+    src: url(../font/digital-7.ttf);
+  }
+  .font {
+    font-family: myDigitalFont;
+    color: yellow;
+    font-size: 25px;
+  }

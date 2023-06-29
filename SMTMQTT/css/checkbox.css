@@ -1,0 +1,354 @@
+/* Checkbox line */
+#linesv1 {
+  position: absolute;
+  z-index: 9999;
+  left: 153px;
+  top: 39px;
+}
+#linesv2 {
+  position: absolute;
+  z-index: 9999;
+  left: 363px;
+  top: 39px;
+}
+#linesv3 {
+  position: absolute;
+  z-index: 9999;
+  left: 573px;
+  top: 39px;
+}
+#linesv4 {
+  position: absolute;
+  z-index: 9999;
+  left: 777px;
+  top: 39px;
+}
+#linesv5 {
+  position: absolute;
+  z-index: 9999;
+  left: 983px;
+  top: 39px;
+}
+#linesv6 {
+  position: absolute;
+  z-index: 9999;
+  left: 1186px;
+  top: 39px;
+}
+#linesv7 {
+  position: absolute;
+  z-index: 9999;
+  left: 1403px;
+  top: 39px;
+}
+#linesv8 {
+  position: absolute;
+  z-index: 9999;
+  left: 153px;
+  top: 534px;
+}
+#linesv9 {
+  position: absolute;
+  z-index: 9999;
+  left: 363px;
+  top: 534px;
+}
+#linesv10 {
+  position: absolute;
+  z-index: 9999;
+  left: 573px;
+  top: 534px;
+}
+#linesv11 {
+  position: absolute;
+  z-index: 9999;
+  left: 775px;
+  top: 534px;
+}
+#linesv12 {
+  position: absolute;
+  z-index: 9999;
+  left: 983px;
+  top: 534px;
+}
+#linesv13 {
+  position: absolute;
+  z-index: 9999;
+  left: 1186px;
+  top: 534px;
+}
+#linesv14 {
+  position: absolute;
+  z-index: 9999;
+  left: 1396px;
+  top: 534px;
+}
+#linesv15 {
+  position: absolute;
+  z-index: 9999;
+  left: 1618px;
+  top: 534px;
+}
+#linesv16 {
+  position: absolute;
+  z-index: 9999;
+  left: 1797px;
+  top: 534px;
+}
+/* checkbox reflow */
+#lineReflow1 {
+  position: absolute;
+  z-index: 9999;
+  left: 147px;
+  top: 254px;
+}
+#lineReflow2 {
+  position: absolute;
+  z-index: 9999;
+  left: 360px;
+  top: 254px;
+}
+#lineReflow3 {
+  position: absolute;
+  z-index: 9999;
+  left: 562px;
+  top: 254px;
+}
+#lineReflow4 {
+  position: absolute;
+  z-index: 9999;
+  left: 769px;
+  top: 254px;
+}
+#lineReflow4 {
+  position: absolute;
+  z-index: 9999;
+  left: 770px;
+  top: 254px;
+}
+#lineReflow5 {
+  position: absolute;
+  z-index: 9999;
+  left: 980px;
+  top: 254px;
+}
+#lineReflow6 {
+  position: absolute;
+  z-index: 9999;
+  left: 1180px;
+  top: 254px;
+}
+#lineReflow7 {
+  position: absolute;
+  z-index: 9999;
+  left: 1397px;
+  top: 254px;
+}
+#lineReflow8 {
+  position: absolute;
+  z-index: 9999;
+  left: 150px;
+  top: 762px;
+}
+#lineReflow9 {
+  position: absolute;
+  z-index: 9999;
+  left: 360px;
+  top: 762px;
+}
+#lineReflow10 {
+  position: absolute;
+  z-index: 9999;
+  left: 565px;
+  top: 762px;
+}
+#lineReflow11 {
+  position: absolute;
+  z-index: 9999;
+  left: 769px;
+  top: 762px;
+}
+#lineReflow12 {
+  position: absolute;
+  z-index: 9999;
+  left: 980px;
+  top: 762px;
+}
+#lineReflow13 {
+  position: absolute;
+  z-index: 9999;
+  left: 1184px;
+  top: 762px;
+}
+#lineReflow14 {
+  position: absolute;
+  z-index: 9999;
+  left: 1405px;
+  top: 762px;
+}
+#lineReflow15 {
+  position: absolute;
+  z-index: 9999;
+  left: 1612px;
+  top: 762px;
+}
+#lineReflow16 {
+  position: absolute;
+  z-index: 9999;
+  left: 1781px;
+  top: 762px;
+}
+/* checkbox printer */
+#linePrinter1 {
+  position: absolute;
+  z-index: 9999;
+  left: 153px;
+  top: 393px;
+}
+#linePrinter2 {
+  position: absolute;
+  z-index: 9999;
+  left: 366px;
+  top: 393px;
+}
+#linePrinter3 {
+  position: absolute;
+  z-index: 9999;
+  left: 568px;
+  top: 393px;
+}
+#linePrinter4 {
+  position: absolute;
+  z-index: 9999;
+  left: 775px;
+  top: 393px;
+}
+#linePrinter4 {
+  position: absolute;
+  z-index: 9999;
+  left: 776px;
+  top: 393px;
+}
+#linePrinter5 {
+  position: absolute;
+  z-index: 9999;
+  left: 986px;
+  top: 393px;
+}
+#linePrinter6 {
+  position: absolute;
+  z-index: 9999;
+  left: 1188px;
+  top: 393px;
+}
+#linePrinter7 {
+  position: absolute;
+  z-index: 9999;
+  left: 1403px;
+  top: 393px;
+}
+#linePrinter8 {
+  position: absolute;
+  z-index: 9999;
+  left: 157px;
+  top:901px;
+}
+#linePrinter9 {
+  position: absolute;
+  z-index: 9999;
+  left: 367px;
+  top:901px;
+}
+#linePrinter10 {
+  position: absolute;
+  z-index: 9999;
+  left: 572px;
+  top:901px;
+}
+#linePrinter11 {
+  position: absolute;
+  z-index: 9999;
+  left: 776px;
+  top:901px;
+}
+#linePrinter12 {
+  position: absolute;
+  z-index: 9999;
+  left: 987px;
+  top:901px;
+}
+#linePrinter13 {
+  position: absolute;
+  z-index: 9999;
+  left: 1190px;
+  top:901px;
+}
+#linePrinter14 {
+  position: absolute;
+  z-index: 9999;
+  left: 1412px;
+  top:901px;
+}
+#linePrinter15 {
+  position: absolute;
+  z-index: 9999;
+  left: 1619px;
+  top:901px;
+}
+#linePrinter16 {
+  position: absolute;
+  z-index: 9999;
+  left: 1788px;
+  top:901px;
+}
+
+@media only screen and (max-width: 1920px) {
+  input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  input[type="checkbox"] {
+    margin: 4px 0 0;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  input[type="checkbox"] {
+    margin: 4px 0 0;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 568px) {
+  input[type="checkbox"] {
+    margin: 4;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 667px) {
+  input[type="checkbox"] {
+    margin: 4px 0 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  input[type="checkbox"] {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1280px) {
+  input[type="checkbox"] {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+  input[type="checkbox"] {
+    margin: 0;
+  }
+}

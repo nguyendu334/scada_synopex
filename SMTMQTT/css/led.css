@@ -1,0 +1,355 @@
+#LedRefLowline1{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 174px;
+    left: 151px;
+}
+#LedRefLowline2{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 174px;
+    left: 365px;
+}
+#LedRefLowline3{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 174px;
+    left: 565px;
+}
+#LedRefLowline4{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 174px;
+    left: 771px;
+}
+#LedRefLowline5{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 174px;
+    left: 978px;
+}
+#LedRefLowline6{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 174px;
+    left: 1184px;
+}
+#LedRefLowline7{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 174px;
+    left: 1405px;
+}
+#LedRefLowline8{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 682px;
+    left: 151px;
+}
+#LedRefLowline9{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 682px;
+    left: 365px;
+}
+#LedRefLowline10{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 682px;
+    left: 565px;
+}
+#LedRefLowline11{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 682px;
+    left: 771px;
+}
+#LedRefLowline12{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 682px;
+    left: 978px;
+}
+#LedRefLowline13{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 682px;
+    left: 1184px;
+}
+#LedRefLowline14{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 682px;
+    left: 1405px;
+}
+#LedRefLowline15{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 682px;
+    left: 1621px;
+}
+#LedRefLowline16{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 682px;
+    left: 1791px;
+}
+#LedPrinterline1{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 313px;
+    left: 151px;
+}
+#LedPrinterline2{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 313px;
+    left: 365px;
+}
+#LedPrinterline3{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 313px;
+    left: 565px;
+}
+#LedPrinterline4{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 313px;
+    left: 771px;
+}
+#LedPrinterline5{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 313px;
+    left: 978px;
+}
+#LedPrinterline6{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 313px;
+    left: 1184px;
+}
+#LedPrinterline7{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 313px;
+    left: 1405px;
+}
+#LedPrinterline8{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 821px;
+    left: 151px;
+}
+#LedPrinterline9{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 821px;
+    left: 365px;
+}
+#LedPrinterline10{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 821px;
+    left: 565px;
+}
+#LedPrinterline11{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 821px;
+    left: 771px;
+}
+#LedPrinterline12{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 821px;
+    left: 978px;
+}
+#LedPrinterline13{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 821px;
+    left: 1184px;
+}
+#LedPrinterline14{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 821px;
+    left: 1405px;
+}
+#LedPrinterline15{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 821px;
+    left: 1621px;
+}
+#LedPrinterline16{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    top: 821px;
+    left: 1791px;
+}
+
+@media (min-width: 320px) and (max-width: 568px) {
+    #LedRefLowline1{
+        z-index: 9999;
+        left: 176px;
+    }
+    #LedRefLowline2{
+        z-index: 9999;
+        left: 390px;
+    }
+    #LedRefLowline3{
+        z-index: 9999;
+        left: 590px;
+    }
+    #LedRefLowline4{
+        z-index: 9999;
+        left: 796px;
+    }
+    #LedRefLowline5{
+        z-index: 9999;
+        left: 1003px;
+    }
+    #LedRefLowline6{
+        z-index: 9999;
+        left: 1209px;
+    }
+    #LedRefLowline7{
+        z-index: 9999;
+        left: 1430px;
+    }
+    #LedRefLowline8{
+        z-index: 9999;
+        left: 176px;
+    }
+    #LedRefLowline9{
+        z-index: 9999;
+        left: 390px;
+    }
+    #LedRefLowline10{
+        z-index: 9999;
+        left: 590px;
+    }
+    #LedRefLowline11{
+        z-index: 9999;
+        left: 796px;
+    }
+    #LedRefLowline12{
+        z-index: 9999;
+        left: 1003px;
+    }
+    #LedRefLowline13{
+        z-index: 9999;
+        left: 1209px;
+    }
+    #LedRefLowline14{
+        z-index: 9999;
+        left: 1430px;
+    }
+    #LedRefLowline15{
+        z-index: 9999;
+        left: 1646px;
+    }
+    #LedRefLowline16{
+        z-index: 9999;
+        left: 1816px;
+    }
+    #LedPrinterline1{
+        z-index: 9999;
+        left: 176px;
+    }
+    #LedPrinterline2{
+        z-index: 9999;
+        left: 390px;
+    }
+    #LedPrinterline3{
+        z-index: 9999;
+        left: 590px;
+    }
+    #LedPrinterline4{
+        z-index: 9999;
+        left: 796px;
+    }
+    #LedPrinterline5{
+        z-index: 9999;
+        left: 1003px;
+    }
+    #LedPrinterline6{
+        z-index: 9999;
+        left: 1209px;
+    }
+    #LedPrinterline7{
+        z-index: 9999;
+        left: 1430px;
+    }
+    #LedPrinterline8{
+        z-index: 9999;
+        left: 176px;
+    }
+    #LedPrinterline9{
+        z-index: 9999;
+        left: 390px;
+    }
+    #LedPrinterline10{
+        z-index: 9999;
+        left: 590px;
+    }
+    #LedPrinterline11{
+        z-index: 9999;
+        left: 796px;
+    }
+    #LedPrinterline12{
+        z-index: 9999;
+        left: 1003px;
+    }
+    #LedPrinterline13{
+        z-index: 9999;
+        left: 1209px;
+    }
+    #LedPrinterline14{
+        z-index: 9999;
+        left: 1430px;
+    }
+    #LedPrinterline15{
+        z-index: 9999;
+        left: 1646px;
+    }
+    #LedPrinterline16{
+        z-index: 9999;
+        left: 1816px;
+    }
+  }

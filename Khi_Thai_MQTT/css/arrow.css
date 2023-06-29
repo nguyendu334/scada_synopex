@@ -1,0 +1,392 @@
+/* Arow hướng vào */
+.arrow {
+  /* more triangle */
+  position: relative;
+  height: 0px;
+  width: 0px;
+  border: 9px solid;
+  border-color: #dfd8d7 #e1d3d1 transparent transparent;
+  transform: rotate(45deg);
+}
+
+.arrow:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: block;
+  height: 10px;
+  width: 14px;
+  background-color: white;
+  transform: rotate(-45deg) translate(2px, 1px);
+}
+
+@keyframes example {
+  0% {
+    left: 480px;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    left: 600px;
+    opacity: 0;
+  }
+}
+
+/* Arow hướng ra */
+.arrowRa {
+  /* more triangle */
+  position: relative;
+  height: 0px;
+  width: 0px;
+  border: 5px solid;
+  border-color: burlywood burlywood transparent transparent;
+  transform: rotate(-135deg);
+}
+
+.arrowRa:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: block;
+  height: 7px;
+  width: 10px;
+  background-color: burlywood;
+  transform: rotate(-45deg) translate(2px, 1px);
+}
+#arrowxanhduong1_2 {
+  position: absolute;
+  top: 458px;
+  z-index: 101;
+  left: 373px;
+  animation: arrowxanhduong1_2 4s linear infinite;
+}
+#arrowxanhduong2_2 {
+  position: absolute;
+  top: 458px;
+  z-index: 101;
+  left: 855px;
+  animation: arrowxanhduong1_2 4s linear infinite;
+}
+#arrowxanhduong3_2 {
+  position: absolute;
+  top: 458px;
+  z-index: 101;
+  left: 1336px;
+  animation: arrowxanhduong1_2 4s linear infinite;
+}
+#arrowxanhduong4_2 {
+  position: absolute;
+  top: 458px;
+  z-index: 101;
+  left: 1810px;
+  animation: arrowxanhduong1_2 4s linear infinite;
+}
+
+@keyframes arrowxanhduong1_2 {
+  0% {
+    transform: translateX(0) rotate(-135deg);
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(-125px) rotate(-135deg);
+    opacity: 0;
+  }
+}
+
+/* Arow hướng lên  */
+.arrowUp {
+  /* more triangle */
+  position: relative;
+  height: 0px;
+  width: 0px;
+  border: 5px solid;
+  border-color: burlywood burlywood transparent transparent;
+  transform: rotate(-45deg);
+}
+
+.arrowUp:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: block;
+  height: 7px;
+  width: 10px;
+  background-color: burlywood;
+  transform: rotate(-45deg) translate(2px, 1px);
+}
+
+.arrowUpTo {
+  /* more triangle */
+  position: relative;
+  height: 0px;
+  width: 0px;
+  border: 20px solid;
+  border-color: yellow transparent transparent;
+  transform: rotateY(516deg) rotate(-45deg);
+}
+
+.arrowUpTo:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: 2px;
+  display: block;
+  height: 17px;
+  width: 35px;
+  background-color: yellow;
+  transform: rotate(-45deg) translate(2px, 1px);
+}
+/* Arrow Cu1200 */
+#Cu1200_arrow1 {
+  position: absolute;
+  z-index: 10;
+  left: 123px;
+  top: 170px;
+  /* animation: arrow1 5s linear infinite; */
+}
+#arrowxanhla1_1 {
+  position: absolute;
+  top: 533px;
+  z-index: 101;
+  left: 262px;
+  animation: arrowxanhla1 7s linear infinite;
+}
+#arrowxanhla1_2 {
+  position: absolute;
+  top: 583px;
+  z-index: 101;
+  left: 305px;
+  animation: arrowxanhla2 2s linear infinite;
+}
+#arrowxanhduong1_1 {
+  position: absolute;
+  top: 548px;
+
+  z-index: 101;
+  left: 375px;
+  animation: arrowxanhduong1 4s linear infinite;
+}
+
+/* arrow Cu1000  */
+#Cu1000_arrow2 {
+  position: absolute;
+  z-index: 10;
+  left: 605px;
+  top: 170px;
+  animation: arrow1 5s linear infinite;
+}
+#arrowxanhla2_1 {
+  position: absolute;
+  top: 533px;
+  z-index: 101;
+  left: 744px;
+  animation: arrowxanhla1 7s linear infinite;
+}
+#arrowxanhla2_2 {
+  position: absolute;
+  top: 583px;
+  z-index: 101;
+  left: 787px;
+  animation: arrowxanhla2 2s linear infinite;
+}
+#arrowxanhduong2_1 {
+  position: absolute;
+  top: 548px;
+
+  z-index: 101;
+  left: 857px;
+  animation: arrowxanhduong1 4s linear infinite;
+}
+/* wetline 400  */
+#Wetline700_arrow3 {
+  position: absolute;
+  z-index: 10;
+  left: 1087px;
+  top: 170px;
+  animation: arrow1 5s linear infinite;
+}
+#arrowxanhla3_1 {
+  position: absolute;
+  top: 533px;
+  z-index: 101;
+  left: 1226px;
+  animation: arrowxanhla1 7s linear infinite;
+}
+#arrowxanhla3_2 {
+  position: absolute;
+  top: 583px;
+  z-index: 101;
+  left: 1269px;
+  animation: arrowxanhla2 2s linear infinite;
+}
+#arrowxanhduong3_1 {
+  position: absolute;
+  top: 548px;
+
+  z-index: 101;
+  left: 1339px;
+  animation: arrowxanhduong1 4s linear infinite;
+}
+/* Au 400 */
+#Au400_arrow4 {
+  position: absolute;
+  z-index: 10;
+  left: 1567px;
+  top: 170px;
+  animation: arrow1 5s linear infinite;
+}
+#arrowxanhla4_1 {
+  position: absolute;
+  top: 533px;
+  z-index: 101;
+  left: 1706px;
+  animation: arrowxanhla1 7s linear infinite;
+}
+#arrowxanhla4_2 {
+  position: absolute;
+  top: 583px;
+  z-index: 101;
+  left: 1749px;
+  animation: arrowxanhla2 2s linear infinite;
+}
+#arrowxanhduong4_1 {
+  position: absolute;
+  top: 548px;
+
+  z-index: 101;
+  left: 1819px;
+  animation: arrowxanhduong1 4s linear infinite;
+}
+@keyframes arrow1 {
+  0% {
+    transform: translateY(0) rotateY(516deg) rotate(-45deg);
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-160px) rotateY(516deg) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes arrowxanhduong1 {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-86px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+@keyframes arrowxanhla1 {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-187px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+@keyframes arrowxanhla2 {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-30px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+/* Arow hướng xuống  */
+
+.arrowDown {
+  /* more triangle */
+  position: relative;
+  height: 0px;
+  width: 0px;
+  border: 6px solid;
+  border-color: burlywood burlywood transparent transparent;
+  transform: rotate(-225deg);
+}
+
+.arrowDown:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: block;
+  height: 8px;
+  width: 11px;
+  background-color: burlywood;
+  transform: rotate(-45deg) translate(2px, 1px);
+}
+
+@keyframes arrowarowRaw {
+  0% {
+    top: 220px;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 970px;
+    opacity: 0;
+  }
+}

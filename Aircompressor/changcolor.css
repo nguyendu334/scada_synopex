@@ -1,0 +1,28 @@
+#boxN2, #boxRoom1 , #boxRoom2, #boxProduct{
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    opacity: 0.5;
+    background: red;
+    display: none;
+}
+#boxN2{
+    position: absolute;
+    top: 184px;
+    left: 1134px;
+}
+#boxRoom1{
+    position: absolute;
+    top: 369px;
+    left: 984px;
+}
+#boxProduct{
+    position: absolute;
+    top: 273px;
+    left: 1682px;
+}
+#boxRoom2{
+    position: absolute;
+    top: 709px;
+    left: 984px;
+}

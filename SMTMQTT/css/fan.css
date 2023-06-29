@@ -1,0 +1,24 @@
+#fan1{
+    position: absolute;
+    right: 206px;
+    top: 101px;
+    z-index: 999;
+    width: 115px;
+    height:75px
+}
+#fan2{
+    position: absolute;
+    right: 206px;
+    top: 211px;
+    z-index: 999;
+    width: 115px;
+    height:75px
+}
+#fan3{
+    position: absolute;
+    right: 206px;
+    top: 318px;
+    z-index: 999;
+    width: 115px;
+    height:75px
+}

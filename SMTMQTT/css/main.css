@@ -1,0 +1,102 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+@font-face {
+  font-family: myDigitalFont;
+  src: url(../font/digital-7.ttf);
+}
+.font {
+  font-family: myDigitalFont;
+  color: yellow;
+  font-size: 25px;
+}
+#container {
+  width: 1920px;
+  height: 1080px;
+}
+iframe {
+  border: none;
+}
+input[type=checkbox]{
+  margin: 0;
+}
+#tieude {
+  position: relative;
+  font-size: 30px;
+  color: rgb(33 26 224);
+  text-align: center;
+  width: 1920px;
+  height: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 50px;
+  background: #e5f1f2;
+}
+#tieude span {
+  line-height: 50px;
+  font-weight: bold;
+  font-size: 39px;
+}
+#timedata {
+  background: none;
+  border: none;
+}
+#myTime {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  color: #dacd51;
+  font-size: 22px;
+  background: black;
+  width: 290px;
+}
+#loa {
+  position: absolute;
+  left: 500px;
+  top:0px;
+}
+
+h3 {
+  font-size: 19px;
+}
+#wapper {
+  position: relative;
+  width: 100%;
+  height: 1008px;
+  background: black;
+}
+#img-wapper {
+  width: 100%;
+  height: 1010px;
+  position: absolute;
+  z-index: 100;
+}
+/* Css Footer */
+.wapper2 {
+  background-color: aqua;
+  height: 20px;
+  position: relative;
+}
+
+
+#connect,
+#PLC_isconnected1_7,
+#PLC_isconnected8_16,
+#Exhaufan_isconnected {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: none;
+  position: absolute;
+  top: 0px;
+}
+.black {
+  background: black;
+  box-shadow: 0px 2px 3px black;
+}
+.green {
+  background: green;
+  box-shadow: 0px 2px 3px green;
+  border: 1px solid #ffffff;
+}

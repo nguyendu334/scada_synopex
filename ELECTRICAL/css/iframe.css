@@ -1,0 +1,52 @@
+#mdb1{
+    position:absolute;
+    width: 300px;
+    height:200px;
+    top: 424px;
+    left: 24px;
+}
+#mdb2{
+    position:absolute;
+    width: 300px;
+    height:200px;
+    top: 424px;
+    left: 408px;
+}
+#mdb3{
+    position:absolute;
+    width: 300px;
+    height:200px;
+    top: 424px;
+    left: 790px;
+}
+#mdb4{
+    position:absolute;
+    width: 300px;
+    height:200px;
+    top: 424px;
+    left: 1170px;
+}
+#mdb5{
+    position:absolute;
+    width: 300px;
+    height:200px;
+    top: 424px;
+    left: 1547px;
+}
+#mdb{  width: 800px;
+    height:270px;}
+    #mdbpopup1
+        {  width: 800px;
+            height:270px;}
+            #mdbpopup2
+            {  width: 800px;
+                height:270px;}
+                #mdbpopup3
+                {  width: 800px;
+                    height:270px;}
+                    #mdbpopup4
+                    {  width: 800px;
+                        height:270px;}
+                        #mdbpopup5
+                        {  width: 800px;
+                            height:270px;}
