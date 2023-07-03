@@ -58,7 +58,7 @@
             <audio id="myAudio" loop>
                 <source src="audio/canhbao.mp3" type="audio/mpeg">
             </audio> -->
-            <span>DI MONITORING WEB-SYSTEM</span>
+            <div class="backname"><span class="NameProject">DI MONITORING WEB-SYSTEM</span></div>
 
         </header>
         <section id="wapper">
@@ -238,9 +238,9 @@
 
 
                 <div id="LedEdisystem1ATop" class="on ledgarenal"></div>
-                <div id="LedEdisystem1BTop" class="on ledgarenal"></div>
                 <div id="LedEdisystem2ATop" class="on ledgarenal"></div>
                 <div id="LedEdisystem2BTop" class="on ledgarenal"></div>
+                <div id="LedEdisystem2CTop" class="on ledgarenal"></div>
 
                 <div id="LedEdisystem1ABottom" class="ledgarenal"></div>
                 <div id="LedEdisystem1BBottom" class="ledgarenal"></div>
@@ -301,7 +301,9 @@
 
                 <span id="dataResistivity1">555.5</span>
                 <span id="dataResistivity2">55.55</span>
-                <span id="dataResistivity3">55.55</span>
+                <span id="dataEDIResistivity1B_3">55.55</span><!-- dataEDIResistivity1B_3 -->
+                <span id="dataEDIResistivity1B_2">55.55</span>
+                <span id="dataEDIResistivity1B_1">55.55</span>
                 <span id="dataResistivity4">55.55</span>
                 <span id="dataResistivity5">NULL</span>
                 <span id="dataResistivity6">NULL</span>
@@ -404,14 +406,17 @@
 
                 CONNECT: <input id="connect" class="on ledgarenal" type="text"
                     disabled />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                ConnectLineRO2 : <input id="ConnectLineRO2" class="on ledgarenal " type="text"
+                    Client1_20_502 : <input id="Client1_20_502" class="on ledgarenal " type="text"
                     disabled />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                ConnectValveLine1 : <input id="ConnectValveLine1" class="on ledgarenal " type="text"
+                    Client2_23_8000 : <input id="Client2_23_8000" class="on ledgarenal " type="text"
                     disabled />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                ConnectROTANK: <input id="ConnectROTANK" class="on ledgarenal " type="text"
+                    Client3_10_502: <input id="Client3_10_502" class="on ledgarenal " type="text"
                     disabled />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                ConnectRawwaterTank: <input id="ConnectRawwaterTank" class="on ledgarenal " type="text"
+                    Client4_46_502: <input id="Client4_46_502" class="on ledgarenal " type="text"
                     disabled />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    Client5_32_8000: <input id="Client5_32_8000" class="on ledgarenal " type="text"
+                    disabled />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
                 TIME UPDATE DATA: <input id="timedata" type="text" value="" disabled />
 
             </form>
@@ -426,14 +431,22 @@
         };
 
         setInterval(timer, 1000);
-        function timer() {
+  function timer() {
 
             var time = new Date();
             var h = time.getHours();
             var day = time.getDate();
             var m = time.getMinutes();
             var s = time.getSeconds();
-            if (day = 1 && h == 00 && s == 1) {
+            var y = time.getFullYear();
+            var m = time.getMonth() + 1;
+            /*Hàm tính số ngày trong tháng javascript*/
+            const get_day_of_month = (year, month) => {
+                return new Date(year, month, 0).getDate();
+            };
+            let getdayinmonth = get_day_of_month(y,m);
+            // console.log(h+":"+m+":"+s);
+            if (day == getdayinmonth && h == 23 && m == 59 && s == 50) {
                 document.getElementById('btn_dowload').click();
             }
         }
@@ -463,7 +476,8 @@
     <script type="text/javascript " src="js/mqttws31.min.js "></script>
     <script type="text/javascript " src="js/toggeled.js "></script>
     <script type="text/javascript " src="library/mainsvg.js"></script>
-    <script type="text/javascript " src="js/app.js "></script>
+    <!-- <script type="text/javascript " src="js/index.js "></script> -->
+    <script type="text/javascript " src="js/indexMQTT.js "></script>
     <!-- <script type=" text/javascript " src="js/HMI-TANK.js "></script> -->
 
 

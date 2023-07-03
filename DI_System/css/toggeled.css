@@ -160,5 +160,9 @@ a.logo b {
   font-weight: 900;
 }
 a.logo span {
-  color: rgb(243 183 3);
+  color: rgb(243 183 3);  
+  background: url(https://24.media.tumblr.com/tumblr_m87dri70zh1qzla33o1_500.gif);
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

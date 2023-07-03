@@ -350,7 +350,7 @@ const config = {
         },
       },
     },
-  },
+  }
 };
 
 // render init block
@@ -706,24 +706,24 @@ function ledOnOf(data) {
   }
 
 
-  var ConnectLineRO2 = document.getElementById("ConnectLineRO2");
-  var ConnectValveLine1 = document.getElementById("ConnectValveLine1");
-  var ConnectROTANK = document.getElementById("ConnectROTANK");
-  var ConnectRawwaterTank = document.getElementById("ConnectRawwaterTank");
-  if (data[0].ConnectLineRO2 == 1) {
-    ConnectLineRO2.classList.add("on");
+  var Client1_20_502 = document.getElementById("Client1_20_502");
+  var Client2_23_8000 = document.getElementById("Client2_23_8000");
+  var Client3_10_502 = document.getElementById("Client3_10_502");
+  var ConnectRawwaterTank = document.getElementById("Client4_46_502");
+  if (data[0].Connect.Client1 == 1) {
+    Client1_20_502.classList.add("on");
   } else {
-    ConnectLineRO2.classList.remove("on");
+    Client1_20_502.classList.remove("on");
   }
-  if (data[0].ConnectValveLine1 == 1) {
-    ConnectValveLine1.classList.add("on");
+  if (data[0].Connect.Client2 == 1) {
+    Client2_23_8000.classList.add("on");
   } else {
-    ConnectValveLine1.classList.remove("on");
+    Client2_23_8000.classList.remove("on");
   }
-  if (data[0].ConnectROTANK == 1) {
-    ConnectROTANK.classList.add("on");
+  if (data[0].Connect.Client3 == 1) {
+    Client3_10_502.classList.add("on");
   } else {
-    ConnectROTANK.classList.remove("on");
+    Client3_10_502.classList.remove("on");
   }
   // if (data[0].ConnectRawwaterTank == 1) {
   //   ConnectRawwaterTank.classList.add("on");

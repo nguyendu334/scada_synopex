@@ -129,23 +129,23 @@
   top: 518px;
   left: 642px;
 }
-#LedEdisystem1BTop {
-  position: absolute;
-  z-index: 10;
-  top: 556px;
-  left: 642px;
-}
 #LedEdisystem2ATop {
   position: absolute;
   z-index: 10;
   top: 595px;
-  left: 642px;
+  left: 557px;
 }
 #LedEdisystem2BTop {
   position: absolute;
   z-index: 10;
-  top: 634px;
-  left: 642px;
+  top: 595px;
+    left: 595px;
+}
+#LedEdisystem2CTop {
+  position: absolute;
+  z-index: 10;
+  top: 595px;
+  left: 632px;
 }
 
 #LedEdisystem1ABottom {

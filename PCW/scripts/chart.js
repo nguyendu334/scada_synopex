@@ -66,7 +66,8 @@ function rd() {
     document.getElementById('wetline_temp').textContent = db.nhiệt_độ.wetline.toFixed(2) + ' °C';
 
     // document.getElementById('chiller4').textContent = db.nhiệt_độ.chiller4.toFixed(2) + ' °C';
-    document.getElementById('chiller4').textContent = (db.nhiệt_độ.hotpress - 1.5).toFixed(2) + ' °C';
+    document.getElementById('chiller4').textContent =
+        (db.nhiệt_độ.hotpress - 1.5).toFixed(2) + ' °C';
     document.getElementById('chiller5').textContent = db.nhiệt_độ.chiller5.toFixed(2) + ' °C';
     document.getElementById('chiller6').textContent = db.nhiệt_độ.chiller6.toFixed(2) + ' °C';
     document.getElementById('chiller7').textContent = db.nhiệt_độ.chiller7.toFixed(2) + ' °C';
@@ -79,74 +80,147 @@ function rd() {
     document.getElementById('copper_line2').textContent =
         db.nhiệt_độ.nước_về.copper_line_2.toFixed(1) + ' °C';
 
-    if (db.nhiệt_độ.hotpress > 15 || db.nhiệt_độ.hotpress < 9) {
-        document.getElementById('hotpress_temp').style.backgroundColor = '#ff0000';
+    var input = document.getElementById('specmax');
+    var input2 = document.getElementById('specmin');
+
+    if (input.value != '' && input2.value != '') {
+        if (db.nhiệt_độ.hotpress > input.value || db.nhiệt_độ.hotpress < input2.value) {
+            document.getElementById('hotpress_temp').style.backgroundColor = '#ff0000';
+        }
+
+        if (db.nhiệt_độ.hotpress < input.value && db.nhiệt_độ.hotpress > input2.value) {
+            document.getElementById('hotpress_temp').style.backgroundColor = 'black';
+        }
+
+        if (db.nhiệt_độ.wetline > input.value || db.nhiệt_độ.wetline < input2.value) {
+            document.getElementById('wetline_temp').style.backgroundColor = '#ff0000';
+        }
+        if (db.nhiệt_độ.wetline < input.value && db.nhiệt_độ.wetline > input2.value) {
+            document.getElementById('wetline_temp').style.backgroundColor = 'black';
+        }
+    } else {
+        if (db.nhiệt_độ.hotpress > 15 || db.nhiệt_độ.hotpress < 9) {
+            document.getElementById('hotpress_temp').style.backgroundColor = '#ff0000';
+        }
+
+        if (db.nhiệt_độ.hotpress < 15 && db.nhiệt_độ.hotpress > 9) {
+            document.getElementById('hotpress_temp').style.backgroundColor = 'black';
+        }
+
+        if (db.nhiệt_độ.wetline > 15 || db.nhiệt_độ.wetline < 9) {
+            document.getElementById('wetline_temp').style.backgroundColor = '#ff0000';
+        }
+        if (db.nhiệt_độ.wetline < 15 && db.nhiệt_độ.wetline > 9) {
+            document.getElementById('wetline_temp').style.backgroundColor = 'black';
+        }
     }
 
-    if (db.nhiệt_độ.hotpress < 15 && db.nhiệt_độ.hotpress > 9) {
-        document.getElementById('hotpress_temp').style.backgroundColor = 'black';
+    // chaeck spec && cảnh báo mức nước
+    var soundAlarm = document.getElementById('myAudio');
+    var loa = document.getElementById('loa');
+    var input_mucnuoc = document.getElementById('spec-mucnuoc');
+
+    if (input_mucnuoc.value != '') {
+        if (db.mực_nước.hotpress < input_mucnuoc.value) {
+            document.getElementById('hotpress_level').style.backgroundColor = '#ff0000';
+        }
+
+        if (db.mực_nước.hotpress > input_mucnuoc.value) {
+            document.getElementById('hotpress_level').style.backgroundColor = 'black';
+        }
+
+        if (db.mực_nước.wetline < input_mucnuoc.value) {
+            document.getElementById('wetline_level').style.backgroundColor = '#ff0000';
+        }
+
+        if (db.mực_nước.wetline > input_mucnuoc.value) {
+            document.getElementById('wetline_level').style.backgroundColor = 'black';
+        }
+
+        if (db.mực_nước.hotpress < input_mucnuoc.value || db.mực_nước.wetline < input_mucnuoc.value) {
+            soundAlarm.play();
+            loa.src = 'img/ALARM.png';
+            loa.style.cursor = 'pointer';
+
+            $('#loa').click(function () {
+                loa.style.opacity = '0';
+                soundAlarm.muted = true;
+            });
+
+            if (loa.style.opacity === '0') {
+                $('#loa').click(function () {
+                    loa.style.opacity = '1';
+                    soundAlarm.muted = false;
+                });
+            }
+        } else {
+            soundAlarm.pause();
+            loa.src = 'img/onvolumn.png';
+            loa.style.cursor = 'pointer';
+
+            $('#loa').click(function () {
+                loa.style.opacity = '0';
+                soundAlarm.muted = true;
+            });
+
+            if (loa.style.opacity === '0') {
+                $('#loa').click(function () {
+                    loa.style.opacity = '1';
+                    soundAlarm.muted = false;
+                });
+            }
+        }
+    } else {
+        if (db.mực_nước.hotpress < 50) {
+            document.getElementById('hotpress_level').style.backgroundColor = '#ff0000';
+        }
+
+        if (db.mực_nước.hotpress > 50) {
+            document.getElementById('hotpress_level').style.backgroundColor = 'black';
+        }
+
+        if (db.mực_nước.wetline < 50) {
+            document.getElementById('wetline_level').style.backgroundColor = '#ff0000';
+        }
+
+        if (db.mực_nước.wetline > 50) {
+            document.getElementById('wetline_level').style.backgroundColor = 'black';
+        }
+
+        if (db.mực_nước.hotpress < 50 || db.mực_nước.wetline < 50) {
+            soundAlarm.play();
+            loa.src = 'img/ALARM.png';
+            loa.style.cursor = 'pointer';
+
+            $('#loa').click(function () {
+                loa.style.opacity = '0';
+                soundAlarm.muted = true;
+            });
+
+            if (loa.style.opacity === '0') {
+                $('#loa').click(function () {
+                    loa.style.opacity = '1';
+                    soundAlarm.muted = false;
+                });
+            }
+        } else {
+            soundAlarm.pause();
+            loa.src = 'img/onvolumn.png';
+            loa.style.cursor = 'pointer';
+
+            $('#loa').click(function () {
+                loa.style.opacity = '0';
+                soundAlarm.muted = true;
+            });
+
+            if (loa.style.opacity === '0') {
+                $('#loa').click(function () {
+                    loa.style.opacity = '1';
+                    soundAlarm.muted = false;
+                });
+            }
+        }
     }
-
-    if (db.nhiệt_độ.wetline > 15 || db.nhiệt_độ.wetline < 9) {
-        document.getElementById('wetline_temp').style.backgroundColor = '#ff0000';
-    }
-    if (db.nhiệt_độ.wetline < 15 && db.nhiệt_độ.wetline > 9) {
-        document.getElementById('wetline_temp').style.backgroundColor = 'black';
-    }
-
-// chaeck spec && cảnh báo mức nước
-var soundAlarm = document.getElementById('myAudio');
-var loa = document.getElementById('loa');
-
-if (db.mực_nước.hotpress < 50) {
-    document.getElementById('hotpress_level').style.backgroundColor = '#ff0000';
-}
-
-if (db.mực_nước.hotpress > 50) {
-    document.getElementById('hotpress_level').style.backgroundColor = 'black';
-}
-
-if (db.mực_nước.wetline < 50) {
-    document.getElementById('wetline_level').style.backgroundColor = '#ff0000';
-}
-
-if (db.mực_nước.wetline > 50) {
-    document.getElementById('wetline_level').style.backgroundColor = 'black';
-}
-
-if (db.mực_nước.hotpress < 50 || db.mực_nước.wetline < 50) {
-    soundAlarm.play();
-    loa.src = 'img/ALARM.png';
-    loa.style.cursor = 'pointer';
-
-    $('#loa').click(function () {
-        loa.style.opacity = '0';
-        soundAlarm.muted = true;
-    });
-
-    if (loa.style.opacity === '0') {
-        $('#loa').click(function () {
-            loa.style.opacity = '1';
-            soundAlarm.muted = false;
-        });
-    }
-} else {
-    soundAlarm.pause();
-    loa.src = 'img/onvolumn.png';
-    loa.style.cursor = 'pointer';
-
-    $('#loa').click(function () {
-        loa.style.opacity = '0';
-        soundAlarm.muted = true;
-    });
-
-    if (loa.style.opacity === '0') {
-        $('#loa').click(function () {
-            loa.style.opacity = '1';
-            soundAlarm.muted = false;
-        });
-    }
-}
 
     // // add css
     // document
@@ -568,8 +642,8 @@ if (db.mực_nước.hotpress < 50 || db.mực_nước.wetline < 50) {
             .getElementById('left-wapper')
             .getSVGDocument()
             .getElementById('chiller4_comp1_fan6').style.animation = '';
-        
-            document
+
+        document
             .getElementById('left-wapper')
             .getSVGDocument()
             .getElementById('chiller4_comp1_fan1').style.fill = '#ffffff';
@@ -1811,7 +1885,7 @@ if (db.mực_nước.hotpress < 50 || db.mực_nước.wetline < 50) {
             .getSVGDocument()
             .getElementById('chiller7_comp2_fan4').style.animation = '';
 
-            document
+        document
             .getElementById('left-wapper')
             .getSVGDocument()
             .getElementById('chiller7_comp2_fan3').style.fill = '#ffffff';

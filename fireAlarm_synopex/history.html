@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FIRE ALARM MONITORING WEB-SYSTEM</title>
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="stylesheet" href="./css/styleTable.css" />
+        <link rel="shortcut icon" href="./img/monitoring.png" type="image/x-icon" />
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    </head>
+
+    <body>
+        <div id="container">
+            <header id="tieude">
+                <a href="index.html" class="logo">
+                    <img src="./svg/list.svg" alt="" class="svg-list" />
+                    <b class="syno">Syno<span style="font-size: 34px">pex</span> </b>
+                </a>
+
+                <p id="myTime"></p>
+
+                <div class="backname">
+                    <span class="NameProject">FIRE ALARM MONITORING WEB-SYSTEM</span>
+                </div>
+            </header>
+
+            <div class="table" id="sheet0">
+                <table cellpadding="0" cellspacing="0" id="tableHeder" border="1"></table>
+                <table cellpadding="0" cellspacing="0" id="table" border="1"></table>
+            </div>
+
+            <button class="button-export" onclick="Export()">Export Data</button>
+
+            <!-- <section class="footer" style="margin-top: 0px;">
+                <span class="process">PROCESSING:</span>
+                <input class="input-process" type="text" disabled />
+
+                <span class="connect">CONNECT:</span>
+                <input id="connect" class="black" type="text" disabled />
+
+                <span class="mqtt">MQTT:</span>
+                <input id="mqtt" class="black" type="text" disabled />
+
+                <span class="SPINKLER">SPINKLER:</span>
+                <input id="SPINKLER" class="black" type="text" disabled />
+
+                <span class="pumpPlc">PLC:</span>
+                <input id="pumpPlc" class="black" type="text" disabled />
+
+                <span class="time-data">TIME UPDATE DATA:</span>
+                <input id="timedata" type="text" disabled />
+            </section> -->
+        </div>
+
+        <script>
+            function Export() {
+                $('#sheet0').table2excel({
+                    filename: 'Lịch_sử_báo_cháy' + '.xls',
+                    preserveColors: true,
+                });
+            }
+        </script>
+        <script src="./scripts/history.js"></script>
+        <script src="./scripts/scripts.js"></script>
+        <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="./scripts/table2excel.js"></script>
+    </body>
+</html>

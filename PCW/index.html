@@ -18,10 +18,11 @@
     </head>
     <body>
         <div class="container">
-            <header class="header">
+            <!-- <header class="header">
                 <a href="" class="logo">
                     <img src="./svg/list.svg" alt="" />
                     <b class="syno">SYNO<span>PEX</span></b>
+
                 </a>
 
                 <img id="loa1" src="img/volume.png" />
@@ -32,45 +33,127 @@
                 </audio>
 
                 <span class="NameProject">PCW MONITORING WEB-SYSTEM</span>
+                <span id="myTime"></span>
+            </header> -->
 
+            <header class="header">
+                <input type="checkbox" name="open" id="open" />
+                <label  class="open">
+                    <img src="./svg/list.svg" alt="" />
+                    <b class="syno">SYNO<span>PEX</span></b>
+                </label>
+                <div class="menu">
+                    <div>
+                        <span class="text1" style="left: 40px; top: 30px"
+                            >Spec nhiệt độ:</span
+                        >
+                        <span class="text1" style="left: 40px; top: 90px;"
+                            >Min:
+                            <input
+                                type="number"
+                                id="specmin"
+                                min="1"
+                                max="100"
+                        /></span>
+                        <span class="text1" style="left: 250px; top: 90px;"
+                            >Max:
+                            <input
+                                type="number"
+                                id="specmax"
+                                min="1"
+                                max="100"
+                        /></span>
+                    </div>
+
+                    <div>
+                        <span class="text1" style="left: 40px; top: 170px"
+                            >Nhiệt độ mặc định: 9-15°C</span
+                        >
+                    </div>
+
+                    <div>
+                        <span class="text1" style="left: 40px; top: 220px"
+                            >Spec mực nước:</span
+                        >
+                        <span class="text1" style="left: 40px; top: 280px;"
+                            >Min:
+                            <input
+                                type="number"
+                                id="spec-mucnuoc"
+                                min="1"
+                                max="100"
+                        /></span>
+                    </div>
+                </div>
+
+                <img id="loa1" src="img/volume.png" />
+                <img id="loa" src="img/onvolumn.png" />
+
+                <audio id="myAudio" type="audio/mpeg" loop>
+                    <source src="audio/canhbao.mp3" type="audio/mpeg" />
+                </audio>
+
+                <span class="NameProject">PCW MONITORING WEB-SYSTEM</span>
                 <span id="myTime"></span>
             </header>
 
             <section class="wapper">
                 <iframe src="./svg/pcw.svg" frameborder="0" id="left-wapper"></iframe>
 
-                <img src="./svg/smoke2.gif" alt="" class="water" id="water_hotpress" style="top: 504px; left: 312px" />
-                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 507px; left: 379px" />
-                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 515px; left: 523px" />
-                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 509px; left: 661px" />
+                <img
+                    src="./svg/smoke2.gif"
+                    alt=""
+                    class="water"
+                    id="water_hotpress"
+                    style="top: 505px; left: 301px"
+                />
+                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 507px; left: 368px" />
+                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 515px; left: 511px" />
+                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 509px; left: 653px" />
 
-                <img src="./svg/smoke2.gif" alt="" class="water" id="water_wetline" style="top: 1174px; left: 320px" />
-                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 1176px; left: 378px" />
-                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 1186px; left: 521px" />
-                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 1179px; left: 600px" />
-                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 1179px; left: 662px" />
+                <img
+                    src="./svg/smoke2.gif"
+                    alt=""
+                    class="water"
+                    id="water_wetline"
+                    style="top: 1180px; left: 308px"
+                />
+                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 1179px; left: 368px" />
+                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 1190px; left: 511px" />
+                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 1179px; left: 590px" />
+                <img src="./svg/smoke2.gif" alt="" class="water" style="top: 1179px; left: 652px" />
 
-                <button class="btn-a" id="btn1" style="top: 792px; left: 302px"></button>
-                <span class="data-water" id="hotpress_level" style="top: 642px; left: 304px"></span>
-                <span class="data-water" id="hotpress_temp" style="top: 642px; left: 530px"></span>
-                <span class="text-water" style="top: 607px; left: 304px"><b>MỨC NƯỚC</b></span>
-                <span class="text-water" style="top: 607px; left: 530px"><b>NHIỆT ĐỘ</b></span>
-                <span class="text" style="top: 730px; left: 345px"><b>PCW TANK HOTPRESS</b></span>
+                <label for="open" style=" cursor: pointer">
+                    <button class="btn-a" id="btn1" style="top: 794px; left: 290px"></button>
+                    <span class="data-water" id="hotpress_level" style="top: 642px; left: 294px"></span>
+                    <span class="data-water" id="hotpress_temp" style="top: 642px; left: 520px"></span>
+                    <span class="text-water" style="top: 607px; left: 294px"><b>MỨC NƯỚC</b></span>
+                    <span class="text-water" style="top: 607px; left: 520px"><b>NHIỆT ĐỘ</b></span>
+                    <span class="text" style="top: 730px; left: 345px;" ><b>PCW TANK HOTPRESS</b></span>
+    
+                    <button class="btn-a" id="btn2" style="top: 1470px; left: 290px"></button>
+                    <span class="data-water" id="wetline_level" style="top: 1300px; left: 294px"></span>
+                    <span class="data-water" id="wetline_temp" style="top: 1300px; left: 520px"></span>
+                    <span class="text-water" style="top: 1270px; left: 294px"><b>MỨC NƯỚC</b></span>
+                    <span class="text-water" style="top: 1270px; left: 520px"><b>NHIỆT ĐỘ</b></span>
+                    <span class="text" style="top: 1390px; left: 360px;" ><b>PCW TANK WETLINE</b></span>
+                </label>
 
-                <button class="btn-a" id="btn2" style="top: 1461px; left: 302px"></button>
-                <span class="data-water" id="wetline_level" style="top: 1307px; left: 304px"></span>
-                <span class="data-water" id="wetline_temp" style="top: 1307px; left: 530px"></span>
-                <span class="text-water" style="top: 1270px; left: 304px"><b>MỨC NƯỚC</b></span>
-                <span class="text-water" style="top: 1270px; left: 530px"><b>NHIỆT ĐỘ</b></span>
-                <span class="text" style="top: 1390px; left: 360px"><b>PCW TANK WETLINE</b></span>
+                <span class="data-chiller" id="chiller4" style="top: 685px; left: 1485px"></span>
+                <span class="data-chiller" id="chiller5" style="top: 1320px; left: 1485px"></span>
+                <span class="data-chiller" id="chiller6" style="top: 1610px; left: 1485px"></span>
+                <span class="data-chiller" id="chiller7" style="top: 1905px; left: 1485px"></span>
 
-                <span class="data-chiller" id="chiller4" style="top: 675px; left: 1485px"></span>
-                <span class="data-chiller" id="chiller5" style="top: 1310px; left: 1485px"></span>
-                <span class="data-chiller" id="chiller6" style="top: 1600px; left: 1485px"></span>
-                <span class="data-chiller" id="chiller7" style="top: 1890px; left: 1485px"></span>
-
-                <span class="data-back" id="hotpress_machine1" style="top: 210px; left: 428px"></span>
-                <span class="data-back" id="hotpress_machine2" style="top: 270px; left: 568px"></span>
+                <span
+                    class="data-back"
+                    id="hotpress_machine1"
+                    style="top: 210px; left: 428px"
+                ></span>
+                <span
+                    class="data-back"
+                    id="hotpress_machine2"
+                    style="top: 270px; left: 568px"
+                ></span>
                 <span class="data-back" id="copper_line1" style="top: 916px; left: 346px"></span>
                 <span class="data-back" id="copper_line2" style="top: 916px; left: 495px"></span>
             </section>

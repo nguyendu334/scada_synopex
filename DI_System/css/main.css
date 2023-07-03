@@ -20,7 +20,7 @@ iframe {
 #tieude {
   position: relative;
   font-size: 30px;
-  color: rgb(33 26 224);
+  color: rgb(36, 35, 71);
   text-align: center;
   width: 1920px;
   height: 0;
@@ -33,7 +33,14 @@ iframe {
 #tieude span {
   line-height: 75px;
   font-weight: bold;
-  font-size: 39px;
+  font-size: 58px;
+
+}
+.NameProject{
+  background: url("./water.gif");
+  background-size: 300px 50px ;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #myTime {
@@ -325,11 +332,31 @@ h3 {
   font-family: myDigitalFont;
   font-weight: bolder;
 }
-#dataResistivity3 {
+#dataEDIResistivity1B_3 {
   position: absolute;
   z-index: 10;
-  top: 605px;
-  left: 388px;
+  top: 704px;
+  left: 498px;
+  color: #0b0b0a;
+  font-size: 22px;
+  font-family: myDigitalFont;
+  font-weight: bolder;
+}
+#dataEDIResistivity1B_2 {
+  position: absolute;
+  z-index: 10;
+  top: 704px;
+  left: 584px;
+  color: #0b0b0a;
+  font-size: 22px;
+  font-family: myDigitalFont;
+  font-weight: bolder;
+}
+#dataEDIResistivity1B_1 {
+  position: absolute;
+  z-index: 10;
+  top: 704px;
+  left: 675px;
   color: #0b0b0a;
   font-size: 22px;
   font-family: myDigitalFont;
