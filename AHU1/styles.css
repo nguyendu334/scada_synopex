@@ -19,6 +19,7 @@
     justify-content: center;
     align-items: center;
     height: 120px;
+    width: 3840px;
     background: rgb(15, 1, 63);
 }
 
@@ -63,7 +64,7 @@ ul li a:hover{
 }
 .open{
     display: flex;
-    margin-left: 60px;
+    margin-left: 100px;
     transition: 0.5s;
     cursor: pointer;
 }
@@ -118,7 +119,6 @@ ul li a:hover{
 }
 
 /* wrapper */
-
 #left-wapper {
     display: flex;
     width:3840px;
@@ -129,6 +129,7 @@ ul li a:hover{
 .footer {
     position: relative;
     height: 43px;
+    width: 3840px;
     background: rgb(153, 247, 247);
 }
 
