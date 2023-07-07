@@ -59,13 +59,6 @@ function myMessageArrived(message) {
 function rd() {
   setInterval(() => {
     timer();
-    // ShowSTATUS();
-    // setValueButom();
-    // setboder();
-    // connectAll();
-    // autoBaodong();
-    // setDoor();
-    // history();
 }, 1000);
 
     var arrayDoor = Object.values(data.datadoor);
@@ -78,7 +71,6 @@ function rd() {
             document.getElementById('Muiten' + (i + 1)).style.display = 'none';
         }
     }
-
 
     var databoder = data.dataZone.datazone;
     // tang1

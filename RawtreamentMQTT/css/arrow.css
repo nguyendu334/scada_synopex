@@ -1,0 +1,817 @@
+/* Arow hướng vào */
+.arrow {
+  /* more triangle */
+  position: relative;
+  height: 0px;
+  width: 0px;
+  border: 9px solid;
+  border-color: #dfd8d7 #e1d3d1 transparent transparent;
+  transform: rotate(45deg);
+}
+
+.arrow:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: block;
+  height: 10px;
+  width: 14px;
+  background-color: white;
+  transform: rotate(-45deg) translate(2px, 1px);
+}
+#arowService {
+  position: absolute;
+  z-index: 1;
+  top: 297px;
+  left: 131px;
+}
+#arowPlanA {
+  position: absolute;
+  z-index: 1;
+  top: 84px;
+  left: 510px;
+  animation: example 5s linear infinite;
+}
+@keyframes example {
+  0% {
+    left: 480px;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    left: 600px;
+    opacity: 0;
+  }
+}
+/* @keyframes example {
+  from {
+    left: 480px;
+  }
+  to {
+    left: 600px;
+  }
+} */
+#arowPlan {
+  position: absolute;
+  z-index: 1;
+  top: 578px;
+  left: 510px;
+  animation: example 5s linear infinite;
+}
+/* Arow hướng ra */
+.arrowRa {
+  /* more triangle */
+  position: relative;
+  height: 0px;
+  width: 0px;
+  border: 5px solid;
+  border-color: burlywood burlywood transparent transparent;
+  transform: rotate(-135deg);
+}
+
+.arrowRa:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: block;
+  height: 8px;
+  width: 11px;
+  background-color: burlywood;
+  transform: rotate(-45deg) translate(2px, 1px);
+}
+
+/* Arow hướng lên  */
+.arrowUp {
+  /* more triangle */
+  position: relative;
+  height: 0px;
+  width: 0px;
+  border: 7px solid;
+  border-color: burlywood burlywood transparent transparent;
+  transform: rotate(-45deg);
+}
+
+.arrowUp:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: block;
+  height: 8px;
+  width: 11px;
+  background-color: burlywood;
+  transform: rotate(-45deg) translate(2px, 1px);
+}
+#arowMMFA1 {
+  position: absolute;
+  z-index: 1;
+  top: 90px;
+  left: 631px;
+  animation: arrowA1 3s linear infinite;
+}
+@keyframes arrowA1 {
+  0% {
+    top: 120px;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 80px;
+    opacity: 0;
+  }
+}
+@keyframes arrowA1_1 {
+  0% {
+    top: 355px;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 290px;
+    opacity: 0;
+  }
+}
+@keyframes arrowA2 {
+  0% {
+    top: 190px;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 145px;
+    opacity: 0;
+  }
+}
+@keyframes arrowA3 {
+  0% {
+    top: 220px;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 270px;
+    opacity: 0;
+  }
+}
+@keyframes arrowA4 {
+  0% {
+    top: 145px;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 255px;
+    opacity: 0;
+  }
+}
+@keyframes arrowA5 {
+  0% {
+    top: 290px;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 358px;
+    opacity: 0;
+  }
+}
+@keyframes arrowA6 {
+  0% {
+    top: 40px;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 360px;
+    opacity: 0;
+  }
+}
+
+@keyframes arrowB1 {
+  0% {
+    top: 616px;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 576px;
+    opacity: 0;
+  }
+}
+@keyframes arrowB1_1 {
+  0% {
+    top: 860px;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 790px;
+    opacity: 0;
+  }
+}
+@keyframes arrowB2 {
+  0% {
+    top: 690px;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 640px;
+    opacity: 0;
+  }
+}
+@keyframes arrowB3 {
+  0% {
+    top: 715px;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 765px;
+    opacity: 0;
+  }
+}
+@keyframes arrowB4 {
+  0% {
+    top: 640px;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 750px;
+    opacity: 0;
+  }
+}
+@keyframes arrowB5 {
+  0% {
+    top: 790px;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 855px;
+    opacity: 0;
+  }
+}
+@keyframes arrowB6 {
+  0% {
+    top: 535px;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 855px;
+    opacity: 0;
+  }
+}
+#arowMMFA2 {
+  position: absolute;
+  z-index: 1;
+  top: 155px;
+  left: 763px;
+  animation: arrowA2 3s linear infinite;
+}
+
+#arowMMFA4 {
+  position: absolute;
+  z-index: 1;
+  top: 190px;
+  left: 748px;
+  animation: arrowA4 5s linear infinite;
+}
+#arowMMFA3 {
+  position: absolute;
+  z-index: 1;
+  top: 227px;
+  left: 632px;
+  animation: arrowA3 3s linear infinite;
+}
+#arowMMFA1_1 {
+  position: absolute;
+  z-index: 1;
+  top: 328px;
+  left: 631px;
+  animation: arrowA1_1 3s linear infinite;
+}
+#arowMMFB1 {
+  position: absolute;
+  z-index: 1;
+  top: 590px;
+  left: 635px;
+  animation: arrowB1 3s linear infinite;
+}
+#arowMMFB2 {
+  position: absolute;
+  z-index: 1;
+  top: 655px;
+  left: 767px;
+  animation: arrowB2 3s linear infinite;
+}
+#arowMMFB4 {
+  position: absolute;
+  z-index: 1;
+  top: 665px;
+  left: 752px;
+  animation: arrowB4 5s linear infinite;
+}
+#arowMMFB3 {
+  position: absolute;
+  z-index: 1;
+  top: 724px;
+  left: 636px;
+  animation: arrowB3 3s linear infinite;
+}
+#arowMMFB1_1 {
+  position: absolute;
+  z-index: 1;
+  top: 820px;
+  left: 636px;
+  animation: arrowB1_1 3s linear infinite;
+}
+
+#arowBIRMB1 {
+  position: absolute;
+  z-index: 1;
+  top: 590px;
+  left: 921px;
+  animation: arrowB1 3s linear infinite;
+}
+#arowBIRMB2 {
+  position: absolute;
+  z-index: 1;
+  top: 655px;
+  left: 1051px;
+  animation: arrowB2 3s linear infinite;
+}
+#arowBIRMB1_1 {
+  position: absolute;
+  z-index: 1;
+  top: 820px;
+  left: 923px;
+  animation: arrowB1_1 3s linear infinite;
+}
+
+#arowBIRMB6 {
+  position: absolute;
+  z-index: 1;
+  top: 820px;
+  left: 1073px;
+  animation: arrowB6 15s linear infinite;
+}
+#arowBIRMB3 {
+  position: absolute;
+  z-index: 1;
+  top: 724px;
+  left: 924px;
+  animation: arrowB3 3s linear infinite;
+}
+#arowBIRMB4 {
+  position: absolute;
+  z-index: 1;
+  top: 665px;
+  left: 1039px;
+  animation: arrowB4 5s linear infinite;
+}
+#arowBIRMB5 {
+  position: absolute;
+  z-index: 1;
+  top: 820px;
+  left: 1035px;
+  animation: arrowB5 3s linear infinite;
+}
+#arowBIRMA1 {
+  position: absolute;
+  z-index: 1;
+  top: 90px;
+  left: 919px;
+  animation: arrowA1 3s linear infinite;
+}
+#arowBIRMA2 {
+  position: absolute;
+  z-index: 1;
+  top: 158px;
+  left: 1048px;
+  animation: arrowA2 3s linear infinite;
+}
+#arowBIRMA3 {
+  position: absolute;
+  z-index: 1;
+  top: 224px;
+  left: 919px;
+  animation: arrowA3 3s linear infinite;
+}
+#arowBIRMA5 {
+  position: absolute;
+  z-index: 1;
+  top: 312px;
+  left: 1031px;
+  animation: arrowA5 3s linear infinite;
+}
+#arowBIRMA4 {
+  position: absolute;
+  z-index: 1;
+  top: 170px;
+  left: 1035px;
+  animation: arrowA4 5s linear infinite;
+}
+#arowBIRMA1_1 {
+  position: absolute;
+  z-index: 1;
+  top: 320px;
+  left: 918px;
+  animation: arrowA1_1 3s linear infinite;
+}
+#arowBIRMA6 {
+  position: absolute;
+  z-index: 1;
+  top: 320px;
+  left: 1071px;
+  animation: arrowA6 15s linear infinite;
+}
+
+#arowFILRETA1 {
+  position: absolute;
+  z-index: 1;
+  top: 90px;
+  right: 708px;
+  animation: arrowA1 3s linear infinite;
+}
+#arowFILRETA2 {
+  position: absolute;
+  z-index: 1;
+  top: 155px;
+  right: 574px;
+  animation: arrowA2 3s linear infinite;
+}
+#arowFILRETA3 {
+  position: absolute;
+  z-index: 1;
+  top: 234px;
+  right: 707px;
+  animation: arrowA3 3s linear infinite;
+}
+#arowFILRETA4 {
+  position: absolute;
+  z-index: 1;
+  top: 165px;
+  right: 593px;
+  animation: arrowA4 5s linear infinite;
+}
+#arowFILRETA5 {
+  position: absolute;
+  z-index: 1;
+  top: 320px;
+  right: 596px;
+  animation: arrowA5 3s linear infinite;
+}
+#arowFILRETA1_1 {
+  position: absolute;
+  z-index: 1;
+  top: 320px;
+  right: 707px;
+  animation: arrowA1_1 3s linear infinite;
+}
+
+#arowFILRETB1 {
+  position: absolute;
+  z-index: 1;
+  top: 590px;
+  right: 707px;
+  animation: arrowB1 3s linear infinite;
+}
+#arowFILRETB2 {
+  position: absolute;
+  z-index: 1;
+  top: 655px;
+  right: 573px;
+  animation: arrowB2 3s linear infinite;
+}
+#arowFILRETB1_1 {
+  position: absolute;
+  z-index: 1;
+  top: 820px;
+  right: 706px;
+  animation: arrowB1_1 3s linear infinite;
+}
+#arowFILRETB6 {
+  position: absolute;
+  z-index: 1;
+  top: 820px;
+  left: 1351px;
+  animation: arrowB6 15s linear infinite;
+}
+#arowFILRETB3 {
+  position: absolute;
+  z-index: 1;
+  top: 724px;
+  right: 707px;
+  animation: arrowB3 3s linear infinite;
+}
+#arowFILRETB4 {
+  position: absolute;
+  z-index: 1;
+  top: 655px;
+  right: 591px;
+  animation: arrowB4 5s linear infinite;
+}
+#arowFILRETB5 {
+  position: absolute;
+  z-index: 1;
+  top: 820px;
+  left: 1310px;
+  animation: arrowB5 3s linear infinite;
+}
+#arowSOFTA1 {
+  position: absolute;
+  z-index: 1;
+  top: 90px;
+  right: 421px;
+  animation: arrowA1 3s linear infinite;
+}
+
+#arowSOFTA1_1 {
+  position: absolute;
+  z-index: 1;
+  top: 320px;
+  right: 419px;
+  animation: arrowA1_1 3s linear infinite;
+}
+#arowSOFTA3 {
+  position: absolute;
+  z-index: 1;
+  top: 234px;
+  right: 420px;
+  animation: arrowA3 3s linear infinite;
+}
+#arowSOFTA4 {
+  position: absolute;
+  z-index: 1;
+  top: 165px;
+  right: 304px;
+  animation: arrowA4 5s linear infinite;
+}
+#arowSOFTA6 {
+  position: absolute;
+  z-index: 1;
+  top: 320px;
+  left: 1637px;
+  animation: arrowA6 15s linear infinite;
+}
+#arowSOFTA5 {
+  position: absolute;
+  z-index: 1;
+  top: 320px;
+  right: 309px;
+  animation: arrowA5 3s linear infinite;
+}
+#arowSOFTB1 {
+  position: absolute;
+  z-index: 1;
+  top: 590px;
+  right: 416px;
+  animation: arrowB1 3s linear infinite;
+}
+#arowSOFTB2 {
+  position: absolute;
+  z-index: 1;
+  top: 771px;
+  right: 243px;
+  animation: arrowarowSOFTB2 11s linear infinite;
+}
+@keyframes arrowarowSOFTB2 {
+  from {
+    top: 715px;
+  }
+  to {
+    top: 970px;
+  }
+}
+#arowSOFTB3 {
+  position: absolute;
+  z-index: 1;
+  top: 724px;
+  right: 420px;
+  animation: arrowB3 3s linear infinite;
+}
+#arowSOFTB1_1 {
+  position: absolute;
+  z-index: 1;
+  top: 820px;
+  right: 419px;
+  animation: arrowB1_1 3s linear infinite;
+}
+
+#arowSOFTB6 {
+  position: absolute;
+  z-index: 1;
+  top: 820px;
+  left: 1641px;
+  animation: arrowB6 15s linear infinite;
+}
+#arowSOFTB5 {
+  position: absolute;
+  z-index: 1;
+  top: 820px;
+  left: 1599px;
+  animation: arrowB5 3s linear infinite;
+}
+#arowSOFTB4 {
+  position: absolute;
+  z-index: 1;
+  top: 665px;
+  left: 1604px;
+  animation: arrowB4 5s linear infinite;
+}
+/* Arow hướng xuống  */
+
+.arrowDown {
+  /* more triangle */
+  position: relative;
+  height: 0px;
+  width: 0px;
+  border: 6px solid;
+  border-color: burlywood burlywood transparent transparent;
+  transform: rotate(-225deg);
+}
+
+.arrowDown:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: block;
+  height: 8px;
+  width: 11px;
+  background-color: burlywood;
+  transform: rotate(-45deg) translate(2px, 1px);
+}
+#arowMMFA6 {
+  position: absolute;
+  z-index: 1;
+  top: 320px;
+  left: 783px;
+  animation: arrowA6 15s linear infinite;
+}
+#arowMMFA5 {
+  position: absolute;
+  z-index: 1;
+  top: 320px;
+  left: 743px;
+  animation: arrowA5 3s linear infinite;
+}
+
+#arowFILRETA6 {
+  position: absolute;
+  z-index: 1;
+  top: 320px;
+  left: 1351px;
+  animation: arrowA6 15s linear infinite;
+}
+
+#arowMMFB6 {
+  position: absolute;
+  z-index: 1;
+  top: 820px;
+  left: 787px;
+  animation: arrowB6 15s linear infinite;
+}
+#arowMMFB5 {
+  position: absolute;
+  z-index: 1;
+  top: 820px;
+  left: 747px;
+  animation: arrowB5 3s linear infinite;
+}
+
+#arowRaw {
+  position: absolute;
+  z-index: 1;
+  top: 500px;
+  right: 227px;
+  animation: arrowarowRaw 30s linear infinite;
+}
+@keyframes arrowarowRaw {
+  0% {
+    top: 220px;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 970px;
+    opacity: 0;
+  }
+}
