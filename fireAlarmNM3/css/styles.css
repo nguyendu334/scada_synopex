@@ -34,7 +34,6 @@ a.logo span {
     background: url(https://24.media.tumblr.com/tumblr_m87dri70zh1qzla33o1_500.gif);
     background-size: cover;
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -61,14 +60,12 @@ a.logo span {
 .NameProject {
     background: rgb(255, 255, 255);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .syno {
     background: linear-gradient(90deg, rgb(99, 138, 245) 0%, rgba(0, 212, 255, 1) 100%);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 34px;
 }
@@ -160,7 +157,13 @@ a.logo span {
     left: 660px;
     border: none;
 }
-
+#connect.on {
+    background-image: radial-gradient(
+      farthest-corner at 50% 20%,
+      greenyellow 10%,
+      green 100%
+    );
+  }
 .mqtt {
     position: absolute;
     left: 720px;

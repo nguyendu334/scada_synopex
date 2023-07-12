@@ -4,6 +4,5 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "[svg]": {
         "editor.defaultFormatter": "jock.svg"
-    },
-    "liveServer.settings.port": 5501
+    }
 }

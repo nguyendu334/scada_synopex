@@ -1,16 +1,95 @@
-setInterval(() => {
-    read();
-}, 100);
+var MQTT_CLIENT_ID =
+  "iot_web_firealarm_" +
+  Math.floor((1 + Math.random()) * 0x10000000000).toString(16);
+var reconnect = false;
+// Create a MQTT client instance
+var MQTT_CLIENT = new Paho.MQTT.Client(
+  "broker.hivemq.com",
+  8000,
+  MQTT_CLIENT_ID
+);
 
-var connect = document.getElementById('connect');
-const read = async () => {
+// Tell the client instance to connect to the MQTT broker
+MQTT_CLIENT.connect({ onSuccess: myClientConnected });
+// Tell MQTT_CLIENT to call myMessageArrived(message) each time a new message arrives
+
+MQTT_CLIENT.onMessageArrived = myMessageArrived;
+// set callback handlers
+MQTT_CLIENT.onConnectionLost = onConnectionLost;
+
+var mqtt_isconnected = false;
+
+// This is the function which handles subscribing to topics after a connection is made
+function myClientConnected() {
+  MQTT_CLIENT.subscribe("SYNOPEX/IOT/FIREALARM/NM3");
+  mqtt_isconnected = true;
+}
+
+// called when the client loses its connection
+function onConnectionLost(responseObject) {
+  if (responseObject.errorCode !== 0) {
+    console.log("onConnectionLost:"+responseObject.errorMessage);
+    mqtt_isconnected = false;
+  }
+}
+
+//Khởi tạo các mảng cho data
+var dataCuCl = [];
+var datacheck = [];
+var dataTime = [];
+var data1;
+var dataold;
+var text;
+var data;
+var timedata = document.getElementById("timedata");
+// This is the function which handles received messages
+function myMessageArrived(message) {
+  var topic = message.destinationName;
+  var text = JSON.parse(message.payloadString);
+  data = text;
+  if (dataold != data) {
+    dataold = data;
+    sigmqtt = 0;
+  }
+  alarm(data);
+  timedata.value = data.ts;
+}
+setInterval(connectST,1000);
+function connectST(){
+    // console.log(mqtt_isconnected);
+
+    var connect = document.getElementById("connect");
+    sigmqtt++;
+    if (!mqtt_isconnected) {
+      connect.classList.remove("on");
+    } else {
+      connect.classList.add("on");
+    }
     try {
-        const response = await axios.get('./firealarm.json');
-        connect.classList.add('green');
-        connectAll(response.data);
-        alarm(response.data);
-    } catch {}
-};
+      if (sigmqtt > 15) {
+        reconnect = true;
+        m = MQTT_CLIENT.isConnected;
+        MQTT_CLIENT.connect({ onSuccess: myClientConnected });
+        sigmqtt = 10;
+        console.log("reconnect");
+      }
+    } catch (err) {
+      loi = err.message;
+    }
+}
+// setInterval(() => {
+//     read();
+// }, 100);
+
+// var connect = document.getElementById('connect');
+// const read = async () => {
+//     try {
+//         const response = await axios.get('./firealarm.json');
+//         connect.classList.add('green');
+//         connectAll(response.data);
+        
+//     } catch {}
+// };
 
 var connectAll = (data) => {
     let SPINKLER = document.getElementById('SPINKLER');
@@ -35,17 +114,17 @@ var connectAll = (data) => {
     } else {
         pumpPlc.classList.remove('green');
     }
-    timedata.value = new Date();
+    
     // timedata.value = data.Timespan;
 };
 
 const alarm = (data) => {
-    var dataAlarm = data.dataZone.datazone;
+    var dataAlarm = data.datazone;
     var soundAlarm = document.getElementById('myAudio');
     var loa = document.getElementById('loa');
 
     for (var i = 0; i < 30; i++) {
-        if (Object.values(dataAlarm)[i] === 1) {
+        if (Object.values(dataAlarm)[i] === true) {
             document
                 .getElementById('left-wapper')
                 .getSVGDocument()
@@ -84,7 +163,7 @@ const alarm = (data) => {
             }
         }
 
-        if (Object.values(dataAlarm).every((item) => item === 0)) {
+        if (Object.values(dataAlarm).every((item) => item === false)) {
             document
                 .getElementById('left-wapper')
                 .getSVGDocument()
