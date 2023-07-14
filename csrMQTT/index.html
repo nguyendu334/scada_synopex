@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+        Hieunv
+        SDT: 098.298.68.34
+        Email: tamdaitu.hsdb@gmail.com
+    -->
+
+<head style="background-color: lightskyblue;">
+    <title>HIEUNV - SCADA</title>
+    <Header id="tieude" style="font-size: 400%; color: white; text-align: center; width: 1920px; height: 60px;left:0px; top:0px; background-color:rgb(85, 85, 85)"> <b>WATER FURIFIER MONITORING WEB-SYSTEM</b> </Header>
+    <meta name="viewport" content="max-width=device-max-width, initial-scale=1">
+</head>
+
+<body style="background-color: black;">
+
+    <!--div class="slidecontainer">
+        <input id="dk" style="position:absolute; left:850px; top:70px;" type="range" min="0" max="10000" value="500" class="slider" id="myRange" onchange="onhieunv()">
+    </div-->
+    <h1 style="position:absolute;font-size: 200%; color: black;background-color: rgb(242, 248, 204);  width: 1930px; height: 65px;left:0px; top:975px;"></h1>
+    <MARQUEE style="position:absolute;font-size: 250%; color: black;background-color:ghostwhite;  width: 720px; height: 50;left:510px; top:1002px; border: double;border-color: black; font-family: Arial, Helvetica, sans-serif"> SYSTEM PROCESSING</MARQUEE>
+    <MARQUEE style="position:absolute;font-size: 250%; color: black;background-color:ghostwhite;  width: 680px; height: 47px;left:1240px; top:1002px; border: double;border-color: black;"> <b> </b></MARQUEE>
+    <button style="position:absolute; left:10px; top:1004px;  width: 120px; height: 50px; background-color: gold; color: black; ">RUNNING</button>
+
+    <button style="position:absolute; left:260px; top:1004px;  width: 120px; height: 50px; background-color: gold; color: black; ">ALARM OFF</button>
+    <button style="position:absolute; left:385px; top:1004px;  width: 120px; height: 50px; background-color: gold; color: black; ">RESET</button>
+
+
+
+    <!-- duongong-->
+    <HMI-PICTURE style="position:absolute; left:119px; top:209px; " width="5" height="280" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "></HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:258px; top:209px; " width="5" height="17" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "></HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1089px; top:178px; " width="5" height="54" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1089px; top:178px; " width="5" height="54" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:50px; top:566px; " width="5" height="141" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:148px; top:490px; " width="5" height="40" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:258px; top: 293px; " width="5" height="23" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:560px; top:468px; " width="5" height="17" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:771px; top:449px; " width="5" height="20" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:817px; top:449px; " width="5" height="20" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:861px; top:449px; " width="5" height="20" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:907px; top:449px; " width="5" height="20" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1289px; top:178px; " width="5" height="65" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1394px; top:178px; " width="5" height="68" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1651px; top:176px; " width="5" height="47" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1366px; top:243px; " width="5" height="156" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1472px; top:243px; " width="5" height="156" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1532px; top:178px; " width="5" height="222" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1884px; top:492px; " width="5" height="78" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:387px; top:692px; " width="5" height="35" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:496px; top:642px; " width="5" height="229" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:468px; top:695px; " width="5" height="109" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:866px; top:670px; " width="5" height="212" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1143px; top:644px; " width="5" height="119" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1408px; top:644px; " width="5" height="119" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1532px; top:639px; " width="5" height="10" value=false OnPic=" Camdoc.jpg " OffPic="Camdoc.jpg "> </HMI-PICTURE>
+
+
+
+
+
+
+
+
+    <HMI-PICTURE style="position:absolute; left:120px; top:199px; " width="143" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:922px; top:220px; " width="172" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1089px; top:164px; " width="566" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1289px; top:233px; " width="27" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1349px; top:233px; " width="22" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1394px; top:233px; " width="29" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1456px; top:233px; " width="21" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1367px; top:385px; " width="171" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1823px; top:480px; " width="66" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:878px; top:221px; " width="21" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:833px; top:221px; " width="21" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:788px; top:221px; " width="21" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:491px; top:490px; " width="61" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:563px; top:457px; " width="349" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:53px; top:557px; " width="1836" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:52px; top:693px; " width="119" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:213px; top:716px; " width="179" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:387px; top:683px; " width="150" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:563px; top:490px; " width="61" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:496px; top:630px; " width="1041" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:500px; top:676px; " width="23" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:563px; top:490px; " width="61" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:500px; top:712px; " width="23" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:500px; top:749px; " width="23" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:500px; top:783px; " width="23" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:500px; top:819px; " width="23" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:500px; top:856px; " width="23" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:472px; top:719px; " width="65" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:472px; top:756px; " width="65" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:472px; top:790px; " width="65" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:844px; top:676px; " width="22" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:844px; top:712px; " width="22" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:844px; top:748px; " width="22" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:844px; top:784px; " width="22" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:844px; top:819px; " width="22" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:844px; top:856px; " width="22" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:132px; top:479px; " width="21" height="5" value=false OnPic=" Camngang.jpg " OffPic="Camngang.jpg"> </HMI-PICTURE>
+
+
+
+
+
+    <HMI-PICTURE style="position:absolute; left:449px; top:170px; " width="5" height="55" value=false OnPic=" Timdoc.jpg " OffPic="Timdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1004px; top:170px; " width="5" height="382" value=false OnPic=" Timdoc.jpg " OffPic="Timdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1057px; top:269px; " width="5" height="86" value=false OnPic=" Timdoc.jpg " OffPic="Timdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1089px; top:394px; " width="5" height="72" value=false OnPic=" Timdoc.jpg " OffPic="Timdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1495px; top:462px; " width="5" height="20" value=false OnPic=" Timdoc.jpg " OffPic="Timdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:471px; top:836px; " width="5" height="36" value=false OnPic=" Timdoc.jpg " OffPic="Timdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:773px; top:170px; " width="5" height="32" value=false OnPic=" Timdoc.jpg " OffPic="Timdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:819px; top:170px; " width="5" height="32" value=false OnPic=" Timdoc.jpg " OffPic="Timdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:863px; top:170px; " width="5" height="32" value=false OnPic=" Timdoc.jpg " OffPic="Timdoc.jpg "> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:908px; top:170px; " width="5" height="32" value=false OnPic=" Timdoc.jpg " OffPic="Timdoc.jpg "> </HMI-PICTURE>
+
+
+
+    <HMI-PICTURE style="position:absolute; left:450px; top:161px; " width="558" height="5" value=false OnPic=" Timngang.jpg " OffPic="Timngang.jpg"></HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:928px; top:383px; " width="166" height="5" value=false OnPic=" Timngang.jpg " OffPic="Timngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1089px; top:451px; " width="411" height="5" value=false OnPic=" Timngang.jpg " OffPic="Timngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1004px; top:538px; " width="687" height="5" value=false OnPic=" Timngang.jpg " OffPic="Timngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1007px; top:259px; " width="55" height="5" value=false OnPic=" Timngang.jpg " OffPic="Timngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1008px; top:340px; " width="54" height="5" value=false OnPic=" Timngang.jpg " OffPic="Timngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:472px; top:826px; " width="65" height="5" value=false OnPic=" Timngang.jpg " OffPic="Timngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:140px; top:862px; " width="397" height="5" value=false OnPic=" Timngang.jpg " OffPic="Timngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1507px; top:484px; " width="121" height="5" value=false OnPic=" Timngang.jpg " OffPic="Timngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:793px; top:384px; " width="16" height="5" value=false OnPic=" Timngang.jpg " OffPic="Timngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:839px; top:384px; " width="16" height="5" value=false OnPic=" Timngang.jpg " OffPic="Timngang.jpg"> </HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:883px; top:384px; " width="16" height="5" value=false OnPic=" Timngang.jpg " OffPic="Timngang.jpg"> </HMI-PICTURE>
+
+
+    <HMI-PICTURE style="position:absolute; left:1751px; top:905px; " width="90" height="5" value=false OnPic=" Naungang.png " OffPic="Naungang.png"> </HMI-PICTURE>
+
+    <HMI-PICTURE style="position:absolute; left:907px; top:470px; " width="5" height="27" value=false OnPic=" Naudoc.png " OffPic="Naudoc.png"></HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:613px; top:436px; " width="5" height="31" value=false OnPic=" Naudoc.png " OffPic="Naudoc.png"></HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:627px; top:610px; " width="5" height="31" value=false OnPic=" Naudoc.png " OffPic="Naudoc.png"></HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:845px; top:617px; " width="5" height="25" value=false OnPic=" Naudoc.png " OffPic="Naudoc.png"></HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1012px; top:644px; " width="5" height="25" value=false OnPic=" Naudoc.png " OffPic="Naudoc.png"></HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:866px; top:880px; " width="5" height="27" value=false OnPic=" Naudoc.png " OffPic="Naudoc.png"></HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:471px; top:875px; " width="5" height="27" value=false OnPic=" Naudoc.png " OffPic="Naudoc.png"></HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:366px; top:841px; " width="5" height="31" value=false OnPic=" Naudoc.png " OffPic="Naudoc.png"></HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:275px; top:696px; " width="5" height="31" value=false OnPic=" Naudoc.png " OffPic="Naudoc.png"></HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1221px; top:145px; " width="5" height="31" value=false OnPic=" Naudoc.png " OffPic="Naudoc.png"></HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1268px; top:433px; " width="5" height="31" value=false OnPic=" Naudoc.png " OffPic="Naudoc.png"></HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1533px; top:400px; " width="5" height="24" value=false OnPic=" Naudoc.png " OffPic="Naudoc.png"></HMI-PICTURE>
+    <HMI-PICTURE style="position:absolute; left:1662px; top:494px; " width="5" height="58" value=false OnPic=" Naudoc.png " OffPic="Naudoc.png"></HMI-PICTURE>
+
+
+
+
+
+
+
+    <!-- hinh tròn-->
+    <HMI-PICTURE style="position:absolute; left:897px; top:495px; " width="25" height="20" value=false OnPic=" Nautron.png " OffPic="Nautron.png"> </HMI-PICTURE>
+    <p style="position:absolute; left:905px; top:482px;font-size: 15px; ">S</p>
+    <HMI-PICTURE style="position:absolute; left:598px; top:405px; " width="35" height="35" value=false OnPic=" Nautron.png " OffPic="Nautron.png"></HMI-PICTURE>
+    <p style="position:absolute; left:600px; top:403px;width:32px ;font-size: 13px; ">PS #1</p>
+    <HMI-PICTURE style="position:absolute; left:612px; top:578px; " width="35" height="35" value=false OnPic=" Nautron.png " OffPic="Nautron.png"> </HMI-PICTURE>
+    <p style="position:absolute;left:614px; top:577px;width:32px ; font-size: 13px; ">PS #6</p>
+    <HMI-PICTURE style="position:absolute; left:1206px; top:115px; " width="35" height="35" value=false OnPic=" Nautron.png " OffPic="Nautron.png"> </HMI-PICTURE>
+    <p style="position:absolute;  left:1208px; top:113px; width:32px;font-size: 13px; ">PS #2</p>
+    <HMI-PICTURE style="position:absolute; left:1253px; top:399px; " width="35" height="35" value=false OnPic=" Nautron.png " OffPic="Nautron.png"> </HMI-PICTURE>
+    <p style="position:absolute;  left:1255px; top:397px; width:32px ;font-size: 13px; ">PS #3</p>
+    <HMI-PICTURE style="position:absolute; left:351px; top:807px; " width="35" height="35" value=false OnPic=" Nautron.png " OffPic="Nautron.png"> </HMI-PICTURE>
+    <p style="position:absolute;  left:353px; top:805px; width:32px ;font-size: 13px; ">PS #5</p>
+    <HMI-PICTURE style="position:absolute; left:1523px; top:421px; " width="25" height="20" value=false OnPic=" Nautron.png " OffPic="Nautron.png"> </HMI-PICTURE>
+    <p style="position:absolute;  left:1532px; top:413px; width:32px ;font-size: 13px; ">S</p>
+    <HMI-PICTURE style="position:absolute; left:460px; top:900px; " width="25" height="20" value=false OnPic=" Nautron.png " OffPic="Nautron.png"> </HMI-PICTURE>
+    <p style="position:absolute;  left:469px; top:890px; width:32px ;font-size: 13px; ">S</p>
+    <HMI-PICTURE style="position:absolute; left:260px; top:662px; " width="35" height="35" value=false OnPic=" Nautron.png " OffPic="Nautron.png"> </HMI-PICTURE>
+    <p style="position:absolute; left:262px; top:660px;  width:32px ;  font-size: 13px; ">PS #4</p>
+    <HMI-PICTURE style="position:absolute; left:856px; top:907px; " width="25" height="20" value=false OnPic=" Nautron.png " OffPic="Nautron.png"> </HMI-PICTURE>
+    <p style="position:absolute; left:864px; top:897px; width:32px ;font-size: 13px; ">S</p>
+
+    <!--Flow, Conduc-->
+    <HMI-DISPLAY id="Flow" style="position:absolute;left:805px; top:583px;" width="80px" height="40px" value="20.1" Textcolor="blue" BackColor="rgb(168, 188, 197)" Font=" Digital-7 " FontSize="200% "></HMI-DISPLAY>
+    <HMI-DISPLAY id="Conduc" style="position:absolute;left:969px; top:668px;" width="80px" height="40px" value="20.1" Textcolor="blue" BackColor="rgb(168, 188, 197)" Font=" Digital-7 " FontSize="200% "></HMI-DISPLAY>
+
+
+
+    <!--Thanh ô RO-->
+    <canvas width="36 " height="18 " style="position:absolute; left:571px; top:675px;background-color:rgb(216, 216, 216);border:double;border-color:black;z-index:100 ; "></canvas>
+    <p style="position:absolute; left:583px; top:667px; width:32px ;font-size: 13px;font-style: unset; z-index:101 ; color: blue; ">RO</p>
+    <canvas width="36 " height="18 " style="position:absolute; left:571px; top:711px;background-color:rgb(216, 216, 216);border:double;border-color:black;z-index:100 ; "></canvas>
+    <p style="position:absolute; left:583px; top:703px; width:32px ;font-size: 13px;font-style: unset; z-index:101 ; color: blue; ">RO</p>
+    <canvas width="36 " height="18 " style="position:absolute; left:571px; top:747px;background-color:rgb(216, 216, 216);border:double;border-color:black;z-index:100 ; "></canvas>
+    <p style="position:absolute; left:583px; top:739px; width:32px ;font-size: 13px;font-style: unset; z-index:101 ; color: blue; ">RO</p>
+    <canvas width="36 " height="18 " style="position:absolute; left:571px; top:783px;background-color:rgb(216, 216, 216);border:double;border-color:black;z-index:100 ; "></canvas>
+    <p style="position:absolute; left:583px; top:775px; width:32px ;font-size: 13px;font-style: unset; z-index:101 ; color: blue; ">RO</p>
+    <canvas width="36 " height="18 " style="position:absolute; left:571px; top:818px;background-color:rgb(216, 216, 216);border:double;border-color:black;z-index:100 ; "></canvas>
+    <p style="position:absolute; left:583px; top:809px; width:32px ;font-size: 13px;font-style: unset; z-index:101 ;color: blue; ">RO</p>
+    <canvas width="36 " height="18 " style="position:absolute; left:571px; top:854px;background-color:rgb(216, 216, 216);border:double;border-color:black;z-index:100 ; "></canvas>
+    <p style="position:absolute; left:583px; top:846px; width:32px ;font-size: 13px;font-style: unset; z-index:101 ;color: blue; ">RO</p>
+
+    <!-- chu -->
+    <p style="position:absolute; left:19px; top:514px; width:200px ;font-size:12px;font-style: unset ; color: gold; z-index:101 ; ">SUPPLY WATER PUMP</p>
+    <p style="position:absolute; left:559px; top:514px; width:200px ;font-size:12px;font-style: unset ; color: gold; z-index:101 ; ">UF SERVICE PUMP</p>
+    <p style="position:absolute; left:565px; top:534px; width:200px ;font-size:12px;font-style: unset ; color: lightblue; z-index:101 ; ">220VAC 0.75kW</p>
+    <!-- -->
+    <p style="position:absolute; left:1390px; top:510px; width:200px ;font-size:12px;font-style: unset ; color: gold; z-index:101 ; ">UF BACKWASH PUMP</p>
+    <p style="position:absolute; left:157px; top:738px; width:200px ;font-size:12px;font-style: unset ; color: gold; z-index:101 ; ">RO PUMP</p>
+    <p style="position:absolute; left:115px; top:756px; width:200px ;font-size:12px;font-style: unset ; color: lightblue; z-index:101 ; ">RO HIGH PRESSURE PUMP</p>
+    <p style="position:absolute; left:101px; top:769px; width:200px ;font-size:12px;font-style: unset ; color: lightblue; z-index:101 ; ">2.2KW 2.7m3/h x 100mH x 220VAC</p>
+    <p style="position:absolute; left:72px; top:838px; width:200px ;font-size:12px;font-style: unset ; color: gold; z-index:101 ; ">TO. DRAIN</p>
+    <p style="position:absolute; left:221px; top:840px; width:200px ;font-size:12px;font-style: unset ; color: gold; z-index:101 ; ">Flow Meter</p>
+    <p style="position:absolute; left:572px; top:879px; width:200px ;font-size:12px;font-style: unset ; color: lightblue; z-index:101 ; ">BWRO UNIT</p>
+    <p style="position:absolute; left:557px; top:891px; width:200px ;font-size:12px;font-style: unset ; color: lightblue; z-index:101 ; ">Membrane 4" BWRO STANDARD</p>
+    <p style="position:absolute; left:557px; top:906px; width:250px ;font-size:12px;font-style: unset ; color: lightblue; z-index:101 ; ">VESSEL: 300SPI, END POINT, 1EM-6SET</p>
+    <p style="position:absolute; left:557px; top:181px; width:200px ;font-size:12px;font-style: unset ; color: gold; z-index:101 ; ">VALVE #4</p>
+    <p style="position:absolute; left:678px; top:469px; width:200px ;font-size:12px;font-style: unset ; color: gold; z-index:101 ; ">VALVE #1</p>
+    <p style="position:absolute; left:947px; top:334px; width:200px ;font-size:12px;font-style: unset ; color: gold; z-index:101 ; ">VALVE #5</p>
+    <p style="position:absolute; left:1117px; top:179px; width:200px ;font-size:12px;font-style: unset ; color: gold; z-index:101 ; ">VALVE #3</p>
+    <p style="position:absolute; left:1113px; top:465px; width:200px ;font-size:12px;font-style: unset ; color: gold; z-index:101 ; ">VALVE #2</p>
+    <p style="position:absolute; left:584px; top:376px; width:200px ;font-size:12px;font-style: unset ; color: lightblue; z-index:101 ; ">PRESSURE</p>
+    <!--ps1-->
+    <p style="position:absolute; left:1195px; top:175px; width:200px ;font-size:12px;font-style: unset ; color: lightblue; z-index:101 ; ">PRESSURE</p>
+    <!--ps2-->
+    <p style="position:absolute; left:1240px; top:461px; width:200px ;font-size:12px;font-style: unset ; color: lightblue; z-index:101 ; ">PRESSURE</p>
+    <!--ps3-->
+    <p style="position:absolute; left:301px; top:663px; width:200px ;font-size:12px;font-style: unset ; color: lightblue; z-index:101 ; ">PRESSURE</p>
+    <!--ps4-->
+    <p style="position:absolute; left:336px; top:781px; width:200px ;font-size:12px;font-style: unset ; color: lightblue; z-index:101 ; ">PRESSURE</p>
+    <!--ps5-->
+    <p style="position:absolute; left:653px; top:577px; width:200px ;font-size:12px;font-style: unset ; color: lightblue; z-index:101 ; ">PRESSURE</p>
+    <!--ps6-->
+    <p style="position:absolute; left:795px; top:469px; width:200px ;font-size:12px;font-style: unset ; color: gold; z-index:101 ; ">UF MEMBRANE</p>
+    <!-- -->
+    <p style="position:absolute; left:743px; top:482px; width:200px ;font-size:12px;font-style: unset ; color: lightblue; z-index:101 ; ">Membrane BWRO STANDARD</p>
+    <!-- -->
+    <p style="position:absolute; left:787px; top:500px; width:200px ;font-size:12px;font-style: unset ; color: gold; z-index:101 ; ">SV's Time:</p>
+    <!-- -->
+    <p id="SVTime" style="position:absolute; left:844px; top:500px; width:200px ;font-size:12px;font-style: unset ; color: lightblue; z-index:101 ; ">24 Hours</p>
+    <!-- time service -->
+    <p style="position:absolute; left:783px; top:517px; width:200px ;font-size:12px;font-style: unset ; color: gold; z-index:101 ; ">BW's Time:</p>
+    <!-- -->
+    <p id="BWTime" style="position:absolute; left:844px; top:517px; width:200px ;font-size:12px;font-style: unset ; color: lightblue; z-index:101 ; ">300 Seconds</p>
+    <!-- time backwash -->
+    <p style="position:absolute; left:611px; top:643px; width:200px ;font-size:12px;font-style: unset ; color: gold; z-index:101 ; ">R/O MEMBRANE</p>
+    <!-- -->
+    <p style="position:absolute; left:907px; top:588px; width:200px ;font-size:12px;font-style: unset ; color: gold; z-index:101 ; ">Flow meter</p>
+    <!-- -->
+    <p style="position:absolute; left:907px; top:610px; width:200px ;font-size:12px;font-style: unset ; color: lightblue; z-index:101 ; ">m3/h</p>
+    <!-- -->
+    <p style="position:absolute; left:982px; top:703px; width:200px ;font-size:12px;font-style: unset ; color: gold; z-index:101 ; ">Conductivity</p>
+    <!-- -->
+    <p style="position:absolute; left:1067px; top:674px; width:200px ;font-size:12px;font-style: unset ; color: lightblue; z-index:101 ; ">m3/h</p>
+    <!-- -->
+    <p style="position:absolute; left:1251px; top:717px; width:200px ;font-size:12px;font-style: unset ; color: gold; z-index:101 ; ">UV Unit</p>
+    <!-- -->
+    <p style="position:absolute; left:1248px; top:776px; width:200px ;font-size:12px;font-style: unset ; color: lightblue; z-index:101 ; ">2.2 m3/hr</p>
+    <!-- -->
+    <p style="position:absolute; left:1268px; top:267px; width:95px ;font-size:11px;font-style: unset ; color: lightblue;background-color: black; z-index:101 ; ">CARBON FILTER</p>
+    <!-- -->
+    <p style="position:absolute; left:1377px; top:267px; width:95px ;font-size:11px;font-style: unset ; color: lightblue;background-color: black; z-index:101 ; ">CARBON FILTER</p>
+    <!-- -->
+    <p style="position:absolute; left:1680px; top:188px; width:200px ;font-size:14px;font-style: unset ; color: gold; z-index:101 ; ">UF WATER TANK</p>
+    <!-- -->
+    <p style="position:absolute; left:1721px; top:516px; width:200px ;font-size:12px;font-style: unset ; color: gold; z-index:101 ; ">UF TO. DRAIN</p>
+    <!-- -->
+    <p style="position:absolute; left:1413px; top:522px; width:200px ;font-size:12px;font-style: unset ; color: lightblue; z-index:101 ; ">220VAC 0.75kW</p>
+    <!-- -->
+    <p style="position:absolute; left:1590px; top:616px; width:200px ;font-size:14px;font-style: unset ; color: gold; z-index:101 ; ">RO WATER TANK</p>
+    <!-- -->
+    <!--co -->
+    <img src="laco.gif" width="283" height="124" style="position:absolute; left:16px; top:48px" />
+    <h1 style="position:absolute; left:10px; top:130px;background-color:rgb(216, 216, 216);border:double;border-color:black;z-index:100; width:260px; height:39px; text-align: center;"><i>CSR SYSTEM</i>
+    </h1>
+    <canvas width="5" height="90" style="position:absolute; left:16px; top:69px;background-color:rgb(216, 216, 216);"></canvas>
+    <canvas width="5" height="90" style="position:absolute; left:100px; top:69px;background-color:rgb(216, 216, 216);"></canvas>
+    <canvas width="5" height="90" style="position:absolute; left:175px; top:69px;background-color:rgb(216, 216, 216);"></canvas>
+
+
+
+
+
+
+
+    <!-- HMI SCADA-->
+    < <HMI-TANK id="TANK1" style="position:absolute; left:169px; top:225px;" width="341" height="300" value="10000" Oncolor="lightskyblue" Offcolor="white"></HMI-TANK>
+        <HMI-TANK id="TANK2" style="position:absolute; left:1606px; top:222px;" width="246" height="289" value="40" Oncolor="lightskyblue" Offcolor="white"></HMI-TANK>
+        <HMI-TANK id="TANK3" style="position:absolute; left:1509px; top:652px;" width="253" height="311" value="40" Oncolor="lightskyblue" Offcolor="white"></HMI-TANK>
+        <!-- UF-->
+
+        <HMI-PICTURE id="UF1" style="position:absolute; left:762px; top:202px; " width="31 " height="248 " value=false OnPic=" UFon.png " OffPic="UFoff.png "> </HMI-PICTURE>
+        <HMI-PICTURE id="UF2" style="position:absolute; left:808px; top:202px; " width="31 " height="248 " value=false OnPic=" UFon.png " OffPic="UFoff.png "> </HMI-PICTURE>
+        <HMI-PICTURE id="UF3" style="position:absolute; left:852px; top:202px; " width="31 " height="248 " value=false OnPic=" UFon.png " OffPic="UFoff.png "> </HMI-PICTURE>
+        <HMI-PICTURE id="UF4" style="position:absolute; left:897px; top:202px; " width="31 " height="248 " value=false OnPic=" UFon.png " OffPic="UFoff.png "> </HMI-PICTURE>
+        <!-- RO-->
+        <HMI-PICTURE id="RO1" style="position:absolute; left:517px; top:673px; " width="332" height="30" value=false OnPic=" ROon.png " OffPic="ROoff.png "> </HMI-PICTURE>
+        <HMI-PICTURE id="RO2" style="position:absolute; left:517px; top:709px; " width="332" height="30" value=false OnPic=" ROon.png " OffPic="ROoff.png "> </HMI-PICTURE>
+        <HMI-PICTURE id="RO3" style="position:absolute; left:517px; top:745px; " width="332" height="30" value=false OnPic=" ROon.png " OffPic="ROoff.png "> </HMI-PICTURE>
+        <HMI-PICTURE id="RO4" style="position:absolute; left:517px; top:781px; " width="332" height="30" value=false OnPic=" ROon.png " OffPic="ROoff.png "> </HMI-PICTURE>
+        <HMI-PICTURE id="RO5" style="position:absolute; left:517px; top:816px; " width="332" height="30" value=false OnPic=" ROon.png " OffPic="ROoff.png "> </HMI-PICTURE>
+        <HMI-PICTURE id="RO6" style="position:absolute; left:517px; top:852px; " width="332" height="30" value=false OnPic=" ROon.png " OffPic="ROoff.png "> </HMI-PICTURE>
+        <!-- PUMP-->
+        <HMI-PICTURE id="Pump1" style="position:absolute; left:19px; top:467px; " width="113" height="48" value=false OnPic=" pumpon.png " OffPic="pumpoff.png "> </HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:15px; top:507px; " width="148" height="5" value=false OnPic=" them.png " OffPic="them.png "> </HMI-PICTURE>
+        <HMI-PICTURE id="Pump2" style="position:absolute; left:551px; top:478px; " width="113" height="48" value=false OnPic=" pumpton.png " OffPic="pumptoff.png "> </HMI-PICTURE>
+        <HMI-PICTURE id="Pump3" style="position:absolute; left:1394px; top:474px; " width="113" height="48" value=false OnPic=" pumpon.png " OffPic="pumpoff.png "> </HMI-PICTURE>
+        <HMI-PICTURE id="Pump4" style="position:absolute; left:160px; top:605px; " width="55" height="143" value=false OnPic=" pumpdungon.png " OffPic="pumpdungoff.png"> </HMI-PICTURE>
+
+
+        <!-- Valve -->
+        <HMI-PICTURE id="Valve1" style="position:absolute; left:682px; top:438px; " width="45" height="40" value=false OnPic=" vanngangon.png " OffPic="vanngangoff.png "> </HMI-PICTURE>
+        <HMI-PICTURE id="Valve4" style="position:absolute; left:560px; top:145px; " width="45" height="36" value=false OnPic=" vanngangon.png " OffPic="vanngangoff.png "></HMI-PICTURE>
+        <HMI-PICTURE id="Valve3" style="position:absolute; left:1120px; top:148px; " width="45" height="36" value=false OnPic=" vanngangon.png " OffPic="vanngangoff.png "></HMI-PICTURE>
+        <HMI-PICTURE id="Valve2" style="position:absolute; left:1115px; top:435px; " width="45" height="36" value=false OnPic=" vanngangon.png " OffPic="vanngangoff.png "> </HMI-PICTURE>
+        <HMI-PICTURE id="Valve5" style="position:absolute; left:979px; top:285px; " width="36" height="45" value=false OnPic=" vandocon.png " OffPic="vandocoff.png "> </HMI-PICTURE>
+        <!--Den-->
+        <HMI-LED id="den1" style="position:absolute; left:637px; top:405px; " width="30" height="30" value="true" Oncolor="red" Offcolor="black"></HMI-LED>
+        <HMI-LED id="den2" style="position:absolute; left:1245px; top:115px;" width="30" height="30" value="false" Oncolor="red" Offcolor="black "></HMI-LED>
+        <HMI-LED id="den3" style="position:absolute; left:580px; top:580px;" width="30" height="30" value="false" Oncolor="red" Offcolor="black "></HMI-LED>
+
+        <HMI-PICTURE style="position:absolute; left:176px; top:203px; " width="34" height="15" value=false OnPic=" vantayn.png " OffPic="vantayn.png "></HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:1449px; top:168px; " width="34" height="15" value=false OnPic=" vantayn.png " OffPic="vantayn.png "></HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:1545px; top:488px; " width="34" height="15" value=false OnPic=" vantayn.png " OffPic="vantayn.png "></HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:1768px; top:909px; " width="34" height="15" value=false OnPic=" vantayn.png " OffPic="vantayn.png "></HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:1192px; top:455px; " width="34" height="15" value=false OnPic=" vantayn.png " OffPic="vantayn.png "></HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:1258px; top:634px; " width="34" height="15" value=false OnPic=" vantayn.png " OffPic="vantayn.png "></HMI-PICTURE>
+
+
+        <HMI-PICTURE style="position:absolute; left:1284px; top:190px; " width="15" height="34" value=false OnPic=" vantay.png " OffPic="vantay.png "> </HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:1389px; top:190px; " width="15" height="34" value=false OnPic=" vantay.png " OffPic="vantay.png "> </HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:1361px; top:296px; " width="15" height="34" value=false OnPic=" vantay.png " OffPic="vantay.png "> </HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:1467px; top:296px; " width="15" height="34" value=false OnPic=" vantay.png " OffPic="vantay.png "></HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:903px; top:474px; " width="13" height="18" value=false OnPic=" vantay.png " OffPic="vantay.png "></HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:609px; top:444px; " width="13" height="18" value=false OnPic=" vantay.png " OffPic="vantay.png "></HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:271px; top:700px; " width="13" height="18" value=false OnPic=" vantay.png " OffPic="vantay.png "></HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:623px; top:614px; " width="13" height="18" value=false OnPic=" vantay.png " OffPic="vantay.png "></HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:362px; top:845px; " width="13" height="18" value=false OnPic=" vantay.png " OffPic="vantay.png "></HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:467px; top:879px; " width="13" height="18" value=false OnPic=" vantay.png " OffPic="vantay.png "></HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:862px; top:885px; " width="13" height="18" value=false OnPic=" vantay.png " OffPic="vantay.png "></HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:1217px; top:153px; " width="13" height="18" value=false OnPic=" vantay.png " OffPic="vantay.png "></HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:1645px; top:182px; " width="17" height="32" value=false OnPic=" vantay.png " OffPic="vantay.png "></HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:1658px; top:520px; " width="13" height="18" value=false OnPic=" vantay.png " OffPic="vantay.png "></HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:1529px; top:402px; " width="13" height="18" value=false OnPic=" vantay.png " OffPic="vantay.png "></HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:1264px; top:437px; " width="12" height="18" value=false OnPic=" vantay.png " OffPic="vantay.png "> </HMI-PICTURE>
+
+
+
+
+
+
+        <!--UV-->
+        <HMI-PICTURE style="position:absolute; left:1127px; top:748px; " width="302" height="28" value=false OnPic=" UVUnit.png " OffPic="UVUnit.png "> </HMI-PICTURE>
+        <!--mui ten-->
+        <HMI-PICTURE style="position:absolute; left:29px; top:866px; " width="131" height="17" value=false OnPic=" muitentrai.png " OffPic="muitentrai.png "> </HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:1687px; top:542px; " width="131" height="17" value=false OnPic=" muitenphai.png " OffPic="muitenphai.png "> </HMI-PICTURE>
+        <HMI-PICTURE style="position:absolute; left:1814px; top:908px; " width="70" height="17" value=false OnPic=" muitenphai.png " OffPic="muitenphai.png "> </HMI-PICTURE>
+
+
+        <!--filter -->
+        <HMI-PICTURE id="Valve5" style="position:absolute; left:1310px; top:219px; " width="42" height="165" value=false OnPic=" loc.png " OffPic="loc.png "> </HMI-PICTURE>
+        <HMI-PICTURE id="Valve5" style="position:absolute; left:1417px; top:219px; " width="42" height="165" value=false OnPic=" loc.png " OffPic="loc.png "> </HMI-PICTURE>
+
+        <!--giot nuoc-->
+        <HMI-PICTURE style="position:absolute; left:1870px; top:918px; " width="32" height="43" value=false OnPic=" giotnuoc.png " OffPic="giotnuoc.png "> </HMI-PICTURE>
+        <!--Manual/auto-->
+        <HMI-BUTTON id="Manu1" style="position:absolute; left:670px; top:520px;" width="120" height="50" value=false Ontext="AUTO" Oncolor="Gold" Offtext="MANUAL" Offcolor="GREEN"></HMI-BUTTON>
+        <HMI-BUTTON id="Manu2" style="position:absolute; left:1320px; top:520px;" width="120" height="50" value=false Ontext="AUTO" Oncolor="Gold" Offtext="MANUAL" Offcolor="GREEN"></HMI-BUTTON>
+        <HMI-BUTTON id="Manu3" style="position:absolute; left:220px; top:738px;" width="120" height="50" value=false Ontext="AUTO" Oncolor="Gold" Offtext="MANUAL" Offcolor="GREEN"></HMI-BUTTON>
+
+        <HMI-BUTTON id="SIGNAL" style="position:absolute;left:135px; top:1004px;" width="120px" height="50px" value=false Ontext="SIGNAL" Oncolor="Gold" Offtext="SIGNAL" Offcolor="RED"></HMI-BUTTON>
+
+
+
+        <HMI-ERRSHOW id="Errpump1" style="position:absolute;left:599px; top:488px;" width="80" height="40" value=true Textcolor="gold" BackColor="red"></HMI-ERRSHOW>
+        <HMI-ERRSHOW id="Errpump2" style="position:absolute;left:1400px; top:488px;" width="80" height="40" value=true Textcolor="gold" BackColor="red"></HMI-ERRSHOW>
+        <HMI-ERRSHOW id="Errpump3" style="position:absolute;left:150px; top:638px;" width="80" height="40" value=true Textcolor="gold" BackColor="red"></HMI-ERRSHOW>
+
+        <HMI-ERRSHOW id="Errtank1" style="position:absolute;left:299px; top:388px;" width="80" height="40" value=true Textcolor="gold" BackColor="red"></HMI-ERRSHOW>
+        <HMI-ERRSHOW id="Errtank2" style="position:absolute;left:1700px; top:388px;" width="80" height="40" value=true Textcolor="gold" BackColor="red"></HMI-ERRSHOW>
+        <!--HMI-ERRSHOW id="Errtank3" style="position:absolute;left:1600px; top:838px;" width="80" height="40" value=true Textcolor="gold" BackColor="red"></HMI-ERRSHOW-->
+
+
+        <script type=" text/javascript " src="HMI-ERRShow.js "></script>
+
+        <script type=" text/javascript " src="HMI-Display.js "></script>
+        <script type=" text/javascript " src="HMI-TANK.js "></script>
+        <script type="text/javascript " src="HMI-Button.js "></script>
+        <script type="text/javascript " src="HMI-LED.js "></script>
+
+
+        <script type="text/javascript " src="HMI-Picture.js "></script>
+        <!--script type="text/javascript " src="main.js "></script>
+
+
+    <!-- import jquery library -->
+        <script src="jquery-3.1.0.min.js "></script>
+
+        <!-- import paho MQTT library -->
+        <script src="mqttws31.min.js " type="text/javascript "></script>
+
+        <!-- our javascript -->
+        <script src="app.js "></script>
+</body>
+
+</html>
