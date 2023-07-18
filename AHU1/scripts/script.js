@@ -3,52 +3,52 @@
 var url = 'http://10.100.203.78:3011/data/1';
 var db;
 
-// var MQTT_CLIENT_ID = 'iot_web_temp' + Math.floor((1 + Math.random()) * 0x10000000000).toString(16);
-// var reconnect = false;
-// // Create a MQTT client instance
-// var MQTT_CLIENT = new Paho.MQTT.Client('broker.hivemq.com', 8000, MQTT_CLIENT_ID);
+var MQTT_CLIENT_ID = 'iot_web_temp' + Math.floor((1 + Math.random()) * 0x10000000000).toString(16);
+var reconnect = false;
+// Create a MQTT client instance
+var MQTT_CLIENT = new Paho.MQTT.Client('broker.hivemq.com', 8000, MQTT_CLIENT_ID);
 
-// // Tell the client instance to connect to the MQTT broker
-// MQTT_CLIENT.connect({ onSuccess: myClientConnected });
-// // Tell MQTT_CLIENT to call myMessageArrived(message) each time a new message arrives
+// Tell the client instance to connect to the MQTT broker
+MQTT_CLIENT.connect({ onSuccess: myClientConnected });
+// Tell MQTT_CLIENT to call myMessageArrived(message) each time a new message arrives
 
-// MQTT_CLIENT.onMessageArrived = myMessageArrived;
-// // set callback handlers
-// MQTT_CLIENT.onConnectionLost = onConnectionLost;
+MQTT_CLIENT.onMessageArrived = myMessageArrived;
+// set callback handlers
+MQTT_CLIENT.onConnectionLost = onConnectionLost;
 
-// var mqtt_isconnected = false;
+var mqtt_isconnected = false;
 
-// // This is the function which handles subscribing to topics after a connection is made
-// function myClientConnected() {
-//     MQTT_CLIENT.subscribe('SYNOPEXVINA2/IIOT/MQTT/TempHumi');
-//     mqtt_isconnected = true;
-// }
+// This is the function which handles subscribing to topics after a connection is made
+function myClientConnected() {
+    MQTT_CLIENT.subscribe('SYNOPEXVINA2/IIOT/MQTT/TempHumi');
+    mqtt_isconnected = true;
+}
 
-// // called when the client loses its connection
-// function onConnectionLost(responseObject) {
-//     if (responseObject.errorCode !== 0) {
-//         // console.log("onConnectionLost:"+responseObject.errorMessage);
-//         mqtt_isconnected = false;
-//     }
-// }
-
-// // This is the function which handles received messages
-// function myMessageArrived(message) {
-//     db = JSON.parse(message.payloadString);
-// }
-
-setInterval(() => {
-    read();
-}, 1000);
-
-const read = async () => {
-    try {
-        const response = await axios.get('demo.json');
-        db = response.data;
-    } catch (error) {
-        console.log(error);
+// called when the client loses its connection
+function onConnectionLost(responseObject) {
+    if (responseObject.errorCode !== 0) {
+        // console.log("onConnectionLost:"+responseObject.errorMessage);
+        mqtt_isconnected = false;
     }
-};
+}
+
+// This is the function which handles received messages
+function myMessageArrived(message) {
+    db = JSON.parse(message.payloadString);
+}
+
+// setInterval(() => {
+//     read();
+// }, 1000);
+
+// const read = async () => {
+//     try {
+//         const response = await axios.get('demo.json');
+//         db = response.data;
+//     } catch (error) {
+//         console.log(error);
+//     }
+// };
 
 setInterval(rd, 1000);
 function rd() {
