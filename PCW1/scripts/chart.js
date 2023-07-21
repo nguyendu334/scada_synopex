@@ -65,9 +65,9 @@ function rd() {
     document.getElementById('wetline_level').textContent = db.mực_nước.wetline.toFixed(2) + ' %';
     document.getElementById('wetline_temp').textContent = db.nhiệt_độ.wetline.toFixed(2) + ' °C';
 
-    // document.getElementById('chiller4').textContent = db.nhiệt_độ.chiller4.toFixed(2) + ' °C';
-    document.getElementById('chiller4').textContent =
-        (db.nhiệt_độ.hotpress - 1.5).toFixed(2) + ' °C';
+    document.getElementById('chiller4').textContent = db.nhiệt_độ.chiller4.toFixed(2) + ' °C';
+    // document.getElementById('chiller4').textContent =
+    //     (db.nhiệt_độ.hotpress - 1.5).toFixed(2) + ' °C';
     document.getElementById('chiller5').textContent = db.nhiệt_độ.chiller5.toFixed(2) + ' °C';
     document.getElementById('chiller6').textContent = db.nhiệt_độ.chiller6.toFixed(2) + ' °C';
     document.getElementById('chiller7').textContent = db.nhiệt_độ.chiller7.toFixed(2) + ' °C';
