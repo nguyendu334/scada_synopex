@@ -77,6 +77,9 @@ function rd() {
     document.getElementById('left-wapper').getSVGDocument().getElementById('temp10').textContent =
         db.nhiệt_độ.exposure2.toFixed(1);
 
+    document.getElementById('left-wapper').getSVGDocument().getElementById('temp11').textContent =
+        db.oa.temp.toFixed(1);
+
     document.getElementById('left-wapper').getSVGDocument().getElementById('hum1').textContent =
         db.độ_ẩm.smt1.toFixed(1);
     document.getElementById('left-wapper').getSVGDocument().getElementById('hum2').textContent =
@@ -100,6 +103,9 @@ function rd() {
         db.độ_ẩm.exposure1.toFixed(1);
     document.getElementById('left-wapper').getSVGDocument().getElementById('hum10').textContent =
         db.độ_ẩm.exposure2.toFixed(1);
+
+    document.getElementById('left-wapper').getSVGDocument().getElementById('hum11').textContent =
+        db.oa.humi.toFixed(1);
 
     document
         .getElementById('left-wapper')
