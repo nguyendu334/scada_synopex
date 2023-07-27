@@ -35,6 +35,7 @@ function onConnectionLost(responseObject) {
 // This is the function which handles received messages
 function myMessageArrived(message) {
     db = JSON.parse(message.payloadString);
+    console.log(db);
 }
 
 // setInterval(() => {
@@ -200,6 +201,86 @@ function rd() {
             .getElementById('left-wapper')
             .getSVGDocument()
             .getElementById('fan_ahu6').style.animation = '';
+    }
+
+    for (var i = 1; i < 3; i++) {
+        if (db.acu1[i] == true ) {
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById('acu1_fan' + i).style.animation = 'fanRotate 1s linear infinite';
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById('acu1_fan' + i).style.transformOrigin = 'center';
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById('acu1_fan' + i).style.transformBox = 'fill-box';
+
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById('acu1_comp' + i).style.animation = 'fanRotate 1s linear infinite';
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById('acu1_comp' + i).style.transformOrigin = 'center';
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById('acu1_comp' + i).style.transformBox = 'fill-box';
+        } 
+        if (db.acu1[i] == false ) {
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById('acu1_fan' + i).style.animation = '';
+
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById('acu1_comp' + i).style.animation = '';
+        }
+
+        if (db.acu2[i] == true ) {
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById('acu2_fan' + i).style.animation = 'fanRotate 1s linear infinite';
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById('acu2_fan' + i).style.transformOrigin = 'center';
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById('acu2_fan' + i).style.transformBox = 'fill-box';
+
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById('acu2_comp' + i).style.animation = 'fanRotate 1s linear infinite';
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById('acu2_comp' + i).style.transformOrigin = 'center';
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById('acu2_comp' + i).style.transformBox = 'fill-box';
+        }
+        if (db.acu2[i] == false ) {
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById('acu2_fan' + i).style.animation = '';
+
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById('acu2_comp' + i).style.animation = '';
+        }
     }
 
     // check fan cdu
