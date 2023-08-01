@@ -100,18 +100,18 @@ function rd() {
             document.getElementById('wetline_temp').style.backgroundColor = 'black';
         }
     } else {
-        if (db.nhiệt_độ.hotpress > 15 || db.nhiệt_độ.hotpress < 9) {
+        if (db.nhiệt_độ.hotpress > 20 || db.nhiệt_độ.hotpress < 9) {
             document.getElementById('hotpress_temp').style.backgroundColor = '#ff0000';
         }
 
-        if (db.nhiệt_độ.hotpress < 15 && db.nhiệt_độ.hotpress > 9) {
+        if (db.nhiệt_độ.hotpress < 20 && db.nhiệt_độ.hotpress > 9) {
             document.getElementById('hotpress_temp').style.backgroundColor = 'black';
         }
 
-        if (db.nhiệt_độ.wetline > 15 || db.nhiệt_độ.wetline < 9) {
+        if (db.nhiệt_độ.wetline > 20 || db.nhiệt_độ.wetline < 9) {
             document.getElementById('wetline_temp').style.backgroundColor = '#ff0000';
         }
-        if (db.nhiệt_độ.wetline < 15 && db.nhiệt_độ.wetline > 9) {
+        if (db.nhiệt_độ.wetline < 20 && db.nhiệt_độ.wetline > 9) {
             document.getElementById('wetline_temp').style.backgroundColor = 'black';
         }
     }
