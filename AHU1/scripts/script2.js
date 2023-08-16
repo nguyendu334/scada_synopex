@@ -113,28 +113,50 @@ function rd() {
         .getElementById('humi_ahu7').textContent = db.HVAC2.Humi.toFixed(1);
 
     // Check spec nhiệt độ
-    for (var i = 0; i < 7; i++) {
+
         if (
             document
                 .getElementById('left-wapper')
                 .getSVGDocument()
-                .getElementById(`temp_ahu${i + 1}`).textContent < 17 ||
+                .getElementById(`temp_ahu4`).textContent < 19 ||
             document
                 .getElementById('left-wapper')
                 .getSVGDocument()
-                .getElementById(`temp_ahu${i + 1}`).textContent > 23
+                .getElementById(`temp_ahu4`).textContent > 25
         ) {
             document
                 .getElementById('left-wapper')
                 .getSVGDocument()
-                .getElementById(`fill_temp_ahu${i + 1}`).style.fill = 'red';
+                .getElementById(`fill_temp_ahu4`).style.fill = 'red';
         } else {
             document
                 .getElementById('left-wapper')
                 .getSVGDocument()
-                .getElementById(`fill_temp_ahu${i + 1}`).style.fill = 'black';
+                .getElementById(`fill_temp_ahu4`).style.fill = 'black';
         }
 
+        if (
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById(`temp_ahu5`).textContent < 20 ||
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById(`temp_ahu5`).textContent > 26
+        ) {
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById(`fill_temp_ahu5`).style.fill = 'red';
+        } else {
+            document
+                .getElementById('left-wapper')
+                .getSVGDocument()
+                .getElementById(`fill_temp_ahu5`).style.fill = 'black';
+        }
+
+        for (var i = 0; i < 7; i++) {
         if (
             document
                 .getElementById('left-wapper')
